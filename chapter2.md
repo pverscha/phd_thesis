@@ -1,7 +1,11 @@
 # Unipept Desktop
 
-## Unipept Desktop: A faster, more powerful metaproteomics analysis tool
-\markright{Next-gen metaproteomics analyses}
+The introductory text for this chapter comes here...
+
+\newpage
+
+## Unipept Desktop: a faster, more powerful metaproteomics analysis tool
+\markright{\textsf{High-throughput metaproteomics analysis}}
 
 **Abstract**
 Metaproteomics has become an important research tool to study microbial systems, which has resulted in increased metaproteomics data generation.
@@ -119,3 +123,9 @@ Installation instructions and documentation for the Unipept Desktop Application 
 ### Acknowledgements
 This work was supported by the Research Foundation—Flanders (FWO) \[1164420N to P.V.; 12I5220N to B.M.; 1S90918N to T.V.D.B.; G042518N to L.M.
 \].
+
+\newpage
+
+## Support for novel proteogenomics analysis in Unipept
+\markright{Support for proteogenomics analyses}
+
