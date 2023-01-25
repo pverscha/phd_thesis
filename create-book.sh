@@ -10,4 +10,5 @@ pandoc \
   chapter0.md \
   chapter1.md \
   chapter2.md \
+  references.md \
   -o thesis.pdf
