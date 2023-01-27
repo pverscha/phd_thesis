@@ -20,8 +20,14 @@ header-includes:
 ---
 
 \allsectionsfont{\sffamily}
-\renewcommand{\chaptermark}[1]{\markboth{\textsf{\thechapter.~ #1}}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+[//]: # (https://tex.stackexchange.com/a/13395/91462)
+\let\Oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\textsf{Part \thepart.~ \parttitle}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{\thechapter.~ chapter title}}}
 
 
 

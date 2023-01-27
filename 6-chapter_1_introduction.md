@@ -1,3 +1,3 @@
 \mainmatter
 
-# Introduction
+## Introduction

@@ -1,5 +1,4 @@
-# Functional analysis of metaproteomics datasets
+# Other projects
 
 The introductory text for this chapter comes here...
 
-\newpage{}
