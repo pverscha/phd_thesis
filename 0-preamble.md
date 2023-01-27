@@ -5,6 +5,7 @@ bibliography: all_publications.bib
 csl: bioinformatics.csl
 geometry: a5paper, margin=2cm
 header-includes:
+    - \usepackage{microtype}
     - \usepackage{fontspec}
     - \setmainfont{TeX Gyre Pagella}
     - \setsansfont{TeX Gyre Heros}
@@ -22,10 +23,5 @@ header-includes:
 \renewcommand{\chaptermark}[1]{\markboth{\textsf{\thechapter.~ #1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 
-# Acknowledgements {-}
-
-# Summary {-}
-
-# Samenvatting {-}
 
 

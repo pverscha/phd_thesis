@@ -1,38 +1,32 @@
-# Functional analysis of metaproteomics datasets
-
-The introductory text for this chapter comes here...
-
-\newpage
-
 ## Unipept CLI 2.0: adding support for visualisations and functional annotations
 
 **Abstract**
-Unipept (Mesuere et al., 2012) is a collection of tools developed for fast metaproteomics data analysis.
-The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service (Mesuere et al., 2016) and a command-line interface (CLI) (Mesuere et al., 2018).
+Unipept [@mesuereUnipeptTrypticPeptideBased2012] is a collection of tools developed for fast metaproteomics data analysis.
+The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service [@mesuereUnipeptWebServices2016] and a command-line interface (CLI) [@mesuereHighthroughputMetaproteomicsData2018].
 The key strengths of Unipept are its speed, its ease-of-use and the extensive use of interactive data visualization in the analysis results.
 The Unipept database is derived from the UniProt (UniProt, 2019) KB and consists of tryptic peptides linked with taxonomic and functional annotations.
 Unipept initially launched with support for taxonomic analysis of metaproteomics data in 2012.
-Version 4.0 (Gurdeep Singh et al., 2019) of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms (Ashburner et al., 2000), Enzyme Commission (EC) numbers (Webb, 1992) and InterPro entries (Hunter et al., 2009).
+Version 4.0 [@gurdeepsinghUnipeptFunctionalAnalysis2019] of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms [@ashburnerGeneOntologyTool2000], Enzyme Commission (EC) numbers [@webbEnzymeNomenclature19921992] and InterPro entries [@hunterInterProIntegrativeProtein2009].
 
 ### Introduction
-Unipept (Mesuere et al., 2012) is a collection of tools developed for fast metaproteomics data analysis.
-The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service (Mesuere et al., 2016) and a command-line interface (CLI) (Mesuere et al., 2018).
+Unipept [@mesuereUnipeptTrypticPeptideBased2012] is a collection of tools developed for fast metaproteomics data analysis.
+The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service [@mesuereUnipeptWebServices2016] and a command-line interface (CLI) [@mesuereHighthroughputMetaproteomicsData2018].
 The key strengths of Unipept are its speed, its ease-of-use and the extensive use of interactive data visualization in the analysis results.
-The Unipept database is derived from the UniProt (UniProt, 2019) KB and consists of tryptic peptides linked with taxonomic and functional annotations.
+The Unipept database is derived from the UniProt [@theuniprotconsortiumUniProtWorldwideHub2019] KB and consists of tryptic peptides linked with taxonomic and functional annotations.
 Unipept initially launched with support for taxonomic analysis of metaproteomics data in 2012.
-Version 4.0 (Gurdeep Singh et al., 2019) of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms (Ashburner et al., 2000), Enzyme Commission (EC) numbers (Webb, 1992) and InterPro entries (Hunter et al., 2009).
+Version 4.0 [@gurdeepsinghUnipeptFunctionalAnalysis2019] of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms [@ashburnerGeneOntologyTool2000], Enzyme Commission (EC) numbers [@webbEnzymeNomenclature19921992] and InterPro entries [@hunterInterProIntegrativeProtein2009].
 
 The GO terms are organized into three different domains: ‘cellular components’, ‘molecular functions’ and ‘biological processes’.
 Every GO-term is associated with exactly one domain and consists of a name, an identifier and an exact definition.
 The EC numbers can be used to classify enzymes, based on the chemical reactions that they catalyze.
 Every EC number consists of four numbers, separated by a dot, yielding a hierarchical classification system with progressively finer enzyme classifications.
 InterPro is a database that consists of predictive models collected from external databases that can be classified into five different categories.
-More information about functional annotation in metaproteomics can be found in the study by Schiebenhoefer et al. (2019).
+More information about functional annotation in metaproteomics can be found in the study by [@schiebenhoeferChallengesPromiseInterface2019].
 
 For each input peptide, Unipept finds all functional annotations associated with all of the UniProt entries in which the peptide occurs.
 All found functions are listed in order of decreasing number of peptides associated with this function.
 
-In this article, we present several new additions to the Unipept API and CLI which allow third-party applications [such as Galaxy-P (Jagtap et al., 2015)] to integrate the new functional analysis capabilities provided by Unipept.
+In this article, we present several new additions to the Unipept API and CLI which allow third-party applications \[such as Galaxy-P [@jagtapMetaproteomicAnalysisUsing2015]\] to integrate the new functional analysis capabilities provided by Unipept.
 
 ### Materials and methods
 The Unipept API is a high-performance web service that responds in a textual format (JSON) to HTTP-requests from other applications or tools and allows to integrate the services provided by Unipept into other workflows.
@@ -52,10 +46,6 @@ Among other information, the Unipept tryptic peptide analysis lists functional a
 These data are aggregated because a peptide can occur in multiple proteins that each can have multiple functional annotations.
 For each annotation, we also return the amount of underlying proteins that match with this specific annotation.
 
-Among other information, the Unipept tryptic peptide analysis lists functional annotations associated with a given tryptic peptide.
-These data are aggregated because a peptide can occur in multiple proteins that each can have multiple functional annotations.
-For each annotation, we also return the amount of underlying proteins that match with this specific annotation.
-
 Some applications require all known information for a list of tryptic peptides. The ‘pept2funct’ function is a combination of the preceding three endpoints and returns all functional annotations associated with the given tryptic peptide.
 ‘peptinfo’ on the other hand, returns all the available information for one or more tryptic peptides.
 All functional annotations for this peptide are part of the response, as well as the lowest common ancestor for this peptide.
@@ -70,8 +60,9 @@ A URL on the other hand is simply a shareable link to an online service that hos
 ### Conclusion
 Version 2.0 of the Unipept API and CLI is a significant update that provides fast and easy access to the powerful analysis pipeline of Unipept.
 In addition to the existing taxonomic analysis, it now features multiple functional annotations which will enable users to gain new insights into complex ecosystems.
-These new features can easily be integrated into third-party tools such as the MetaProteome Analyzer (Muth et al., 2018).
+These new features can easily be integrated into third-party tools such as the MetaProteome Analyzer [@muthMPAPortableStandAlone2018].
 Galaxy-P, a highly used workflow integration system, is already successfully making use of the novel analysis functions that are introduced with this new release.
 
 ### Funding
 This work was supported by the Research Foundation—Flanders (FWO) \[1164420N to P.V.; 12I5220N to B.M.; 1S90918N to T.V.D.B.; G042518N to L.M.; 12S9418N to C.D.T.\].
+
