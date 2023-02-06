@@ -68,6 +68,22 @@
   file = {/Users/pverscha/Zotero/storage/8USUPFZX/Ashwood et al. - 2020 - Proceedings of the EuBIC-MS 2020 Developers’ Meeti.pdf}
 }
 
+@article{audainIndepthAnalysisProtein2017,
+  title = {In-Depth Analysis of Protein Inference Algorithms Using Multiple Search Engines and Well-Defined Metrics},
+  author = {Audain, Enrique and Uszkoreit, Julian and Sachsenberg, Timo and Pfeuffer, Julianus and Liang, Xiao and Hermjakob, Henning and Sanchez, Aniel and Eisenacher, Martin and Reinert, Knut and Tabb, David L. and Kohlbacher, Oliver and {Perez-Riverol}, Yasset},
+  year = {2017},
+  month = jan,
+  journal = {Journal of Proteomics},
+  volume = {150},
+  pages = {170--182},
+  issn = {1874-3919},
+  doi = {10.1016/j.jprot.2016.08.002},
+  abstract = {In mass spectrometry-based shotgun proteomics, protein identifications are usually the desired result. However, most of the analytical methods are based on the identification of reliable peptides and not the direct identification of intact proteins. Thus, assembling peptides identified from tandem mass spectra into a list of proteins, referred to as protein inference, is a critical step in proteomics research. Currently, different protein inference algorithms and tools are available for the proteomics community. Here, we evaluated five software tools for protein inference (PIA, ProteinProphet, Fido, ProteinLP, MSBayesPro) using three popular database search engines: Mascot, X!Tandem, and MS-GF+. All the algorithms were evaluated using a highly customizable KNIME workflow using four different public datasets with varying complexities (different sample preparation, species and analytical instruments). We defined a set of quality control metrics to evaluate the performance of each combination of search engines, protein inference algorithm, and parameters on each dataset. We show that the results for complex samples vary not only regarding the actual numbers of reported protein groups but also concerning the actual composition of groups. Furthermore, the robustness of reported proteins when using databases of differing complexities is strongly dependant on the applied inference algorithm. Finally, merging the identifications of multiple search engines does not necessarily increase the number of reported proteins, but does increase the number of peptides per protein and thus can generally be recommended. Significance Protein inference is one of the major challenges in MS-based proteomics nowadays. Currently, there are a vast number of protein inference algorithms and implementations available for the proteomics community. Protein assembly impacts in the final results of the research, the quantitation values and the final claims in the research manuscript. Even though protein inference is a crucial step in proteomics data analysis, a comprehensive evaluation of the many different inference methods has never been performed. Previously Journal of proteomics has published multiple studies about other benchmark of bioinformatics algorithms (PMID: 26585461; PMID: 22728601) in proteomics studies making clear the importance of those studies for the proteomics community and the journal audience. This manuscript presents a new bioinformatics solution based on the KNIME/OpenMS platform that aims at providing a fair comparison of protein inference algorithms (https://github.com/KNIME-OMICS). Six different algorithms - ProteinProphet, MSBayesPro, ProteinLP, Fido and PIA- were evaluated using the highly customizable workflow on four public datasets with varying complexities. Five popular database search engines Mascot, X!Tandem, MS-GF+ and combinations thereof were evaluated for every protein inference tool. In total {$>$}186 proteins lists were analyzed and carefully compare using three metrics for quality assessments of the protein inference results: 1) the numbers of reported proteins, 2) peptides per protein, and the 3) number of uniquely reported proteins per inference method, to address the quality of each inference method. We also examined how many proteins were reported by choosing each combination of search engines, protein inference algorithms and parameters on each dataset. The results show that using 1) PIA or Fido seems to be a good choice when studying the results of the analyzed workflow, regarding not only the reported proteins and the high-quality identifications, but also the required runtime. 2) Merging the identifications of multiple search engines gives almost always more confident results and increases the number of peptides per protein group. 3) The usage of databases containing not only the canonical, but also known isoforms of proteins has a small impact on the number of reported proteins. The detection of specific isoforms could, concerning the question behind the study, compensate for slightly shorter reports using the parsimonious reports. 4) The current workflow can be easily extended to support new algorithms and search engine combinations.},
+  langid = {english},
+  keywords = {Algorithms,Bioinformatics,Mass spectrometry,Protein inference},
+  file = {/Users/pverscha/Zotero/storage/3KBZUNU4/Audain et al. - 2017 - In-depth analysis of protein inference algorithms .pdf}
+}
+
 @article{bar-josephFastOptimalLeaf2001,
   title = {Fast Optimal Leaf Ordering for Hierarchical Clustering},
   author = {{Bar-Joseph}, Ziv and Gifford, David K. and Jaakkola, Tommi S.},
@@ -165,6 +181,23 @@
   keywords = {2D graphics.,Cascading style sheets,Data visualization,Debugging,Image color analysis,Information analysis,Information visualization,toolkits,user interfaces}
 }
 
+@article{bouwmeesterAgeDataDrivenProteomics2020,
+  title = {The {{Age}} of {{Data-Driven Proteomics}}: {{How Machine Learning Enables Novel Workflows}}},
+  shorttitle = {The {{Age}} of {{Data-Driven Proteomics}}},
+  author = {Bouwmeester, Robbin and Gabriels, Ralf and Van Den Bossche, Tim and Martens, Lennart and Degroeve, Sven},
+  year = {2020},
+  journal = {PROTEOMICS},
+  volume = {20},
+  number = {21-22},
+  pages = {1900351},
+  issn = {1615-9861},
+  doi = {10.1002/pmic.201900351},
+  abstract = {A lot of energy in the field of proteomics is dedicated to the application of challenging experimental workflows, which include metaproteomics, proteogenomics, data independent acquisition (DIA), non-specific proteolysis, immunopeptidomics, and open modification searches. These workflows are all challenging because of ambiguity in the identification stage; they either expand the search space and thus increase the ambiguity of identifications, or, in the case of DIA, they generate data that is inherently more ambiguous. In this context, machine learning-based predictive models are now generating considerable excitement in the field of proteomics because these predictive models hold great potential to drastically reduce the ambiguity in the identification process of the above-mentioned workflows. Indeed, the field has already produced classical machine learning and deep learning models to predict almost every aspect of a liquid chromatography-mass spectrometry (LC-MS) experiment. Yet despite all the excitement, thorough integration of predictive models in these challenging LC-MS workflows is still limited, and further improvements to the modeling and validation procedures can still be made. Therefore, highly promising recent machine learning developments in proteomics are pointed out in this viewpoint, alongside some of the remaining challenges.},
+  langid = {english},
+  keywords = {data driven modeling,deep learning,machine learning},
+  annotation = {\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/pmic.201900351}
+}
+
 @article{bouwmeesterDeepLCCanPredict2021,
   title = {{{DeepLC}} Can Predict Retention Times for Peptides That Carry As-yet Unseen Modifications},
   author = {Bouwmeester, Robbin and Gabriels, Ralf and Hulstaert, Niels and Martens, Lennart and Degroeve, Sven},
@@ -231,6 +264,22 @@
   title = {Community {{Proteomics}} of a {{Natural Microbial Biofilm}} | {{Science}}},
   howpublished = {https://www.science.org/doi/full/10.1126/science.1109070},
   file = {/Users/pverscha/Zotero/storage/RE2NVDMI/science.html}
+}
+
+@article{craigTANDEMMatchingProteins2004,
+  title = {{{TANDEM}}: Matching Proteins with Tandem Mass Spectra},
+  shorttitle = {{{TANDEM}}},
+  author = {Craig, Robertson and Beavis, Ronald C.},
+  year = {2004},
+  month = jun,
+  journal = {Bioinformatics},
+  volume = {20},
+  number = {9},
+  pages = {1466--1467},
+  issn = {1367-4803},
+  doi = {10.1093/bioinformatics/bth092},
+  abstract = {Summary: Tandem mass spectra obtained from fragmenting peptide ions contain some peptide sequence specific information, but often there is not enough information to sequence the original peptide completely. Several proprietary software applications have been developed to attempt to match the spectra with a list of protein sequences that may contain the sequence of the peptide. The application TANDEM was written to provide the proteomics research community with a set of components that can be used to test new methods and algorithms for performing this type of sequence-to-data matching.Availability: The source code and binaries for this software are available at http://www.proteome.ca/opensource.html, for Windows, Linux and Macintosh OSX. The source code is made available under the Artistic License, from the authors.},
+  file = {/Users/pverscha/Zotero/storage/RUJ6PE7R/Craig and Beavis - 2004 - TANDEM matching proteins with tandem mass spectra.pdf}
 }
 
 @article{degroeveMS2PIPToolMS2013,
@@ -562,6 +611,25 @@
   file = {/Users/pverscha/Zotero/storage/677QSHVR/Jansson and Baker - 2016 - A multi-omic future for microbiome studies.pdf}
 }
 
+@article{kallSemisupervisedLearningPeptide2007,
+  title = {Semi-Supervised Learning for Peptide Identification from Shotgun Proteomics Datasets},
+  author = {K{\"a}ll, Lukas and Canterbury, Jesse D. and Weston, Jason and Noble, William Stafford and MacCoss, Michael J.},
+  year = {2007},
+  month = nov,
+  journal = {Nature Methods},
+  volume = {4},
+  number = {11},
+  pages = {923--925},
+  publisher = {{Nature Publishing Group}},
+  issn = {1548-7105},
+  doi = {10.1038/nmeth1113},
+  abstract = {Shotgun proteomics uses liquid chromatography\textendash tandem mass spectrometry to identify proteins in complex biological samples. We describe an algorithm, called Percolator, for improving the rate of confident peptide identifications from a collection of tandem mass spectra. Percolator uses semi-supervised machine learning to discriminate between correct and decoy spectrum identifications, correctly assigning peptides to 17\% more spectra from a tryptic Saccharomyces cerevisiae dataset, and up to 77\% more spectra from non-tryptic digests, relative to a fully supervised approach.},
+  copyright = {2007 Nature Publishing Group},
+  langid = {english},
+  keywords = {Bioinformatics,Biological Microscopy,Biological Techniques,Biomedical Engineering/Biotechnology,general,Life Sciences,Proteomics},
+  file = {/Users/pverscha/Zotero/storage/MAQWDPN4/Käll et al. - 2007 - Semi-supervised learning for peptide identificatio.pdf}
+}
+
 @article{keiblingerSoilLeafLitter2016,
   title = {Soil and Leaf Litter Metaproteomics\textemdash a Brief Guideline from Sampling to Understanding},
   author = {Keiblinger, Katharina M. and Fuchs, Stephan and {Zechmeister-Boltenstern}, Sophie and Riedel, Katharina},
@@ -660,6 +728,23 @@
   file = {/Users/pverscha/Zotero/storage/U8WWREFU/bwmeta1.element.html}
 }
 
+@article{langellaTandemPipelineToolManage2017,
+  title = {X!{{TandemPipeline}}: {{A Tool}} to {{Manage Sequence Redundancy}} for {{Protein Inference}} and {{Phosphosite Identification}}},
+  shorttitle = {X!{{TandemPipeline}}},
+  author = {Langella, Olivier and Valot, Beno{\^i}t and Balliau, Thierry and {Blein-Nicolas}, M{\'e}lisande and Bonhomme, Ludovic and Zivy, Michel},
+  year = {2017},
+  month = feb,
+  journal = {Journal of Proteome Research},
+  volume = {16},
+  number = {2},
+  pages = {494--503},
+  publisher = {{American Chemical Society}},
+  issn = {1535-3893},
+  doi = {10.1021/acs.jproteome.6b00632},
+  abstract = {X!TandemPipeline is a software designed to perform protein inference and to manage redundancy in the results of phosphosite identification by database search. It provides the minimal list of proteins or phosphosites that are present in a set of samples using grouping algorithms based on the principle of parsimony. Regarding proteins, a two-level classification is performed, where groups gather proteins sharing at least one peptide and subgroups gather proteins that are not distinguishable according to the identified peptides. Regarding phosphosites, an innovative approach based on the concept of phosphoisland is used to gather overlapping phosphopeptides. The graphical interface of X!TandemPipeline allows the users to launch X!tandem identification, to inspect spectra and to manually validate their assignment to peptides, to launch the grouping program, and to visualize elementary data as well as grouping and redundancy information. Identification results obtained from other search engines can also be processed. X!TandemPipeline results can be exported as ready-to-use tabulated files or as XML files that can be directly used by the PROTICdb database or by the MassChroQ quantification software. X!TandemPipeline runs fast, is easy to use, and can process hundreds of samples simultaneously. It is freely available under the GNU General Public License v3.0 at http://pappso.inra.fr/bioinfo/xtandempipeline/.},
+  file = {/Users/pverscha/Zotero/storage/B2EXPH4L/Langella et al. - 2017 - X!TandemPipeline A Tool to Manage Sequence Redund.pdf}
+}
+
 @article{liIntegratedCatalogReference2014,
   title = {An Integrated Catalog of Reference Genes in the Human Gut Microbiome},
   author = {Li, Junhua and Jia, Huijue and Cai, Xianghang and Zhong, Huanzi and Feng, Qiang and Sunagawa, Shinichi and Arumugam, Manimozhiyan and Kultima, Jens Roat and Prifti, Edi and Nielsen, Trine and Juncker, Agnieszka Sierakowska and Manichanh, Chaysavanh and Chen, Bing and Zhang, Wenwei and Levenez, Florence and Wang, Juan and Xu, Xun and Xiao, Liang and Liang, Suisha and Zhang, Dongya and Zhang, Zhaoxi and Chen, Weineng and Zhao, Hailong and {Al-Aama}, Jumana Yousuf and Edris, Sherif and Yang, Huanming and Wang, Jian and Hansen, Torben and Nielsen, Henrik Bj{\o}rn and Brunak, S{\o}ren and Kristiansen, Karsten and Guarner, Francisco and Pedersen, Oluf and Dor{\'e}, Joel and Ehrlich, S. Dusko and {MetaHIT Consortium} and Bork, Peer and Wang, Jun and {MetaHIT Consortium}},
@@ -709,6 +794,24 @@
   doi = {10.1126/science.aaf4507},
   abstract = {Microbial metabolism powers biogeochemical cycling in Earth's ecosystems. The taxonomic composition of microbial communities varies substantially between environments, but the ecological causes of this variation remain largely unknown. We analyzed taxonomic and functional community profiles to determine the factors that shape marine bacterial and archaeal communities across the global ocean. By classifying {$>$}30,000 marine microorganisms into metabolic functional groups, we were able to disentangle functional from taxonomic community variation. We find that environmental conditions strongly influence the distribution of functional groups in marine microbial communities by shaping metabolic niches, but only weakly influence taxonomic composition within individual functional groups. Hence, functional structure and composition within functional groups constitute complementary and roughly independent ``axes of variation'' shaped by markedly different processes.},
   file = {/Users/pverscha/Zotero/storage/55YW3BBM/Louca et al. - 2016 - Decoupling function and taxonomy in the global oce.pdf}
+}
+
+@article{martensProteomicsDataValidation2007,
+  title = {Proteomics Data Validation: Why All Must Provide Data},
+  shorttitle = {Proteomics Data Validation},
+  author = {Martens, Lennart and Hermjakob, Henning},
+  year = {2007},
+  month = jul,
+  journal = {Molecular BioSystems},
+  volume = {3},
+  number = {8},
+  pages = {518--522},
+  publisher = {{The Royal Society of Chemistry}},
+  issn = {1742-2051},
+  doi = {10.1039/B705178F},
+  abstract = {The field of proteomics has gained considerable momentum over the last years as new technologies and better instrumentation allowed the field to mature from what resembled a cottage industry into a high-throughput means to identify, characterize and quantify hundreds of proteins. The identifications and (relative) quantitation values obtained are often controversial however, as various techniques and different software platforms are used in the many laboratories worldwide. This Opinion attempts to shed some light on some of the underlying issues, and proposes certain guidelines authors can adhere to in order to allow others to validate their findings.},
+  langid = {english},
+  file = {/Users/pverscha/Zotero/storage/RQASTD33/Martens and Hermjakob - 2007 - Proteomics data validation why all must provide d.pdf}
 }
 
 @article{merkelDockerLightweightLinux,
@@ -805,6 +908,23 @@
   file = {/Users/pverscha/Zotero/storage/BIB97S6F/Muth et al. - 2018 - MPA Portable A Stand-Alone Software Package for A.pdf;/Users/pverscha/Zotero/storage/7PGYRMSF/acs.analchem.html}
 }
 
+@article{nesvizhskiiInterpretationShotgunProteomic2005,
+  title = {Interpretation of {{Shotgun Proteomic Data}}},
+  author = {Nesvizhskii, Alexey I. and Aebersold, Ruedi},
+  year = {2005},
+  month = oct,
+  journal = {Molecular \& Cellular Proteomics},
+  volume = {4},
+  number = {10},
+  pages = {1419--1440},
+  publisher = {{Elsevier}},
+  issn = {1535-9476, 1535-9484},
+  doi = {10.1074/mcp.R500012-MCP200},
+  abstract = {{$<$}p{$>$}The shotgun proteomic strategy based on digesting proteins into peptides and sequencing them using tandem mass spectrometry and automated database searching has become the method of choice for identifying proteins in most large scale studies. However, the peptide-centric nature of shotgun proteomics complicates the analysis and biological interpretation of the data especially in the case of higher eukaryote organisms. The same peptide sequence can be present in multiple different proteins or protein isoforms. Such shared peptides therefore can lead to ambiguities in determining the identities of sample proteins. In this article we illustrate the difficulties of interpreting shotgun proteomic data and discuss the need for common nomenclature and transparent informatic approaches. We also discuss related issues such as the state of protein sequence databases and their role in shotgun proteomic analysis, interpretation of relative peptide quantification data in the presence of multiple protein isoforms, the integration of proteomic and transcriptional data, and the development of a computational infrastructure for the integration of multiple diverse datasets.{$<$}/p{$>$}},
+  langid = {english},
+  file = {/Users/pverscha/Zotero/storage/T7EDCDBK/Nesvizhskii and Aebersold - 2005 - Interpretation of Shotgun Proteomic Data.pdf}
+}
+
 @article{nesvizhskiiProteogenomicsConceptsApplications2014,
   title = {Proteogenomics: Concepts, Applications and Computational Strategies},
   shorttitle = {Proteogenomics},
@@ -879,6 +999,22 @@
   file = {/Users/pverscha/Zotero/storage/6NTBVY2D/Palomba et al. - 2021 - Time-restricted feeding induces Lactobacillus- and.pdf}
 }
 
+@article{perez-riverolPRIDEDatabaseRelated2019,
+  title = {The {{PRIDE}} Database and Related Tools and Resources in 2019: Improving Support for Quantification Data},
+  shorttitle = {The {{PRIDE}} Database and Related Tools and Resources in 2019},
+  author = {{Perez-Riverol}, Yasset and Csordas, Attila and Bai, Jingwen and {Bernal-Llinares}, Manuel and Hewapathirana, Suresh and Kundu, Deepti J and Inuganti, Avinash and Griss, Johannes and Mayer, Gerhard and Eisenacher, Martin and P{\'e}rez, Enrique and Uszkoreit, Julian and Pfeuffer, Julianus and Sachsenberg, Timo and Y{\i}lmaz, {\c S}ule and Tiwary, Shivani and Cox, J{\"u}rgen and Audain, Enrique and Walzer, Mathias and Jarnuczak, Andrew F and Ternent, Tobias and Brazma, Alvis and Vizca{\'i}no, Juan Antonio},
+  year = {2019},
+  month = jan,
+  journal = {Nucleic Acids Research},
+  volume = {47},
+  number = {D1},
+  pages = {D442-D450},
+  issn = {0305-1048},
+  doi = {10.1093/nar/gky1106},
+  abstract = {The PRoteomics IDEntifications (PRIDE) database (https://www.ebi.ac.uk/pride/) is the world's largest data repository of mass spectrometry-based proteomics data, and is one of the founding members of the global ProteomeXchange (PX) consortium. In this manuscript, we summarize the developments in PRIDE resources and related tools since the previous update manuscript was published in Nucleic Acids Research in 2016. In the last 3~years, public data sharing through PRIDE (as part of PX) has definitely become the norm in the field. In parallel, data re-use of public proteomics data has increased enormously, with multiple applications. We first describe the new architecture of PRIDE Archive, the archival component of PRIDE. PRIDE Archive and the related data submission framework have been further developed to support the increase in submitted data volumes and additional data types. A new scalable and fault tolerant storage backend, Application Programming Interface and web interface have been implemented, as a part of an ongoing process. Additionally, we emphasize the improved support for quantitative proteomics data through the mzTab format. At last, we outline key statistics on the current data contents and volume of downloads, and how PRIDE data are starting to be disseminated to added-value resources including Ensembl, UniProt and Expression Atlas.},
+  file = {/Users/pverscha/Zotero/storage/X9HTMUEC/Perez-Riverol et al. - 2019 - The PRIDE database and related tools and resources.pdf}
+}
+
 @article{pockrandtApproximateStringMatching2019,
   title = {Approximate {{String Matching}}: {{Improving Data Structures}} and {{Algorithms}}},
   shorttitle = {Approximate {{String Matching}}},
@@ -928,23 +1064,7 @@
   issn = {0305-1048},
   doi = {10.1093/nar/gks1219},
   abstract = {SILVA (from Latin silva, forest, http://www.arb-silva.de) is a comprehensive web resource for up to date, quality-controlled databases of aligned ribosomal RNA (rRNA) gene sequences from the Bacteria, Archaea and Eukaryota domains and supplementary online services. The referred database release 111 (July 2012) contains 3 194 778 small subunit and 288 717 large subunit rRNA gene sequences. Since the initial description of the project, substantial new features have been introduced, including advanced quality control procedures, an improved rRNA gene aligner, online tools for probe and primer evaluation and optimized browsing, searching and downloading on the website. Furthermore, the extensively curated SILVA taxonomy and the new non-redundant SILVA datasets provide an ideal reference for high-throughput classification of data from next-generation sequencing approaches.},
-  file = {/Users/pverscha/Zotero/storage/YNXTMTG6/Quast et al. - 2013 - The SILVA ribosomal RNA gene database project imp.pdf;/Users/pverscha/Zotero/storage/EXM7B5G9/1069277.html}
-}
-
-@article{quastSILVARibosomalRNA2013a,
-  title = {The {{SILVA}} Ribosomal {{RNA}} Gene Database Project: Improved Data Processing and Web-Based Tools},
-  shorttitle = {The {{SILVA}} Ribosomal {{RNA}} Gene Database Project},
-  author = {Quast, Christian and Pruesse, Elmar and Yilmaz, Pelin and Gerken, Jan and Schweer, Timmy and Yarza, Pablo and Peplies, J{\"o}rg and Gl{\"o}ckner, Frank Oliver},
-  year = {2013},
-  month = jan,
-  journal = {Nucleic Acids Research},
-  volume = {41},
-  number = {D1},
-  pages = {D590-D596},
-  issn = {0305-1048},
-  doi = {10.1093/nar/gks1219},
-  abstract = {SILVA (from Latin silva, forest, http://www.arb-silva.de) is a comprehensive web resource for up to date, quality-controlled databases of aligned ribosomal RNA (rRNA) gene sequences from the Bacteria, Archaea and Eukaryota domains and supplementary online services. The referred database release 111 (July 2012) contains 3 194 778 small subunit and 288 717 large subunit rRNA gene sequences. Since the initial description of the project, substantial new features have been introduced, including advanced quality control procedures, an improved rRNA gene aligner, online tools for probe and primer evaluation and optimized browsing, searching and downloading on the website. Furthermore, the extensively curated SILVA taxonomy and the new non-redundant SILVA datasets provide an ideal reference for high-throughput classification of data from next-generation sequencing approaches.},
-  file = {/Users/pverscha/Zotero/storage/8R6QA4DW/Quast et al. - 2013 - The SILVA ribosomal RNA gene database project imp.pdf;/Users/pverscha/Zotero/storage/W58PC53B/1069277.html}
+  file = {/Users/pverscha/Zotero/storage/8R6QA4DW/Quast et al. - 2013 - The SILVA ribosomal RNA gene database project imp.pdf;/Users/pverscha/Zotero/storage/YNXTMTG6/Quast et al. - 2013 - The SILVA ribosomal RNA gene database project imp.pdf;/Users/pverscha/Zotero/storage/EXM7B5G9/1069277.html}
 }
 
 @article{rechenbergerChallengesClinicalMetaproteomics2019,
@@ -1085,6 +1205,25 @@
   langid = {english},
   keywords = {Research data},
   file = {/Users/pverscha/Zotero/storage/4EF4Z9JJ/Sansone et al. - 2012 - Toward interoperable bioscience data.pdf}
+}
+
+@article{schapeSimplifiedHumanIntestinal2019,
+  title = {The {{Simplified Human Intestinal Microbiota}} ({{SIHUMIx}}) {{Shows High Structural}} and {{Functional Resistance}} against {{Changing Transit Times}} in {{In Vitro Bioreactors}}},
+  author = {Sch{\"a}pe, Stephanie Serena and Krause, Jannike Lea and Engelmann, Beatrice and {Fritz-Wallace}, Katarina and Schattenberg, Florian and Liu, Zishu and M{\"u}ller, Susann and Jehmlich, Nico and {Rolle-Kampczyk}, Ulrike and Herberth, Gunda and {von Bergen}, Martin},
+  year = {2019},
+  month = dec,
+  journal = {Microorganisms},
+  volume = {7},
+  number = {12},
+  pages = {641},
+  publisher = {{Multidisciplinary Digital Publishing Institute}},
+  issn = {2076-2607},
+  doi = {10.3390/microorganisms7120641},
+  abstract = {Many functions in host\textendash microbiota interactions are potentially influenced by intestinal transit times, but little is known about the effects of altered transition times on the composition and functionality of gut microbiota. To analyze these effects, we cultivated the model community SIHUMIx in bioreactors in order to determine the effects of varying transit times (TT) on the community structure and function. After five days of continuous cultivation, we investigated the influence of different medium TT of 12 h, 24 h, and 48 h. For profiling the microbial community, we applied flow cytometric fingerprinting and revealed changes in the community structure of SIHUMIx during the change of TT, which were not associated with changes in species abundances. For pinpointing metabolic alterations, we applied metaproteomics and metabolomics and found, along with shortening the TT, a slight decrease in glycan biosynthesis, carbohydrate, and amino acid metabolism and, furthermore, a reduction in butyrate, methyl butyrate, isobutyrate, valerate, and isovalerate concentrations. Specifically, B. thetaiotaomicron was identified to be affected in terms of butyrate metabolism. However, communities could recover to the original state afterward. This study shows that SIHUMIx showed high structural stability when TT changed\textemdash even four-fold. Resistance values remained high, which suggests that TTs did not interfere with the structure of the community to a certain degree.},
+  copyright = {http://creativecommons.org/licenses/by/3.0/},
+  langid = {english},
+  keywords = {<i>In vitro</i> model,bioreactor,flow cytometry,intestinal microbiota,metabolomics,metaproteomics,microbial community,short-chain fatty acids,SIHUMIx},
+  file = {/Users/pverscha/Zotero/storage/NETPU52U/Schäpe et al. - 2019 - The Simplified Human Intestinal Microbiota (SIHUMI.pdf}
 }
 
 @article{schiebenhoeferChallengesPromiseInterface2019,
@@ -1251,17 +1390,6 @@
   file = {/Users/pverscha/Zotero/storage/WPZJEUC8/Tanca et al. - 2022 - Metaproteomic Profile of the Colonic Luminal Micro.pdf}
 }
 
-@article{tancaMetaproteomicProfileColonic2022a,
-  title = {Metaproteomic {{Profile}} of the {{Colonic Luminal Microbiota From Patients With Colon Cancer}}},
-  author = {Tanca, Alessandro and Abbondio, Marcello and Fiorito, Giovanni and Pira, Giovanna and Sau, Rosangela and Manca, Alessandra and Muroni, Maria Rosaria and Porcu, Alberto and Scanu, Antonio Mario and {Cossu-Rocca}, Paolo and De Miglio, Maria Rosaria and Uzzau, Sergio},
-  year = {2022},
-  journal = {Frontiers in Microbiology},
-  volume = {13},
-  issn = {1664-302X},
-  abstract = {Recent studies have provided evidence of interactions among the gut microbiota (GM), local host immune cells, and intestinal tissues in colon carcinogenesis. However, little is known regarding the functions exerted by the GM in colon cancer (CC), particularly with respect to tumor clinical classification and lymphocyte infiltration. In addition, stool, usually employed as a proxy of the GM, cannot fully represent the original complexity of CC microenvironment. Here, we present a pilot study aimed at characterizing the metaproteome of CC-associated colonic luminal contents and identifying its possible associations with CC clinicopathological features. Colonic luminal contents were collected from 24 CC tissue specimens immediately after surgery. Samples were analyzed by shotgun metaproteomics. Almost 30,000 microbial peptides were quantified in the samples, enabling the achievement of the taxonomic and functional profile of the tumor-associated colonic luminal metaproteome. Upon sample aggregation based on tumor stage, grade, or tumor-infiltrating lymphocytes (TILs), peptide sets enabling discrimination of sample groups were identified through discriminant analysis (DA). As a result, Bifidobacterium and Bacteroides fragilis were significantly enriched in high-stage and high-grade CC, respectively. Among metabolic functions, formate\textendash tetrahydrofolate ligase was significantly associated with high-stage CC. Finally, based on the results of this pilot study, we assessed the optimal sample size for differential metaproteomic studies analyzing colonic luminal contents. In conclusion, we provide a detailed picture of the microbial and host components of the colonic luminal proteome and propose promising associations between GM taxonomic/functional features and CC clinicopathological features. Future studies will be needed to verify the prognostic value of these data and to fully exploit the potential of metaproteomics in enhancing our knowledge concerning CC progression.},
-  file = {/Users/pverscha/Zotero/storage/JLYCN9EX/Tanca et al. - 2022 - Metaproteomic Profile of the Colonic Luminal Micro.pdf}
-}
-
 @article{thegeneontologyconsortiumGeneOntologyResource2019,
   title = {The {{Gene Ontology Resource}}: 20 Years and Still {{GOing}} Strong},
   shorttitle = {The {{Gene Ontology Resource}}},
@@ -1276,6 +1404,24 @@
   doi = {10.1093/nar/gky1055},
   abstract = {The Gene Ontology resource (GO; http://geneontology.org) provides structured, computable knowledge regarding the functions of genes and gene products. Founded in 1998, GO has become widely adopted in the life sciences, and its contents are under continual improvement, both in quantity and in quality. Here, we report the major developments of the GO resource during the past two years. Each monthly release of the GO resource is now packaged and given a unique identifier (DOI), enabling GO-based analyses on a specific release to be reproduced in the future. The molecular function ontology has been refactored to better represent the overall activities of gene products, with a focus on transcription regulator activities. Quality assurance efforts have been ramped up to address potentially out-of-date or inaccurate annotations. New evidence codes for high-throughput experiments now enable users to filter out annotations obtained from these sources. GO-CAM, a new framework for representing gene function that is more expressive than standard GO annotations, has been released, and users can now explore the growing repository of these models. We also provide the `GO ribbon' widget for visualizing GO annotations to a gene; the widget can be easily embedded in any web page.},
   file = {/Users/pverscha/Zotero/storage/YXBQ4XWQ/The Gene Ontology Consortium - 2019 - The Gene Ontology Resource 20 years and still GOi.pdf}
+}
+
+@article{theIntegratedIdentificationQuantification2019,
+  title = {Integrated {{Identification}} and {{Quantification Error Probabilities}} for {{Shotgun Proteomics}} * [{{S}}]},
+  author = {The, Matthew and K{\"a}ll, Lukas},
+  year = {2019},
+  month = mar,
+  journal = {Molecular \& Cellular Proteomics},
+  volume = {18},
+  number = {3},
+  pages = {561--570},
+  publisher = {{Elsevier}},
+  issn = {1535-9476, 1535-9484},
+  doi = {10.1074/mcp.RA118.001018},
+  abstract = {{$<$}p{$>$}Protein quantification by label-free shotgun proteomics experiments is plagued by a multitude of error sources. Typical pipelines for identifying differential proteins use intermediate filters to control the error rate. However, they often ignore certain error sources and, moreover, regard filtered lists as completely correct in subsequent steps. These two indiscretions can easily lead to a loss of control of the false discovery rate (FDR). We propose a probabilistic graphical model, \emph{Triqler}, that propagates error information through all steps, employing distributions in favor of point estimates, most notably for missing value imputation. The model outputs posterior probabilities for fold changes between treatment groups, highlighting uncertainty rather than hiding it. We analyzed 3 engineered data sets and achieved FDR control and high sensitivity, even for truly absent proteins. In a bladder cancer clinical data set we discovered 35 proteins at 5\% FDR, whereas the original study discovered 1 and MaxQuant/Perseus 4 proteins at this threshold. Compellingly, these 35 proteins showed enrichment for functional annotation terms, whereas the top ranked proteins reported by MaxQuant/Perseus showed no enrichment. The model executes in minutes and is freely available at https://pypi.org/project/triqler/.{$<$}/p{$>$}},
+  langid = {english},
+  pmid = {30482846},
+  file = {/Users/pverscha/Zotero/storage/VPE8GINA/The and Käll - 2019 - Integrated Identification and Quantification Error.pdf}
 }
 
 @article{theuniprotconsortiumUniProtUniversalProtein2021,
@@ -1341,6 +1487,23 @@
   title = {Universal {{Protein Resource}} ({{UniProt}}) | {{Nucleic Acids Research}} | {{Oxford Academic}}},
   howpublished = {https://academic.oup.com/nar/article/36/suppl\_1/D190/2507561},
   file = {/Users/pverscha/Zotero/storage/D2WHKPQA/2507561.html}
+}
+
+@article{uszkoreitPIAIntuitiveProtein2015,
+  title = {{{PIA}}: {{An Intuitive Protein Inference Engine}} with a {{Web-Based User Interface}}},
+  shorttitle = {{{PIA}}},
+  author = {Uszkoreit, Julian and Maerkens, Alexandra and {Perez-Riverol}, Yasset and Meyer, Helmut E. and Marcus, Katrin and Stephan, Christian and Kohlbacher, Oliver and Eisenacher, Martin},
+  year = {2015},
+  month = jul,
+  journal = {Journal of Proteome Research},
+  volume = {14},
+  number = {7},
+  pages = {2988--2997},
+  publisher = {{American Chemical Society}},
+  issn = {1535-3893},
+  doi = {10.1021/acs.jproteome.5b00121},
+  abstract = {Protein inference connects the peptide spectrum matches (PSMs) obtained from database search engines back to proteins, which are typically at the heart of most proteomics studies. Different search engines yield different PSMs and thus different protein lists. Analysis of results from one or multiple search engines is often hampered by different data exchange formats and lack of convenient and intuitive user interfaces. We present PIA, a flexible software suite for combining PSMs from different search engine runs and turning these into consistent results. PIA can be integrated into proteomics data analysis workflows in several ways. A user-friendly graphical user interface can be run either locally or (e.g., for larger core facilities) from a central server. For automated data processing, stand-alone tools are available. PIA implements several established protein inference algorithms and can combine results from different search engines seamlessly. On several benchmark data sets, we show that PIA can identify a larger number of proteins at the same protein FDR when compared to that using inference based on a single search engine. PIA supports the majority of established search engines and data in the mzIdentML standard format. It is implemented in Java and freely available at https://github.com/mpc-bioinformatics/pia.},
+  file = {/Users/pverscha/Zotero/storage/8VMQZW8H/Uszkoreit et al. - 2015 - PIA An Intuitive Protein Inference Engine with a .pdf}
 }
 
 @article{vandenbergeRNASequencingData2019,
@@ -1429,7 +1592,7 @@
   doi = {10.1186/s40168-021-01176-w},
   abstract = {Through connecting genomic and metabolic information, metaproteomics is an essential approach for understanding how microbiomes function in space and time. The international metaproteomics community is delighted to announce the launch of the Metaproteomics Initiative (www.metaproteomics.org), the goal of which is to promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research. The Initiative aims to be the central information hub and open meeting place where newcomers and experts interact to communicate, standardize, and accelerate experimental and bioinformatic methodologies in this field. We invite the entire microbiome community to join and discuss potential synergies at the interfaces with other disciplines, and to collectively promote innovative approaches to gain deeper insights into microbiome functions and dynamics.},
   keywords = {Education,Interactions,Metaproteomics,Microbiome,Multi-omics,Networking},
-  file = {/Users/pverscha/Zotero/storage/QZWLZCX2/s40168-021-01176-w.html}
+  file = {/Users/pverscha/Zotero/storage/5DPKDBCF/Van Den Bossche et al. - 2021 - The Metaproteomics Initiative a coordinated appro.pdf;/Users/pverscha/Zotero/storage/QZWLZCX2/s40168-021-01176-w.html}
 }
 
 @article{vanderjeugtUMGAPUnipeptMetaGenomics2022,
