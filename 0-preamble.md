@@ -13,6 +13,8 @@ header-includes:
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{hyperref}
     - \usepackage{fancyhdr}
+    - \usepackage{booktabs}
+    - \usepackage{bbding}
     - \pagestyle{fancy}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
@@ -20,6 +22,7 @@ header-includes:
 ---
 
 \allsectionsfont{\sffamily}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 [//]: # (https://tex.stackexchange.com/a/13395/91462)
 \let\Oldpart\part

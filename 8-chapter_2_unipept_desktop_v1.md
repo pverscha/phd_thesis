@@ -74,7 +74,7 @@ The application accepts simple text files with one peptide per line.
 In order to quantify peptide occurrence, a peptide can be included more than once in this file and the “filter duplicate peptides” option should be disabled for the analysis.
 
 Because projects are folder-based, they can contain both the raw input data as well as the analysis results for an assay, making it practical for users to share projects with each other, for instance, in the form of compressed project folders.
-In addition, previously performed analyses do not need to be recomputed when the application is restarted, as opposed to analyses that were run on the Unipept website, which need to be recomputed every time the web site is closed.
+In addition, previously performed analyses do not need to be recomputed when the application is restarted, as opposed to analyses that were run on the Unipept website, which need to be recomputed every time the website is closed.
 
 #### Comparative analysis
 ![Screenshot of the inter-assay comparative analysis pipeline. Note that it is possible to select multiple assays from the project explorer. A heatmap is constructed from the set of items that were selected for comparison at the top of the page.](resources/figures/chapter2_comparative_analysis_screenshot.png)
@@ -95,7 +95,26 @@ The other two normalization techniques also normalize based on minimum and maxim
 It is worth noting that, while the comparative analysis pipeline was originally designed for the Unipept Desktop Application, a slimmed-down version has meanwhile also been integrated into the Unipept web app.
 
 With the advent of the Unipept Desktop Application, users now have a variety of ways in which they can use Unipept.
-A comparison between the various functionalities offered by these different services is provided in Table 1 below.
+A comparison between the various functionalities offered by these different services is provided in \autoref{tab:comparison_of_unipept_services}.
+
+\begin{table*}\centering
+\ra{1.3}
+\begin{tabular}{@{}p{45mm}cccc@{}}\toprule
+& desktop app & web app & CLI & API\\ \midrule
+visualizations & \Checkmark & \Checkmark & $\sim$ & $\sim$ \\
+basic metaproteomics analysis pipeline & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
+tryptic peptide analysis pipeline & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
+comparative analysis & \Checkmark & $\sim$ & \XSolidBrush & \XSolidBrush \\
+metadata or projects & \Checkmark & \XSolidBrush & \XSolidBrush & \XSolidBrush \\
+custom endpoint & \Checkmark & \XSolidBrush & \Checkmark & \XSolidBrush \\
+store analysis results & \Checkmark & \XSolidBrush & $\sim$ & \XSolidBrush \\
+process large samples & \Checkmark & \XSolidBrush & \Checkmark & \Checkmark \\
+no command line knowledge required & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
+no installation required & \XSolidBrush & \Checkmark & \XSolidBrush & \Checkmark \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of the functionalities provided by the different Unipept services. \label{tab:comparison_of_unipept_services}}
+\end{table*}
 
 ### Conclusion
 Unipept Desktop is a novel desktop application that extends upon the Unipept web application by eradicating the strict limitations posed by the web-based nature of this application to increase metaproteomics data analysis throughput.
