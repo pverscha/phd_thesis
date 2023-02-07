@@ -136,3 +136,8 @@ LM also acknowledges support from the European Union’s Horizon 2020 Programme 
 KS and DB would like to acknowledge the German Federal Ministry of Education and Research (BMBF) of the project “MetaProteomanalyzer Service” within the German Network for Bioinformatics Infrastructure (de.NBI) \[031L103\].
 The authors declare no conflict of interest.
 
+\newpage
+
+### Highlighting taxonomic diversity of metaproteomic samples in metabolic pathways
+
+
