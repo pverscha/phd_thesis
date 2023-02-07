@@ -4,6 +4,8 @@
 During the course of my career as a PhD student, I have also been working on a lot of different research projects for which I was not the main contributor, but for which I, nonetheless, provided a significant addition.
 I have selected two of these projects and included them as sections in this chapter.
 
+\newpage
+
 ### Pout2Prot: An efficient tool to create protein (sub)groups from Percolator output files
 
 **Abstract**
@@ -35,21 +37,21 @@ This algorithm is for example used in the X!TandemPipeline [@langellaTandemPipel
 On the other hand, anti-Occam’s razor is based on the maximal explanatory set of proteins, where any protein that is matched by at least one identified peptide will be included in the reported protein list.
 This algorithm is used in, for example, MetaProteomeAnalyzer (MPA) [@muthMetaProteomeAnalyzerPowerfulOpenSource2015].
 Unfortunately, there is no simple way to determine a priori which algorithm will be optimal, as this can differ from sample to sample [@muthMetaProteomeAnalyzerPowerfulOpenSource2015].
-These strategies are visually represented in Figure 1.
+These strategies are visually represented in \autoref{fig:pout2prot_grouping_example}.
 
-Figure 1. Protein grouping algorithms Occam’s razor (left) and anti-Occam’s razor (right). Groups can be based on shared peptide rule (protein groups) or on shared peptide set rule (protein subgroups). This figure also illustrates how PSMs are assigned to protein (sub)groups and shows the weighted PSM count for subgroups. When a PSM is assigned to multiple subgroups, it will be calculated as one divided by the number of subgroups, which can result in fractional PSM counts.
+![Protein grouping algorithms Occam’s razor (left) and anti-Occam’s razor (right). Groups can be based on shared peptide rule (protein groups) or on shared peptide set rule (protein subgroups). This figure also illustrates how PSMs are assigned to protein (sub)groups and shows the weighted PSM count for subgroups. When a PSM is assigned to multiple subgroups, it will be calculated as one divided by the number of subgroups, which can result in fractional PSM counts.\label{fig:pout2prot_grouping_example}](resources/figures/chapter7_pout2prot_grouping_example.svg)
 
 Moreover, as proteins are grouped based on their identified peptides, carefully defined rules are required on when and how to group these proteins.
 There are two possible approaches here: the first approach consists of grouping all proteins that share one or more identified peptides (i.e., the shared peptide rule), while the second approach consists of only grouping proteins that share the same set (or subset) of identified peptides (i.e., the shared peptide set rule).
-These two approaches can also be interpreted as grouping at two different levels: the protein group level (based on the shared peptide rule) and the protein subgroup level (based on the shared peptide set rule). These two approaches are also visualized in Figure 1.
+These two approaches can also be interpreted as grouping at two different levels: the protein group level (based on the shared peptide rule) and the protein subgroup level (based on the shared peptide set rule). These two approaches are also visualized in \autoref{fig:pout2prot_grouping_example}.
 
 Pout2Prot implements all of these approaches: Occam’s razor and anti-Occam’s razor, and both of these at the protein group and protein subgroup level.
 During conceptualization and testing, we discovered challenges with the naive description of these algorithms.
 First, different protein subgroups can have the same peptide and therefore have the same spectrum assigned to them, leading to distorted spectrum counts.
-Second, when removing proteins using Occam’s razor or when assigning subgroups using anti-Occam’s razor, “undecidable” cases can occur as illustrated in Figure 2.
+Second, when removing proteins using Occam’s razor or when assigning subgroups using anti-Occam’s razor, “undecidable” cases can occur as illustrated in \autoref{fig:pout2prot_undecidable_cases}.
 In these undecidable cases, the naive approach might produce inconsistent results when the algorithm is run multiple times.
 
-Figure 2. Illustration of undecidable cases. Undecidable cases are situations where peptides and proteins are matched in such a way that the naive interpretation of the algorithm cannot make a clear decision. Specifically, this occurs in Occam’s razor when one of two or more proteins can be removed to explain the remaining peptides (Figure 2, left), and this occurs in anti-Occam’s razor when a protein can be put into a subgroup with two or more other proteins that cannot be subgrouped together (Figure 2, right).
+![Illustration of undecidable cases. Undecidable cases are situations where peptides and proteins are matched in such a way that the naive interpretation of the algorithm cannot make a clear decision. Specifically, this occurs in Occam’s razor when one of two or more proteins can be removed to explain the remaining peptides (left), and this occurs in anti-Occam’s razor when a protein can be put into a subgroup with two or more other proteins that cannot be subgrouped together (right).\label{fig:pout2prot_undecidable_cases}](resources/figures/chapter7_pout2prot_example_undecidable_cases.svg)
 
 In this manuscript, we describe a new command line tool and web application that can convert .pout files from different experiments into two files containing protein groups and subgroups either as .tsv for direct use with Prophane or as human readable .csv files.
 Furthermore, we include a file converter that turns Proteome Discoverer output files into the .pout file format.
@@ -77,12 +79,12 @@ Finally, the spectrum count contains the weighted spectrum count from all PSMs p
 ##### Qualitative comparison to other tools
 To develop a protein grouping algorithm and to truly compare different protein grouping tools, the behavior of the algorithm must be validated against a set of well-defined data, where differences between expected and observed behavior (i.e., the composition of the groups) can be clearly distinguished.
 During the development of Pout2Prot, it quickly became clear that multiple algorithms can solve certain test cases, but fail at others.
-This also led to the discovery of the undecidable cases outlined in Figure 2.
+This also led to the discovery of the undecidable cases outlined in \autoref{fig:pout2prot_undecidable_cases}.
 Therefore, we created 14 test cases (Supporting Information, Figures S3–S16) that capture all possible pitfalls of protein grouping algorithms, and solved those cases by using both Occam’s razor and anti-Occam’s razor at the protein group and subgroup level.
 To resolve the issue of undecidability, we propose that no choice should be made at all.
 For undecidable cases for protein removal (Occam’s razor), no protein should be removed, and for undecidable cases of protein subgroups (anti-Occam’s razor), the protein in question should remain in its own subgroup.
 
-Table 1 shows the result of the comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
+\label{fig:pout2prot_tool_comparison} shows the result of the comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
 To run tests with each tool, appropriate input files that reflect the test cases were created manually, and these are all available on the Pout2Prot GitHub repository.
 If a test case did not produce the expected output, it was investigated more closely to ensure this was not the result of differences between, or potential errors in, these input files.
 For undecidable cases, it was verified that the random choice behavior could be observed (i.e., multiple analyses, different results).
@@ -91,7 +93,7 @@ Specifically, if a protein’s peptide set is a strict subset of another protein
 Of all the tests that could be run, one resulted in an error: the algorithm for X!TandemPipeline for Case 13.
 In this case, only one of the six proteins was put into a single group, which leads to a situation where one of the three peptides was not explained by the resulting groups.
 
-Table 1. Comparison of the Outcome of Test Cases for Five Protein Grouping Tools (The 14 test cases were run with the PIA, Fido (Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot. Test cases producing the expected outcome are marked as “successful” (green). Otherwise, these are either categorized as “undecidable” (yellow) if a random choice was made in case of undecidability, “incorrect” (red) if the result cannot be explained logically, and as “different approach” for PIA and Fido, because the anti-Occam protein subgrouping approach used here follows different rules (blue). If a tool does not implement a certain grouping method it is marked as “not implemented” (grey).)
+![Comparison of the outcome of test cases for five protein grouping tools. The 14 test cases were run with the PIA, Fido (Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot. Test cases producing the expected outcome are marked as “successful” (green). Otherwise, these are either categorized as “undecidable” (yellow) if a random choice was made in case of undecidability, “incorrect” (red) if the result cannot be explained logically, and as “different approach” for PIA and Fido, because the anti-Occam protein subgrouping approach used here follows different rules (blue). If a tool does not implement a certain grouping method it is marked as “not implemented” (grey).\label{fig:pout2prot_tool_comparison}](resources/figures/chapter7_pout2prot_tool_comparisons.png)
 
 While we tried to make a fair comparison, it should be noted that PIA also offers and even recommends another option that falls in between Occam’s razor and anti-Occam’s razor.
 This method called SpectrumExtractor uses spectrum level information to determine which proteins should be removed or grouped together.
@@ -104,15 +106,15 @@ This choice is influenced by the fact that a probabilistic approach makes the as
 To evaluate the performance of Pout2Prot, we tested it on a metaproteomics data set, derived from the six selected SIHUMIx [@schapeSimplifiedHumanIntestinal2019] data sets used in the Critical Assessment of Metaproteome Investigation (CAMPI) study [@vandenbosscheCriticalAssessmentMetaProteome2021].
 Here, we used the X!Tandem [@craigTANDEMMatchingProteins2004] files available on PRIDE [@perez-riverolPRIDEDatabaseRelated2019] (PXD023217) to (i) convert these files to Percolator Input (.pin) files with tandem2pin, (ii) process the .pin files with Percolator resulting in Percolator Output (.pout) files, and (iii) convert these .pout files to protein (sub)grouping files with Pout2Prot, once using Occam’s razor, once using anti-Occam’s razor.
 
-Interestingly, the identification rate (the number of identified spectra divided by the total number of spectra measured) at 1% False Discovery Rate (FDR) increases on average by 7% when using Percolator (Figure 3a, blue bars (X!Tandem) vs red bars (Percolator)).
+Interestingly, the identification rate (the number of identified spectra divided by the total number of spectra measured) at 1% False Discovery Rate (FDR) increases on average by 7% when using Percolator (\autoref{fig:pout2prot_identification_rates}a, blue bars (X!Tandem) vs red bars (Percolator)).
 It is important to notice that Pout2Prot takes into account the PSM FDR, not the protein FDR. As expected and described before, the semisupervised machine learning algorithm Percolator is able to increase the number of PSMs due to the better separation of true and false matches [@kallSemisupervisedLearningPeptide2007; @bouwmeesterAgeDataDrivenProteomics2020].
 More interestingly, we examined the effect of Percolator on the number of protein groups and subgroups.
 To establish the number of protein (sub)groups before Percolator analysis, we reanalyzed the publicly available raw files of the selected data sets with MPA, also using X!Tandem with identical search settings.
 Note here that MPA is only able to group proteins according to the anti-Occam’s strategy, so only those numbers were compared in the section below.
 
-Figure 3. (A) Identification rates per sample for X!Tandem and Percolator analyses. Here, the identification rate was defined as the number of identified spectra divided by the total number of spectra measured. (B) Number of protein (sub)groups compared between X!Tandem and Percolator for the anti-Occam’s razor strategy, and number of protein (sub)groups using Percolator for the Occam’s razor strategy. S03, S05, S07, S08, S11_F1–4, and S14_Rep1 refer to the six SIHUMIx samples.
+![(A) Identification rates per sample for X!Tandem and Percolator analyses. Here, the identification rate was defined as the number of identified spectra divided by the total number of spectra measured. (B) Number of protein (sub)groups compared between X!Tandem and Percolator for the anti-Occam’s razor strategy, and number of protein (sub)groups using Percolator for the Occam’s razor strategy. S03, S05, S07, S08, S11_F1–4, and S14_Rep1 refer to the six SIHUMIx samples.\label{fig:pout2prot_identification_rates}](resources/figures/chapter7_pout2prot_identification_rates.jpeg)
 
-In Figure 3b, we observe that after Percolator analysis, the number of protein groups per sample increased by 18.5% on average (blue vs red bars) and the number of protein subgroups per sample increased by 25.3% on average (yellow vs green bars).
+In \autoref{fig:pout2prot_identification_rates}b, we observe that after Percolator analysis, the number of protein groups per sample increased by 18.5% on average (blue vs red bars) and the number of protein subgroups per sample increased by 25.3% on average (yellow vs green bars).
 The total number of groups and subgroups across all samples increased more drastically (by 34.7% and 39.9%, respectively) in comparison to the averages per sample.
 All raw data is available in Supporting Information (Tables S1 and S2).
 

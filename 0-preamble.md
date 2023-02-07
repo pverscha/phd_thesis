@@ -7,19 +7,22 @@ geometry: a5paper, margin=2cm
 header-includes:
     - \usepackage{microtype}
     - \usepackage{fontspec}
-    - \setmainfont{TeX Gyre Pagella}
-    - \setsansfont{TeX Gyre Heros}
+    - \setmainfont{Adobe Caslon Pro}
+    - \setsansfont{Myriad Pro}
     - \usepackage{sectsty}
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{hyperref}
     - \usepackage{fancyhdr}
     - \usepackage{booktabs}
     - \usepackage{bbding}
+    - \usepackage{setspace}
     - \pagestyle{fancy}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
 ---
+
+\onehalfspacing
 
 \allsectionsfont{\sffamily}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
