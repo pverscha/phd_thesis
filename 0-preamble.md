@@ -3,7 +3,8 @@ title: High-Throughput, High-Volume, Expanding Unipept Desktop, ... Comparative 
 author: Pieter Verschaffelt
 bibliography: all_publications.bib
 csl: bioinformatics.csl
-geometry: a5paper, margin=2cm
+documentclass: book
+papersize: a5
 header-includes:
     - \usepackage{microtype}
     - \usepackage{fontspec}
@@ -20,11 +21,16 @@ header-includes:
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
+    - \allsectionsfont{\sffamily}
+    - \usepackage{tocloft}
+    - \renewcommand{\cftpartfont}{\huge\sffamily}
+    - \renewcommand{\cftchapfont}{\Large\sffamily}   
+    - \renewcommand{\cftsecfont}{\large\sffamily}
+    - \renewcommand{\cftsubsecfont}{\normalfont\sffamily}
 ---
 
 \onehalfspacing
 
-\allsectionsfont{\sffamily}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 [//]: # (https://tex.stackexchange.com/a/13395/91462)

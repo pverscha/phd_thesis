@@ -136,9 +136,3 @@ Installation instructions and documentation for the Unipept Desktop Application 
 ### Acknowledgements
 This work was supported by the Research Foundation—Flanders (FWO) \[1164420N to P.V.; 12I5220N to B.M.; 1S90918N to T.V.D.B.; G042518N to L.M.
 \].
-
-\newpage
-
-## Support for novel proteogenomics analysis in Unipept
-\markright{Support for proteogenomics analyses}
-
