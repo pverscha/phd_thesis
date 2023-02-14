@@ -11,5 +11,11 @@ pandoc \
   --number-sections \
   --citeproc \
   --toc \
+  -s \
+  --include-before-body="1-acknowledgements.front.tex" \
+  --include-before-body="2-summary.front.tex" \
+  --include-before-body="3-samenvatting.front.tex" \
+  --include-before-body="4-publications_summary.front.tex" \
+  --include-before-body="5-conferences_summary.front.tex" \
   $MD_FILES \
   -o thesis.pdf

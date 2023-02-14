@@ -22,11 +22,6 @@ header-includes:
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
     - \allsectionsfont{\sffamily}
-    - \usepackage{tocloft}
-    - \renewcommand{\cftpartfont}{\huge\sffamily}
-    - \renewcommand{\cftchapfont}{\Large\sffamily}   
-    - \renewcommand{\cftsecfont}{\large\sffamily}
-    - \renewcommand{\cftsubsecfont}{\normalfont\sffamily}
 ---
 
 \onehalfspacing
