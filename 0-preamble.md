@@ -16,7 +16,6 @@ header-includes:
     - \usepackage{booktabs}
     - \usepackage{bbding}
     - \usepackage{setspace}
-    - \pagestyle{fancy}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
@@ -32,8 +31,5 @@ header-includes:
 \newcommand{\parttitle}{}
 \renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\textsf{Part \thepart.~ \parttitle}}{}}
-\renewcommand{\sectionmark}[1]{\markright{\textsf{\thechapter.~ chapter title}}}
-
-
+\pagestyle{plain}
 

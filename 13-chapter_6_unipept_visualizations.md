@@ -1,5 +1,5 @@
 ## Unipept Visualizations: an interactive visualization library for biological data
-\markright{\textsf{Novel visualizations tailored at biological data}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Novel visualizations tailored at biological data}}}
 
 **Abstract**
 The Unipept Visualizations library is a JavaScript package to generate interactive visualizations of both hierarchical and non-hierarchical quantitative data.

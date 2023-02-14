@@ -1,5 +1,5 @@
 ## Other projects
-\markright{\textsf{Other projects conducted during my PhD}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Other projects conducted during my PhD}}}
 
 During the course of my career as a PhD student, I have also been working on a lot of different research projects for which I was not the main contributor, but for which I, nonetheless, provided a significant addition.
 I have selected two of these projects and included them as sections in this chapter.

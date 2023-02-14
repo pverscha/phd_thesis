@@ -1,5 +1,5 @@
 ## Unipept Desktop 2.0: construction of targeted reference protein databases for proteogenomics analyses
-\markright{\textsf{Proteogenomics analysis in Unipept Desktop}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Proteogenomics analysis in Unipept Desktop}}}
 
 **Abstract**
 Unipept Desktop 2.0 is the most recent iteration of the Unipept Desktop tool that adds support for the analysis of proteogenomics datasets.

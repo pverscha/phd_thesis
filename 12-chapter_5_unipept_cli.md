@@ -1,4 +1,6 @@
 ## Unipept CLI 2.0: adding support for visualisations and functional annotations
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Adding support for functional annotations to the Unipept CLI and API}}}
+
 
 **Abstract**
 Unipept [@mesuereUnipeptTrypticPeptideBased2012] is a collection of tools developed for fast metaproteomics data analysis.

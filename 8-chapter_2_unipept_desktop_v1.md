@@ -1,5 +1,5 @@
 ## Unipept Desktop: a faster, more powerful metaproteomics analysis tool
-\markright{\textsf{High-throughput metaproteomics analysis}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ High-throughput metaproteomics analysis}}}
 
 **Abstract**
 Metaproteomics has become an important research tool to study microbial systems, which has resulted in increased metaproteomics data generation.
@@ -99,7 +99,7 @@ A comparison between the various functionalities offered by these different serv
 
 \begin{table*}\centering
 \ra{1.3}
-\begin{tabular}{@{}p{45mm}cccc@{}}\toprule
+\begin{tabular}{@{}p{40mm}cccc@{}}\toprule
 & desktop app & web app & CLI & API\\ \midrule
 visualizations & \Checkmark & \Checkmark & $\sim$ & $\sim$ \\
 basic metaproteomics analysis pipeline & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
