@@ -26,6 +26,7 @@ header-includes:
     - \captionsetup[figure]{font={small,stretch=1.2}}
 ---
 
+
 \makeatletter
 \renewcommand*\@makechapterhead[1]{%
 %       \vspace*{50\p@}%
