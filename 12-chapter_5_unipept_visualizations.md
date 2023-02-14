@@ -23,7 +23,7 @@ We currently provide four highly interactive data visualizations that are all de
 The sunburst (\autoref{fig:visualizations_overview}a), treeview (\autoref{fig:visualizations_overview}d) and treemap (\autoref{fig:visualizations_overview}b) can be used to visualize quantitative hierarchical data and are designed to depict the parent–child relationship of a hierarchy of nodes as clearly as possible, while still incorporating the strength of the relationship between, or the counts associated with, connected nodes.
 The heatmap (\autoref{fig:visualizations_overview}c), conversely, is not suitable to visualize hierarchical information but displays a magnitude in two dimensions, including optional clustering and dendrogram rendering.
 
-![Overview of the visualizations currently provided by the Unipept Visualizations library. All examples were generated with default configuration settings, except for the heatmap for which the setting ‘dendrogramEnabled’ was set to ‘true’.\label{fig:visualizations_overview}](resources/figures/chapter6_visualizations_overview.png)
+![Overview of the visualizations currently provided by the Unipept Visualizations library. All examples were generated with default configuration settings, except for the heatmap for which the setting ‘dendrogramEnabled’ was set to ‘true’.\label{fig:visualizations_overview}](resources/figures/chapter5_visualizations_overview.png)
 
 #### Quantitative hierarchical data visualizations
 Hierarchical data occurs throughout a variety of bioinformatics disciplines.
