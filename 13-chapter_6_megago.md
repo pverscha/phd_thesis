@@ -1,6 +1,12 @@
 ## MegaGO: a fast yet powerful approach to assess functional Gene Ontology similarity across meta-omics data sets
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ A new similarity metric for GO-terms}}}
 
+\newpage
+
+\color{gray}
+*This chapter contains a verbatim copy of the manuscript by [@verschaffeltMegaGOFastPowerful2021] as submitted to Journal of Proteome Research.*
+\color{black}
+
 **Abstract**
 The study of microbiomes has gained in importance over the past few years and has led to the emergence of the fields of metagenomics, metatranscriptomics, and metaproteomics.
 While initially focused on the study of biodiversity within these communities, the emphasis has increasingly shifted to the study of (changes in) the complete set of functions available in these communities.

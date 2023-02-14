@@ -8,6 +8,11 @@ I have selected two of these projects and included them as sections in this chap
 
 ### Pout2Prot: An efficient tool to create protein (sub)groups from Percolator output files
 
+\color{gray}
+*This section contains a verbatim copy of the manuscript by [@schallertPout2ProtEfficientTool2022] as submitted to Journal of Proteome Research.*
+\color{black}
+
+
 **Abstract**
 In metaproteomics, the study of the collective proteome of microbial communities, the protein inference problem is more challenging than in single-species proteomics.
 Indeed, a peptide sequence can be present not only in multiple proteins or protein isoforms of the same species, but also in homologous proteins from closely related species.

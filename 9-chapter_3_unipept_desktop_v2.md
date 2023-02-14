@@ -4,7 +4,7 @@
 \newpage
 
 \color{gray}
-This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the BioRXiv preprint server.
+*This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the BioRXiv preprint server.*
 \color{black}
 
 **Abstract** ---

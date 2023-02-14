@@ -1,7 +1,13 @@
 ## Unipept Visualizations: an interactive visualization library for biological data
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Novel visualizations tailored at biological data}}}
 
-**Abstract**
+\newpage
+
+\color{gray}
+*This chapter contains a verbatim copy of the application note by [@verschaffeltUnipeptVisualizationsInteractive2022] as submitted to Bioinformatics.*
+\color{black}
+
+**Abstract** --
 The Unipept Visualizations library is a JavaScript package to generate interactive visualizations of both hierarchical and non-hierarchical quantitative data.
 It provides four different visualizations: a sunburst, a treemap, a treeview and a heatmap.
 Every visualization is fully configurable, supports TypeScript and uses the excellent D3.js library.

@@ -30,7 +30,7 @@ header-includes:
 \renewcommand*\@makechapterhead[1]{%
 %       \vspace*{50\p@}%
 {%
-\parindent\z@\raggedright\normalfont
+\singlespacing\parindent\z@\raggedright\normalfont
            \ifnum\c@secnumdepth>\m@ne
                \sffamily\huge\bfseries\@chapapp\space\thechapter\par
                \nobreak\vskip 5\p@
@@ -39,6 +39,7 @@ header-includes:
 \sffamily\Huge\bfseries
 #1\par
 \nobreak\vskip 20\p@
+\onehalfspacing
 }
 }
 \makeatother
@@ -53,4 +54,6 @@ header-includes:
 \renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
 
 \pagestyle{plain}
+
+\raggedbottom
 

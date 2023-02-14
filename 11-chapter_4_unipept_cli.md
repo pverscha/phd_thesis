@@ -1,8 +1,13 @@
 ## Unipept CLI 2.0: adding support for visualisations and functional annotations
-\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Adding support for functional annotations to the Unipept CLI and API}}}
+\renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Functional annotations in the Unipept CLI and API}}}
 
+\newpage
 
-**Abstract**
+\color{gray}
+*This chapter contains a verbatim copy of the technical note by [@verschaffeltUnipeptCLIAdding2020] as submitted to Bioinformatics.*
+\color{black}
+
+**Abstract** ---
 Unipept [@mesuereUnipeptTrypticPeptideBased2012] is a collection of tools developed for fast metaproteomics data analysis.
 The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service [@mesuereUnipeptWebServices2016] and a command-line interface (CLI) [@mesuereHighthroughputMetaproteomicsData2018].
 The key strengths of Unipept are its speed, its ease-of-use and the extensive use of interactive data visualization in the analysis results.
