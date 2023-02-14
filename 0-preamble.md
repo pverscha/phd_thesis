@@ -26,6 +26,23 @@ header-includes:
     - \captionsetup[figure]{font={small,stretch=1.2}}
 ---
 
+\makeatletter
+\renewcommand*\@makechapterhead[1]{%
+%       \vspace*{50\p@}%
+{%
+\parindent\z@\raggedright\normalfont
+           \ifnum\c@secnumdepth>\m@ne
+               \sffamily\huge\bfseries\@chapapp\space\thechapter\par
+               \nobreak\vskip 5\p@
+           \fi
+           \interlinepenalty\@M
+\sffamily\Huge\bfseries
+#1\par
+\nobreak\vskip 20\p@
+}
+}
+\makeatother
+
 \onehalfspacing
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
