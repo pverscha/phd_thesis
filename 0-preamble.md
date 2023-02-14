@@ -20,6 +20,8 @@ header-includes:
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
     - \allsectionsfont{\sffamily}
+    - \captionsetup[table]{font={small,stretch=1.2}}
+    - \captionsetup[figure]{font={small,stretch=1.2}}
 ---
 
 \onehalfspacing
