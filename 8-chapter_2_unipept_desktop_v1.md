@@ -1,7 +1,21 @@
 ## Unipept Desktop: a faster, more powerful metaproteomics analysis tool
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ High-throughput metaproteomics analysis}}}
 
-**Abstract**
+\newpage
+
+One of the major tools that I developed as part of my PhD, is the Unipept Desktop application.
+Version 1.0 of the Unipept Desktop application was first released on January 14, 2021 and improves upon the Unipept Web application in a number of different ways.
+Since a desktop application has access to all compute resources available on a user's machine, it enables analysing much larger metaproteomics datasets and drastically improves organisation of samples and metadata.
+I started working on the Unipept Desktop application in August 2019 and I am still the lead developer up to this day.
+Therefore, I am the main author of this manuscript as well as the desktop tool itself.
+
+\newpage
+
+\color{gray}
+This chapter contains a verbatim copy of the application note by [@verschaffeltUnipeptDesktopFaster2021] as published in Journal of Proteome Research.
+\color{black}
+
+**Abstract** --- 
 Metaproteomics has become an important research tool to study microbial systems, which has resulted in increased metaproteomics data generation.
 However, efficient tools for processing the acquired data have lagged behind.
 One widely used tool for metaproteomics data interpretation is Unipept, a web-based tool that provides, amongst others, interactive and insightful visualizations.

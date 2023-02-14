@@ -1,5 +1,6 @@
 ---
-title: High-Throughput, High-Volume, Expanding Unipept Desktop, ... Comparative Analysis of High-Throughput Metaproteomics Data in Unipept 
+title: "Building the Unipept Ecosystem"
+subtitle: "Empowering high-throughput metaproteomics data analysis for characterizing complex microbial communities"
 author: Pieter Verschaffelt
 bibliography: all_publications.bib
 csl: bioinformatics.csl
@@ -16,6 +17,7 @@ header-includes:
     - \usepackage{booktabs}
     - \usepackage{bbding}
     - \usepackage{setspace}
+    - \usepackage{xcolor}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}
