@@ -5,11 +5,10 @@ bibliography: all_publications.bib
 csl: bioinformatics.csl
 documentclass: book
 papersize: a5
+mainfont: Adobe Caslon Pro
+sansfont: Myriad Pro
 header-includes:
     - \usepackage{microtype}
-    - \usepackage{fontspec}
-    - \setmainfont{Adobe Caslon Pro}
-    - \setsansfont{Myriad Pro}
     - \usepackage{sectsty}
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{hyperref}
