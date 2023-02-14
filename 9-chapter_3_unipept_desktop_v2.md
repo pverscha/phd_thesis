@@ -1,7 +1,13 @@
 ## Unipept Desktop 2.0: construction of targeted reference protein databases for proteogenomics analyses
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Proteogenomics analysis in Unipept Desktop}}}
 
-**Abstract**
+\newpage
+
+\color{gray}
+This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the BioRXiv preprint server.
+\color{black}
+
+**Abstract** ---
 Unipept Desktop 2.0 is the most recent iteration of the Unipept Desktop tool that adds support for the analysis of proteogenomics datasets.
 Unipept Desktop now supports the automatic construction of targeted protein reference databases that only contain proteins associated with a predetermined list of taxa.
 This improves both the taxonomic and functional resolution of a metaproteomic analysis and yields several technical advantages.
@@ -36,7 +42,7 @@ Each peptide that is presented to Unipept will be matched with all proteins in w
 All of these proteins are associated with a specific organism and such a peptide-based analysis thus results in a set of organisms from which this peptide could potentially originate.
 In order to increase insight of researchers into the taxonomic composition of a sample, Unipept summarizes all of this information and calculates the lowest common ancestor (LCA) of this set of organisms (i.e., NCBI taxa) for each peptide.
 If all of the matched organisms are evolutionarily close to each other, this works very well and the LCA of our matches will be of value.
-If, however, one or more of the matched organisms is very different from the others, the LCA will typically end up at the root or another very general taxon within the NCBI taxonomy (\autoref{fig:lca_overview}a).
+If, however, one or more of the matched organisms is very different from the others, the LCA will typically end up at the root or another very general taxon within the NCBI taxonomy (\autoref{fig:lca_unfiltered}).
 
 Proteogenomics tries to overcome this problem by combining information from prior metagenomics experiments from the same environment with metaproteomics experiments.
 The metagenomics experiment is used to explore the taxonomic composition of an ecosystem, which subsequently guides the researcher to query only a subset of the reference database.
@@ -50,9 +56,11 @@ Since users do not have control over the database that is being used, they canno
 
 To solve this problem, we introduce version 2.0 of the Unipept Desktop application, which marks the beginning of a new era for the analysis of proteogenomics datasets.
 Unipept Desktop now provides support for the automatic construction of targeted protein reference databases on the user’s local machine.
-Such targeted databases are based on a filtered version of UniProtKB and only contain UniProtKB records that are associated with the taxa provided by the user (\autoref{fig:lca_overview}b).
+Such targeted databases are based on a filtered version of UniProtKB and only contain UniProtKB records that are associated with the taxa provided by the user (\autoref{fig:lca_filtered}).
 
-![Two examples of how the lowest common ancestor (LCA) for a set of identified taxa is computed in Unipept Desktop. In both cases, a single input peptide is matched against proteins in a reference database. The taxa associated with all matched proteins are then summarized as the LCA, which is the most specific node in the taxonomy tree that is a parent of all matched taxa. An unfiltered protein reference database is used in the matching process. Since more proteins from a more diverse range of species are matched, the LCA ends up at the root of the taxonomy tree, providing little to no information. b) The reference database is restricted to viral proteins only and a much more specific LCA will be found (mapping onto the Coronaviridae family). These examples illustrate the importance of targeted protein reference databases when analyzing metaproteomics samples.\label{fig:lca_overview}](resources/figures/chapter3_lca_overview.svg)
+![An example of how the lowest common ancestor (LCA) for a set of identified taxa is computed in Unipept Desktop, using an unfiltered protein reference database. A single input peptide is matched against proteins in a reference database. The taxa associated with all matched proteins are then summarized as the LCA, which is the most specific node in the taxonomy tree that is a parent of all matched taxa. An unfiltered protein reference database is used in the matching process. Since more proteins from a more diverse range of species are matched, the LCA ends up at the root of the taxonomy tree, providing little to no information. b) The reference database is restricted to viral proteins only and a much more specific LCA will be found (mapping onto the Coronaviridae family). \label{fig:lca_unfiltered}](resources/figures/chapter3_lca_unfiltered.svg)
+
+![An example of how the lowest common ancestor (LCA) for a set of identified taxa is computed in Unipept Desktop, using a filtered protein reference database. The reference database is restricted to viral proteins only and a much more specific LCA will be found (mapping onto the Coronaviridae family). This example illustrate the importance of targeted protein reference databases when analyzing metaproteomics samples.\label{fig:lca_filtered}](resources/figures/chapter3_lca_filtered.svg)
 
 In this article, we discuss how these targeted protein reference databases are constructed by the Unipept Desktop application and how they can be queried efficiently on a user’s machine.
 We also present a case study, based on a human gut metaproteome dataset obtained from 28 celiac patients, in which we investigate to what extent the accuracy of the analysis results improves by only taking into account a subset of the UniProtKB reference database.
@@ -168,7 +176,7 @@ It is important to note that there is a trade-off to be made between matches on 
 The more restrictive the input filter (assuming it is a good representation of the taxa in the environment under study), the fewer peptides will generally be matched, but the more likely it is that more detailed taxon matches will be found.
 This is easily explained.
 The more proteins there are in a reference database, the greater the chance that a purely random peptide match will occur by chance.
-These random matches are typically with proteins from organisms unrelated to the environment of interest, so the lowest common ancestor calculation ends up at a very high level in the NCBI taxonomy (\autoref{fig:lca_overview}).
+These random matches are typically with proteins from organisms unrelated to the environment of interest, so the lowest common ancestor calculation ends up at a very high level in the NCBI taxonomy (\autoref{fig:lca_unfiltered} and \autoref{fig:lca_filtered}).
 
 Going down a few ranks in the NCBI taxonomy and counting the number of matches at the species level, we find 13 659 taxa (24.4%) when using the unfiltered database and 14 192 (25.3%), 14 593 (26.0%) and 13 960 matches (24.9%) for the “families”, “genera” and “species” based databases, respectively.
 At this level, all three of the targeted reference databases outperform the unfiltered database while containing significantly fewer proteins.
