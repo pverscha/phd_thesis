@@ -8,6 +8,7 @@ documentclass: book
 papersize: a5
 mainfont: Adobe Caslon Pro
 sansfont: Myriad Pro
+classoption: x11names
 header-includes:
     - \usepackage{microtype}
     - \usepackage{sectsty}
@@ -15,9 +16,8 @@ header-includes:
     - \usepackage{hyperref}
     - \usepackage{fancyhdr}
     - \usepackage{booktabs}
-    - \usepackage{bbding}
+    - \usepackage{fontawesome}
     - \usepackage{setspace}
-    - \usepackage{xcolor}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}

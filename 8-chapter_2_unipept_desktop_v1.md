@@ -115,16 +115,16 @@ A comparison between the various functionalities offered by these different serv
 \ra{1.3}
 \begin{tabular}{@{}p{40mm}cccc@{}}\toprule
 & desktop app & web app & CLI & API\\ \midrule
-visualizations & \Checkmark & \Checkmark & $\sim$ & $\sim$ \\
-basic metaproteomics analysis pipeline & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
-tryptic peptide analysis pipeline & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
-comparative analysis & \Checkmark & $\sim$ & \XSolidBrush & \XSolidBrush \\
-metadata or projects & \Checkmark & \XSolidBrush & \XSolidBrush & \XSolidBrush \\
-custom endpoint & \Checkmark & \XSolidBrush & \Checkmark & \XSolidBrush \\
-store analysis results & \Checkmark & \XSolidBrush & $\sim$ & \XSolidBrush \\
-process large samples & \Checkmark & \XSolidBrush & \Checkmark & \Checkmark \\
-no command line knowledge required & \Checkmark & \Checkmark & \XSolidBrush & \XSolidBrush \\
-no installation required & \XSolidBrush & \Checkmark & \XSolidBrush & \Checkmark \\
+visualizations & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \faMinus & \faMinus \\
+basic metaproteomics analysis pipeline & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
+tryptic peptide analysis pipeline & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
+comparative analysis & \textcolor{Green3}{\faCheck} & \faMinus & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
+metadata or projects & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
+custom endpoint & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} \\
+store analysis results & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \faMinus & \textcolor{Red3}{\faClose} \\
+process large samples & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} \\
+no command line knowledge required & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
+no installation required & \textcolor{Red3}{\faClose} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Green3}{\faCheck} \\
 \bottomrule
 \end{tabular}
 \caption{Comparison of the functionalities provided by the different Unipept services. \label{tab:comparison_of_unipept_services}}
