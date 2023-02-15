@@ -9,7 +9,7 @@ papersize: a5
 geometry: margin=3cm
 mainfont: Adobe Caslon Pro
 sansfont: Myriad Pro
-classoption: x11names
+classoption: x11names, table
 header-includes:
     - \usepackage{microtype}
     - \usepackage{sectsty}

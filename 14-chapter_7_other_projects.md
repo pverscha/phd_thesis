@@ -89,7 +89,7 @@ Therefore, we created 14 test cases (Supporting Information, Figures S3–S16) t
 To resolve the issue of undecidability, we propose that no choice should be made at all.
 For undecidable cases for protein removal (Occam’s razor), no protein should be removed, and for undecidable cases of protein subgroups (anti-Occam’s razor), the protein in question should remain in its own subgroup.
 
-\label{fig:pout2prot_tool_comparison} shows the result of the comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
+\label{tab:pout2prot_tool_comparison} shows the result of the comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
 To run tests with each tool, appropriate input files that reflect the test cases were created manually, and these are all available on the Pout2Prot GitHub repository.
 If a test case did not produce the expected output, it was investigated more closely to ensure this was not the result of differences between, or potential errors in, these input files.
 For undecidable cases, it was verified that the random choice behavior could be observed (i.e., multiple analyses, different results).
@@ -98,7 +98,25 @@ Specifically, if a protein’s peptide set is a strict subset of another protein
 Of all the tests that could be run, one resulted in an error: the algorithm for X!TandemPipeline for Case 13.
 In this case, only one of the six proteins was put into a single group, which leads to a situation where one of the three peptides was not explained by the resulting groups.
 
-![Comparison of the outcome of test cases for five protein grouping tools. The 14 test cases were run with the PIA, Fido (Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot. Test cases producing the expected outcome are marked as “successful” (green). Otherwise, these are either categorized as “undecidable” (yellow) if a random choice was made in case of undecidability, “incorrect” (red) if the result cannot be explained logically, and as “different approach” for PIA and Fido, because the anti-Occam protein subgrouping approach used here follows different rules (blue). If a tool does not implement a certain grouping method it is marked as “not implemented” (grey).\label{fig:pout2prot_tool_comparison}](resources/figures/chapter7_pout2prot_tool_comparisons.png)
+\begin{table*}
+\scriptsize
+\centering
+\begin{tabular}{p{0.13\textwidth}p{0.14\textwidth}p{0.18\textwidth}p{0.15\textwidth}p{0.16\textwidth}}\toprule
+Tool & Occam grouping & Occam subgrouping & Anti-Occam grouping & Anti-Occam subgrouping\\ \midrule
+PIA & \cellcolor{lightgray} & \cellcolor{PaleGreen1} case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14 successful & \cellcolor{lightgray} & \cellcolor{PaleGreen1} case 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14 successful \\
+& \cellcolor{lightgray} & \cellcolor{LemonChiffon1} case 12 undecidable & \cellcolor{lightgray} & \cellcolor{PaleTurquoise1} case 3, 10 different approach \\ \midrule
+FIDO (Percolator) & \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{PaleGreen1} case 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14 successful \\
+& \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{PaleTurquoise1} case 3, 10 different approach \\ \midrule
+MPA & \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{PaleGreen1} all successful & \cellcolor{LemonChiffon1} case 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 successful \\
+& \cellcolor{lightgray} & \cellcolor{lightgray} & \cellcolor{PaleGreen1} & \cellcolor{LemonChiffon1} case 8, 13, 14 undecidable \\ \midrule
+X!TandemPipeline & \cellcolor{PaleGreen1} case 1, 2, 3, 4, 5, 6, 8, 10, 11, 14 successful & \cellcolor{PaleGreen1} case 1, 2, 3, 4, 5, 6, 8, 10, 11, 14 successful & \cellcolor{lightgray} & \cellcolor{lightgray} \\
+& \cellcolor{LemonChiffon1} case 7, 9, 12 undecidable & \cellcolor{LemonChiffon1} case 7, 9, 12 undecidable & \cellcolor{lightgray} & \cellcolor{lightgray} \\
+& \cellcolor{LightSalmon1} case 13 incorrect & \cellcolor{LightSalmon1} case 13 incorrect & \cellcolor{lightgray} & \cellcolor{lightgray} \\ \midrule
+Pout2Prot & \cellcolor{PaleGreen1} all successful & \cellcolor{PaleGreen1} all successful & \cellcolor{PaleGreen1} all successful & \cellcolor{PaleGreen1} all successful \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of the outcome of test cases for five protein grouping tools. The 14 test cases were run with the PIA, Fido (Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot. Test cases producing the expected outcome are marked as “successful” (green). Otherwise, these are either categorized as “undecidable” (yellow) if a random choice was made in case of undecidability, “incorrect” (red) if the result cannot be explained logically, and as “different approach” for PIA and Fido, because the anti-Occam protein subgrouping approach used here follows different rules (blue). If a tool does not implement a certain grouping method it is marked as “not implemented” (grey). \label{tab:pout2prot_tool_comparison}}
+\end{table*}
 
 While we tried to make a fair comparison, it should be noted that PIA also offers and even recommends another option that falls in between Occam’s razor and anti-Occam’s razor.
 This method called SpectrumExtractor uses spectrum level information to determine which proteins should be removed or grouped together.
@@ -116,8 +134,6 @@ It is important to notice that Pout2Prot takes into account the PSM FDR, not the
 More interestingly, we examined the effect of Percolator on the number of protein groups and subgroups.
 To establish the number of protein (sub)groups before Percolator analysis, we reanalyzed the publicly available raw files of the selected data sets with MPA, also using X!Tandem with identical search settings.
 Note here that MPA is only able to group proteins according to the anti-Occam’s strategy, so only those numbers were compared in the section below.
-
-
 
 ![(A) Identification rates per sample for X!Tandem and Percolator analyses. Here, the identification rate was defined as the number of identified spectra divided by the total number of spectra measured. (B) Number of protein (sub)groups compared between X!Tandem and Percolator for the anti-Occam’s razor strategy, and number of protein (sub)groups using Percolator for the Occam’s razor strategy. S03, S05, S07, S08, S11_F1–4, and S14_Rep1 refer to the six SIHUMIx samples.\label{fig:pout2prot_identification_rates}](resources/figures/chapter7_pout2prot_identification_rates.jpeg)
 
