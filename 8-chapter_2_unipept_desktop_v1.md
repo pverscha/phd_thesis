@@ -2,11 +2,12 @@
 
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ High-throughput metaproteomics analysis}}}
 
-One of the major tools that I developed as part of my PhD, is the Unipept Desktop application.
-Version 1.0 of the Unipept Desktop application was first released on January 14, 2021 and improves upon the Unipept Web application in a number of different ways.
-Since a desktop application has access to all compute resources available on a user's machine, it enables analysing much larger metaproteomics datasets and drastically improves organisation of samples and metadata.
-I started working on the Unipept Desktop application in August 2019 and I am still the lead developer up to this day.
-Therefore, I am the main author of this manuscript as well as the desktop tool itself.
+*I first started working on the Unipept Desktop application in August of 2019 (I started my PhD around the same time).
+Version 1.0 of the Unipept Desktop application was released on January 14, 2021.
+It improves upon the web application in a number of different ways.
+Everything that has been improved, or that has changed, between the Unipept Web application and the Unipept Desktop application, is discussed in this chapter.*
+
+*I have been the lead developer of this desktop application since the start and once version 1.0 was ready for release, I started working on an application note for the Journal of Proteome Research. This application note is included in this chapter.*
 
 \newpage
 
