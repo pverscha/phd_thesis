@@ -1,6 +1,14 @@
 ## Unipept Desktop 2.0: construction of targeted reference protein databases for proteogenomics analyses {#chapter:unipept_desktop_v2}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Proteogenomics analysis in Unipept Desktop}}}
 
+*On February 10, 2023, version 2.0 of the Unipept Desktop application was released.
+A lot of work has gone into the development of this new version, since it first introduced the concept of targeted protein reference databases.
+These targeted databases contain only those proteins that are associated with a list of organisms (provided by the user).
+This not only increases the taxonomic and functional resolution of a metaproteomics analysis (by decreasing the chance of random protein matches), but also provides basic support for proteogenomics analysis.*
+
+*I have taken the lead in the creation of the manuscript that I included in this chapter.
+The case study that's presented here could not have been written without the fantastic help of Dr. Alessandro Tanca.*
+
 \newpage
 
 \color{gray}
