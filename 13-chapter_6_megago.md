@@ -15,6 +15,8 @@ I was furthermore the main responsible of the web application and a big portion 
 *This chapter contains a verbatim copy of the manuscript by [@verschaffeltMegaGOFastPowerful2021] as submitted to Journal of Proteome Research.*
 \color{black}
 
+![Screenshot of the MegaGO Web application. This application is accessible at [https://megago.ugent.be](https://megago.ugent.be). \label{fig:megago_screenshot}](resources/figures/chapter6_megago_application_screenshot.png)
+
 **Abstract** ---
 The study of microbiomes has gained in importance over the past few years and has led to the emergence of the fields of metagenomics, metatranscriptomics, and metaproteomics.
 While initially focused on the study of biodiversity within these communities, the emphasis has increasingly shifted to the study of (changes in) the complete set of functions available in these communities.

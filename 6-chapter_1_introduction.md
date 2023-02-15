@@ -82,5 +82,12 @@ The **genome** of an organism can be defined as the collection of all genes that
 Secondly, the **transcriptome** of an organism is simply the set of all RNA transcripts in an organism.
 Lastly, the **proteome** of an organism is the collection of all proteins that can be expressed by an organism.
 
-In this thesis, we mainly consider the terms **meta**genome, **meta**transcriptome and **meta**proteome.
+In this thesis, we mainly discuss the terms **meta**genome, **meta**transcriptome and **meta**proteome.
 Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a collection of different organisms (typically of the same biological environment).
+
+#### Analysing the metaproteome
+
+##### Taxonomic analysis
+
+##### Functional analysis
+

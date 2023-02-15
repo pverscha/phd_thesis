@@ -79,7 +79,7 @@ These changes will allow us to match arbitrary peptides and peptides with missed
 
 ##### Implement a bi-directional FM-index
 A second step consists of updating the FM-index data structure that was used during the previous step such that supports matching patterns in two directions (backwards *and* forwards).
-This so-called bi-directional FM-index is extensively described in [@lamHighThroughputShort] and is required for efficiently approximate pattern matching using search schemes.
+This so-called bi-directional FM-index is extensively described in [@lamHighThroughputShort] and is required for efficiently performing approximate pattern matching using search schemes.
 We can improve and expand the existing, open-source Rust FM-index implementation from the previous step such that it allows searching in two directions.
 By contributing to this open-source project we do not need to start from scratch, and we can share our improvements with other researchers around the globe.
 
