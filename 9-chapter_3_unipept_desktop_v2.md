@@ -1,4 +1,4 @@
-## Unipept Desktop 2.0: construction of targeted reference protein databases for proteogenomics analyses
+## Unipept Desktop 2.0: construction of targeted reference protein databases for proteogenomics analyses {#chapter:unipept_desktop_v2}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Proteogenomics analysis in Unipept Desktop}}}
 
 \newpage
