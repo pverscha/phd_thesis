@@ -18,7 +18,7 @@ These instructions can be compared with a recipe book that describes and instruc
 All recipes are collected in this book, and every cell has an exact copy of this recipe collection.
 Whenever a client in the restaurants requests a dish, the request is sent to the kitchen where the cook selects the appropriate recipe from the recipe book and starts making the dish.
 
-This is a simple analogy to explain how DNA and RNA are used in the cells of an organism to create new proteins.
+This is a simple analogy to explain how DNA and RNA are used in the cells of an organism to create new proteins (\autoref{fig:recipe_book_analogy}).
 Our book of recipes stands for the DNA that is present in every cell.
 RNA, subsequently, can be regarded as a copy of a single recipe in the book, while the final dish itself corresponds to a single protein.
 
@@ -27,11 +27,11 @@ The first step in making a dish is to choose a recipe from the book.
 This process is called **transcription**.
 In transcription, a section of DNA is copied into an RNA-sequence (more specifically messenger-RNA, or mRNA), which serves as a template for building proteins.
 
-Next, all of the necessary ingredients for the dish are gathered.
+Next, all the necessary ingredients for the dish are gathered.
 These can be thought of as the raw materials that are needed to build a protein.
 For proteins specifically, these raw materials are amino acids, which are brought to the site of protein synthesis by a molecule called transfer-RNA (or tRNA).
 
-Once all of the ingredients have been delivered to the construction site, the cell follows the instructions in the encoded recipe (or thus the instructions encoded by a strand of messenger-RNA, or mRNA).
+Once all the ingredients have been delivered to the construction site, the cell follows the instructions in the encoded recipe (or thus the instructions encoded by a strand of messenger-RNA, or mRNA).
 This process is called **translation**.
 In translation, this mRNA template is read by a ribosome, which assembles amino acids in the correct order to form a protein.
 
@@ -39,8 +39,10 @@ The concept explained above, is called the **central dogma of biology**.
 It is one of the most fundamental principles of the molecular biology and was depicted by Francis Crick in 1958 and which was reformulated in a manuscript published in Nature in 1970 [@crickCentralDogmaMolecular1970].
 The central dogma explains how proteins in organisms are constructed and is very important to grasp in order to understand a lot of the basic principles of biology.
 
+![The central dogma in biology can easily be explained with the recipe book analogy. The DNA corresponds to a recipe book that contains the recipe for every dish that can be made. A copy of a single recipe corresponds to the concept of RNA and a protein corresponds to a single protein that's been completely assembled. \label{fig:recipe_book_analogy}](resources/figures/chapter1_recipe_book.svg)
+
 ##### DNA
-DNA stands for DeoxyriboNucleic Acid and, as explained above, contains the instructions on how all proteins in an organism can be constructed.
+DNA stands for **D**eoxyribo**N**ucleic **A**cid and, as explained above, contains the instructions on how all proteins in an organism can be constructed.
 The complete DNA of an organism is present in every cell of this organism and is organised in chemical structures that we call **chromosomes**.
 These so-called chromosomes always appear in pairs (humans, for example, have 23 pairs of chromosomes).
 
@@ -48,7 +50,37 @@ A gene is a well-defined piece of the DNA that corresponds to the instructions r
 
 The DNA is made up of a sequence of nucleotides (simple molecules that can be chained together) that are represented by the four letters A, C, G and T.
 
+![Relation between a cell, chromosomes, genes and DNA. All chromosomes are collected in the cell nucleus. A chromosome is a structure that consists of DNA and the DNA consists of well-defined pieces that we refer to as genes. \label{fig:cell_chromosome_gene}](resources/figures/chapter1_cell_chromosome_gene.svg)
+
 ##### RNA
-RNA stands for RiboNucleic Acid and 
+RNA stands for **R**ibo**N**ucleic **A**cid and is chemically very similar to DNA.
+Instead of the 4 nucleotides A, C, G and T, RNA is composed of A, C, G and U.
+Unlike DNA, the RNA is found in nature as a single strand folded onto itself, rather than a paired double strand.
 
+There exist different types of RNA that are each responsible for an important process in the creation of proteins.
+Cellular organisms (such as humans), use messenger RNA (mRNA) to convey genetic information to direct the synthesis of specific proteins.
+Secondly, transfer RNA (tRNA) is used for bringing amino acids to the site where protein synthesis takes place.
+Lastly, ribosomal RNA (rRNA) chains together amino acids to form finished proteins.
 
+##### Proteins
+Proteins are large, complex molecules composed of long chains of amino acids.
+The specific ordering of amino acids defines the function of the protein.
+
+Proteins can have a variety of different functions in an organism.
+They can act as enzymes (that help to catalize chemical reactions), to support the immune system, transporters, hormones, signaling molecules, etc.
+
+In short, proteins are a critical component of living organisms and play many important roles in maintaining health and supporting life processes.
+A protein will be constructed from an mRNA strand by the **ribosomes**.
+These are large molecules that link amino acids together to form proteins in a process called protein synthesis.
+See \autoref{fig:dna_transcription_translation} for a schematic overview of the protein synthesis process.
+
+![Schematic depiction of how information recorded in a gene is converted (or synthesized) into a protein. The DNA in a gene is first converted to mRNA (transcription). The mRNA will then be read in groups of 3 nucleotides at a time and matched with amino acids. The final sequence of amino acids constructed this way corresponds with a protein. \label{fig:dna_transcription_translation}](resources/figures/chapter1_dna_transcription_translation.svg)
+
+#### (Meta)genome, (meta)transcriptome and (meta)proteome
+
+The **genome** of an organism can be defined as the collection of all genes that are part of the DNA of this organism.
+Secondly, the **transcriptome** of an organism is simply the set of all RNA transcripts in an organism.
+Lastly, the **proteome** of an organism is the collection of all proteins that can be expressed by an organism.
+
+In this thesis, we mainly consider the terms **meta**genome, **meta**transcriptome and **meta**proteome.
+Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a collection of different organisms (typically of the same biological environment).
