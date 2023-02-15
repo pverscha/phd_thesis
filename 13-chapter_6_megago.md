@@ -1,4 +1,4 @@
-## MegaGO: a fast yet powerful approach to assess functional Gene Ontology similarity across meta-omics data sets
+## MegaGO: a fast yet powerful approach to assess functional Gene Ontology similarity across meta-omics data sets {#chapter:megago}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ A new similarity metric for GO-terms}}}
 
 \newpage

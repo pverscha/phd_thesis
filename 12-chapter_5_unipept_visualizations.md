@@ -1,4 +1,4 @@
-## Unipept Visualizations: an interactive visualization library for biological data
+## Unipept Visualizations: an interactive visualization library for biological data {#chapter:unipept_visualizations}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Novel visualizations tailored at biological data}}}
 
 \newpage

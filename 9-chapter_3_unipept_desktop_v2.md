@@ -12,7 +12,7 @@ The case study that's presented here could not have been written without the fan
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the BioRXiv preprint server.*
+*This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the bioRXiv preprint server.*
 \color{black}
 
 **Abstract** ---

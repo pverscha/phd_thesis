@@ -1,4 +1,4 @@
-## Unipept CLI 2.0: adding support for visualisations and functional annotations
+## Unipept CLI 2.0: adding support for visualisations and functional annotations {#chapter:unipept_cli_v2}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Functional annotations in the Unipept CLI and API}}}
 
 \newpage
