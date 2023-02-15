@@ -6,6 +6,7 @@ bibliography: all_publications.bib
 csl: bioinformatics.csl
 documentclass: book
 papersize: a5
+geometry: margin=3cm
 mainfont: Adobe Caslon Pro
 sansfont: Myriad Pro
 classoption: x11names

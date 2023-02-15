@@ -117,6 +117,8 @@ More interestingly, we examined the effect of Percolator on the number of protei
 To establish the number of protein (sub)groups before Percolator analysis, we reanalyzed the publicly available raw files of the selected data sets with MPA, also using X!Tandem with identical search settings.
 Note here that MPA is only able to group proteins according to the anti-Occam’s strategy, so only those numbers were compared in the section below.
 
+
+
 ![(A) Identification rates per sample for X!Tandem and Percolator analyses. Here, the identification rate was defined as the number of identified spectra divided by the total number of spectra measured. (B) Number of protein (sub)groups compared between X!Tandem and Percolator for the anti-Occam’s razor strategy, and number of protein (sub)groups using Percolator for the Occam’s razor strategy. S03, S05, S07, S08, S11_F1–4, and S14_Rep1 refer to the six SIHUMIx samples.\label{fig:pout2prot_identification_rates}](resources/figures/chapter7_pout2prot_identification_rates.jpeg)
 
 In \autoref{fig:pout2prot_identification_rates}b, we observe that after Percolator analysis, the number of protein groups per sample increased by 18.5% on average (blue vs red bars) and the number of protein subgroups per sample increased by 25.3% on average (yellow vs green bars).
