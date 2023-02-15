@@ -24,8 +24,14 @@ header-includes:
     - \allsectionsfont{\sffamily}
     - \captionsetup[table]{font={small,stretch=1.2}}
     - \captionsetup[figure]{font={small,stretch=1.2}}
+    - \usepackage{tocloft}
+    - \renewcommand{\cftchappresnum}{Chapter\ } 
+    - \renewcommand{\cftchapnumwidth}{0.7in}
+    - \renewcommand{\cftchapdotsep}{\cftdotsep}
+    - \renewcommand{\cftpartpresnum}{Part\ }
+    - \renewcommand{\cftpartnumwidth}{0.7in}
+    - \renewcommand{\cftpartdotsep}{\cftdotsep}
 ---
-
 
 \makeatletter
 \renewcommand*\@makechapterhead[1]{%

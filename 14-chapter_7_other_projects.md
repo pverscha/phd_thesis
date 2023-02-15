@@ -13,7 +13,7 @@ I have selected two of these projects and included them as sections in this chap
 \color{black}
 
 
-**Abstract**
+**Abstract** ---
 In metaproteomics, the study of the collective proteome of microbial communities, the protein inference problem is more challenging than in single-species proteomics.
 Indeed, a peptide sequence can be present not only in multiple proteins or protein isoforms of the same species, but also in homologous proteins from closely related species.
 To assign the taxonomy and functions of the microbial species, specialized tools have been developed, such as Prophane. This tool, however, is not directly compatible with post-processing tools such as Percolator.

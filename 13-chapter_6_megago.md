@@ -7,7 +7,7 @@
 *This chapter contains a verbatim copy of the manuscript by [@verschaffeltMegaGOFastPowerful2021] as submitted to Journal of Proteome Research.*
 \color{black}
 
-**Abstract**
+**Abstract** ---
 The study of microbiomes has gained in importance over the past few years and has led to the emergence of the fields of metagenomics, metatranscriptomics, and metaproteomics.
 While initially focused on the study of biodiversity within these communities, the emphasis has increasingly shifted to the study of (changes in) the complete set of functions available in these communities.
 A key tool to study this functional complement of a microbiome is Gene Ontology (GO) term analysis.
