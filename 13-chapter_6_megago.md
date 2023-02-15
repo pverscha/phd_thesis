@@ -1,6 +1,14 @@
 ## MegaGO: a fast yet powerful approach to assess functional Gene Ontology similarity across meta-omics data sets {#chapter:megago}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ A new similarity metric for GO-terms}}}
 
+*The MegaGO project was born at the 2020 EuBIC Developer's meeting in Nyborg, Denmark.
+This developer's meeting was the first conference that I joined as a PhD-student and consisted of little hackathon projects that were planned and executed in groups of about 6 to 8 people.
+Together with Bart Mesuere, Tim Van Den Bossche and Henning Schiebenhoefer, I hosted a hackathon project over there.
+During the months after the conference, we have further expanded this project with a command line tool and a web application ^[https://megago.ugent.be/].*
+
+*The manuscript discussed in this chapter has mainly been written by Tim Van Den Bossche, Henning Schiebenhoefer and myself.
+I was furthermore the main responsible of the web application and a big portion of the back-end code that powers the analyses of our web app.*
+
 \newpage
 
 \color{gray}
