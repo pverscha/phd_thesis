@@ -77,15 +77,33 @@ See \autoref{fig:dna_transcription_translation} for a schematic overview of the 
 ![Schematic depiction of how information recorded in a gene is converted (or synthesized) into a protein. The DNA in a gene is first converted to mRNA (transcription). The mRNA will then be read in groups of 3 nucleotides at a time and matched with amino acids. The final sequence of amino acids constructed this way corresponds with a protein. \label{fig:dna_transcription_translation}](resources/figures/chapter1_dna_transcription_translation.svg)
 
 #### (Meta)genome, (meta)transcriptome and (meta)proteome
-
 The **genome** of an organism can be defined as the collection of all genes that are part of the DNA of this organism.
 Secondly, the **transcriptome** of an organism is simply the set of all RNA transcripts in an organism.
 Lastly, the **proteome** of an organism is the collection of all proteins that can be expressed by an organism.
 
 In this thesis, we mainly discuss the terms **meta**genome, **meta**transcriptome and **meta**proteome.
 Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a collection of different organisms (typically of the same biological environment).
+See \autoref{fig:proteome_metaproteome} for a schematic dispaly of the proteome and metaproteome.
+
+![Schematic display of the differences between the proteome and the metaproteome. The items on the left of this figure are organisms, the chains on the right represent different proteins. A) The proteome can be defined as the set of proteins that can be expressed by a single organism. B) The metaproteome then corresponds to the set of proteins that can be expressed by a collection of organisms. \label{fig:proteome_metaproteome}](resources/figures/chapter1_proteome_metaproteome.svg)
+
+Since our DNA provides the instructions for all proteins that can possible by expressed, it provides no suitable information about which proteins are really being expressed at a specific moment in time.
+By exploring the genome, it is thus possible to dedice what an organism is capable of doing, but not what it actually *is* doing right now.
+Not all pieces of an organism's DNA have a "meaning" or will lead to suitable proteins.
+Around 98% of the human genome is non-coding, meaning that these parts of the DNA will never be synthesized to a meaningful protein, but rather to regulatory sequences, non-coding genes or nothing.
+
+Studying the transcriptome of an organism has several advantages over studying the genome.
+First of all, it allows researchers to understand dynamic changes that can present themselves during the transcription process in a cell.
+The transcriptome reflects the dynamic changes in gene expression that occur in response to environmental cues, developmental stages, and disease conditions.
+In contrast, the genome remains mostly static, with relatively stable genetic sequences.
+As the transcriptome of an organism captures the expression of genes at a specific time and in a specific context, it provides more information to a researcher and it might help them to understand the underlying mechanisms of diseases, drug responses and other complex biological processes.
+Finally, the transcriptome can also be used to study the regulation of gene expression, including alternative splicing, post-transcriptional modifications, and non-coding RNA expression.
+
+The proteome is the most informative and tells researchers which proteins are being synthesized by an organism at a specific point in time.
+It allows us to study the functional profile of an organism and goes one step further than a study of the transcriptome.
 
 #### Analysing the metaproteome
+In this work, we focus on analysing the metaproteome of an ecosystem.
 
 ##### Taxonomic analysis
 
