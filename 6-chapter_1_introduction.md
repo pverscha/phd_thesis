@@ -64,7 +64,9 @@ Lastly, ribosomal RNA (rRNA) chains together amino acids to form finished protei
 
 ##### Proteins
 Proteins are large, complex molecules composed of long chains of amino acids.
-The specific ordering of amino acids defines the function of the protein.
+Although hundreds of amino acids exist in nature, only 22 of them will appear in proteins.
+Every amino acid has its own chemical properties and is generally represented by a single capital letter: **K** stands for lysine, **R** stands for arginine, etc. 
+It's the specific ordering of amino acids that defines the function of a protein.
 
 Proteins can have a variety of different functions in an organism.
 They can act as enzymes (that help to catalize chemical reactions), to support the immune system, transporters, hormones, signaling molecules, etc.
@@ -102,8 +104,38 @@ Finally, the transcriptome can also be used to study the regulation of gene expr
 The proteome is the most informative and tells researchers which proteins are being synthesized by an organism at a specific point in time.
 It allows us to study the functional profile of an organism and goes one step further than a study of the transcriptome.
 
-#### Analysing the metaproteome
+#### Shotgun metaproteomics (analysing the metaproteome)
 In this work, we focus on analysing the metaproteome of an ecosystem.
+We will first explain how proteins can be identified from a biological sample by using a very advanced device called a **mass spectrometer**.
+Currently, most researchers are using a technique called **shotgun proteomics** when analysing a protein sample and follow a pre-defined set of steps.
+Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaproteomics}) will be explained in this section.
+
+![Overview of the different steps in shotgun metaproteomics. When processing an input sample using a shotgun metaproteomics pipeline, the proteins in the input sample are first digested by trypsin. The sample containing the remaining peptides is then fed into a mass spectrometer that produces a collection of observed mass spectra. \label{fig:shotgun_metaproteomics}](resources/figures/chapter1_input_trypsin_mass_spec.svg)
+
+##### Protein digestion
+Since a protein is typically a molecule too big to be analysed by a mass spectrometer, it first needs to be cut into smaller pieces or **peptides**.
+The process of cutting a protein into smaller peptides is called **protein digestion** and is performed using a specific enzyme: trypsin.
+Other proteases (i.e. enzymes that can be used to digest proteins) exist, but trypsin is by far the most popular one since it digests and *cuts* the protein at a fixed position: everytime the amino acids lysine (K) or arginine (R) are encountered, the protein will be cleaved by trypsin (except when lysine or arginine are directly followed by proline (P)).
+See \autoref{fig:trypsin_digestion} for an example of a tryptic digestion of 2 proteins.
+
+![Digestion of two proteins using the protease trypsin. The amino acids depicted in red are either lysine (K) or arginine (R) and indicate the location where trypsin will cleave the protein (except if one of these is directly followed by proline (P). In the second protein there will be no cleave after the second occurrence of lysine, since the next amino acid is proline. \label{fig:trypsin_digestion}](resources/figures/chapter1_trypsin_digestion.svg)
+
+##### Mass spectrometry
+Before we can start to explain the different steps in shotgun metaproteomics, we need to provide a basic understanding of the mass spectrometer.
+A mass spectrometer is a very advanced and expensive device that allows us to measure the "weight" of molecules.
+Instead of measuring the force of gravity on an object (which is what a traditional scale does), a mass spectrometer uses magnetic and electric fields to measure the "mass-to-charge" ($m/z$) ratio of the particles in the input sample.
+
+These "mass-to-charges" for each of the particles that were found in the input sample can be visualised as a mass spectrum (see \autoref{fig:mass_spectrum}).
+Each peptide that's fed into the mass spectrometer produces a mass spectrum, which is not necessarily unique (i.e. different peptides can produce the same mass spectrum) and the following step in shotgun metaproteomics consists of mapping these mass spectra onto peptide sequences.
+
+![Example of a mass spectrum. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.png)
+
+##### Matching mass spectra with peptide sequences
+Now, in order to map mass spectra back to peptide sequences, researchers use "search engines".
+These search engines contain a list of peptides and the corresponding expected mass spectra and try to convert the experimentally obtained spectra with the theoretically modelled mass spectra in the database.
+
+How exactly this is done is out-of-scope for this work, but more information can be found in [@BenchmarkImprovingMethods2022].
+The most important thing to realize at this point is that the data that comes out of the mass spectrometer (i.e. the mass spectra) can be converted into the peptide sequences that most probably occur in the input sample.
 
 ##### Taxonomic analysis
 
