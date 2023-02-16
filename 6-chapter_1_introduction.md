@@ -128,7 +128,7 @@ Instead of measuring the force of gravity on an object (which is what a traditio
 These "mass-to-charges" for each of the particles that were found in the input sample can be visualised as a mass spectrum (see \autoref{fig:mass_spectrum}).
 Each peptide that's fed into the mass spectrometer produces a mass spectrum, which is not necessarily unique (i.e. different peptides can produce the same mass spectrum) and the following step in shotgun metaproteomics consists of mapping these mass spectra onto peptide sequences.
 
-![Example of a mass spectrum. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.png)
+![Example of a mass spectrum for the molecule "7,15-O-diacetyl-5-O-benzoyl-3-propanoyl-13,17-oxy-14-oxopremyrsinol", taken from [@bittremieuxSpectrumUtilsPython2020]. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.svg)
 
 ##### Matching mass spectra with peptide sequences
 Now, in order to map mass spectra back to peptide sequences, researchers use **search engines**.

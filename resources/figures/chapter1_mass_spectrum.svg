@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1975 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:10;">
+    <g transform="matrix(0,2.94867,2.94867,0,42.9861,-1371.01)">
+        <path d="M796.145,41.309L800.945,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,267.353,-1595.38)">
+        <path d="M872.236,41.309L877.036,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,491.72,-1819.75)">
+        <path d="M948.327,41.309L953.127,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,716.086,-2044.11)">
+        <path d="M1024.42,41.309L1029.22,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,940.453,-2268.48)">
+        <path d="M1100.51,41.309L1105.31,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1164.82,-2492.85)">
+        <path d="M1176.6,41.309L1181.4,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1389.19,-2717.21)">
+        <path d="M1252.69,41.309L1257.49,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1613.55,-2941.58)">
+        <path d="M1328.78,41.309L1333.58,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1837.92,-3165.95)">
+        <path d="M1404.87,41.309L1409.67,41.309" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,85.5004,-1418.25)">
+        <path d="M812.164,42.109L815.364,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,130.374,-1463.12)">
+        <path d="M827.382,42.109L830.582,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,175.247,-1507.99)">
+        <path d="M842.6,42.109L845.8,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,220.12,-1552.87)">
+        <path d="M857.818,42.109L861.018,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,309.867,-1642.61)">
+        <path d="M888.255,42.109L891.455,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,354.741,-1687.49)">
+        <path d="M903.473,42.109L906.673,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,399.614,-1732.36)">
+        <path d="M918.691,42.109L921.891,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,444.487,-1777.23)">
+        <path d="M933.909,42.109L937.109,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,534.234,-1866.98)">
+        <path d="M964.345,42.109L967.545,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,579.107,-1911.85)">
+        <path d="M979.564,42.109L982.764,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,623.981,-1956.73)">
+        <path d="M994.782,42.109L997.982,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,668.854,-2001.6)">
+        <path d="M1010,42.109L1013.2,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,758.601,-2091.35)">
+        <path d="M1040.44,42.109L1043.64,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,803.474,-2136.22)">
+        <path d="M1055.65,42.109L1058.86,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,848.347,-2181.09)">
+        <path d="M1070.87,42.109L1074.07,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,893.221,-2225.97)">
+        <path d="M1086.09,42.109L1089.29,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,982.968,-2315.71)">
+        <path d="M1116.53,42.109L1119.73,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1027.84,-2360.59)">
+        <path d="M1131.75,42.109L1134.94,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1072.71,-2405.46)">
+        <path d="M1146.96,42.109L1150.16,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1117.59,-2450.33)">
+        <path d="M1162.18,42.109L1165.38,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1207.33,-2540.08)">
+        <path d="M1192.62,42.109L1195.82,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1252.21,-2584.95)">
+        <path d="M1207.84,42.109L1211.04,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1297.08,-2629.83)">
+        <path d="M1223.06,42.109L1226.26,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1341.95,-2674.7)">
+        <path d="M1238.27,42.109L1241.47,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1431.7,-2764.45)">
+        <path d="M1268.71,42.109L1271.91,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1476.57,-2809.32)">
+        <path d="M1283.93,42.109L1287.13,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1521.45,-2854.19)">
+        <path d="M1299.14,42.109L1302.35,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1566.32,-2899.07)">
+        <path d="M1314.36,42.109L1317.56,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1656.07,-2988.81)">
+        <path d="M1344.8,42.109L1348,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1700.94,-3033.69)">
+        <path d="M1360.02,42.109L1363.22,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1745.81,-3078.56)">
+        <path d="M1375.24,42.109L1378.44,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(0,2.94867,2.94867,0,1790.69,-3123.43)">
+        <path d="M1390.45,42.109L1393.65,42.109" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,847.67)">
+        <path d="M793.745,43.709L798.545,43.709" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,551.75)">
+        <path d="M793.745,93.888L798.545,93.888" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,255.831)">
+        <path d="M793.745,144.066L798.545,144.066" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,-40.0878)">
+        <path d="M793.745,194.245L798.545,194.245" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,-336.007)">
+        <path d="M793.745,244.423L798.545,244.423" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2505.28,-631.926)">
+        <path d="M793.745,294.602L798.545,294.602" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,773.69)">
+        <path d="M795.345,56.254L798.545,56.254" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,699.71)">
+        <path d="M795.345,68.799L798.545,68.799" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,625.73)">
+        <path d="M795.345,81.343L798.545,81.343" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,477.771)">
+        <path d="M795.345,106.432L798.545,106.432" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,403.791)">
+        <path d="M795.345,118.977L798.545,118.977" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,329.811)">
+        <path d="M795.345,131.522L798.545,131.522" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,181.852)">
+        <path d="M795.345,156.611L798.545,156.611" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,107.872)">
+        <path d="M795.345,169.156L798.545,169.156" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,33.892)">
+        <path d="M795.345,181.7L798.545,181.7" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-114.067)">
+        <path d="M795.345,206.789L798.545,206.789" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-188.047)">
+        <path d="M795.345,219.334L798.545,219.334" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-262.027)">
+        <path d="M795.345,231.879L798.545,231.879" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-409.987)">
+        <path d="M795.345,256.968L798.545,256.968" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-483.966)">
+        <path d="M795.345,269.512L798.545,269.512" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-557.946)">
+        <path d="M795.345,282.057L798.545,282.057" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-705.906)">
+        <path d="M795.345,307.146L798.545,307.146" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-779.886)">
+        <path d="M795.345,319.691L798.545,319.691" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-853.865)">
+        <path d="M795.345,332.236L798.545,332.236" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-927.845)">
+        <path d="M795.345,344.78L798.545,344.78" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(-2.94867,0,0,2.94867,2510,-1001.82)">
+        <path d="M795.345,357.325L798.545,357.325" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:0.8px;"/>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="338.081px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">0</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="362.666px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">100</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="389.59px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">200</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="416.514px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">300</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="443.438px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">400</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="470.362px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">500</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="497.286px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">600</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="524.21px" y="192.684px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">700</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="329.737px" y="187.608px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">0%</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="327.399px" y="169.853px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">20%</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="327.399px" y="152.098px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">40%</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="327.399px" y="134.343px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">60%</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="327.399px" y="116.588px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">80%</text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <text x="325.06px" y="98.832px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:3.679px;fill:rgb(33,33,33);">100%</text>
+    </g>
+    <g transform="matrix(0,-8.33333,8.33333,0,-2662.29,-575.214)">
+        <text x="-138.385px" y="322.666px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(33,33,33);">I<tspan x="-136.959px -134.065px -132.259px -129.645px -126.751px -124.346px -122.915px -121.11px " y="322.666px 322.666px 322.666px 322.666px 322.666px 322.666px 322.666px 322.666px ">ntensity</tspan></text>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <clipPath id="_clip1">
+            <rect x="339.25" y="70.804" width="215.392" height="115.408" clip-rule="nonzero"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(0,-0.35384,-0.35384,0,381.685,490.832)">
+                <path d="M860.896,50.643L874.763,50.643" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,395.047,500.091)">
+                <clipPath id="_clip2">
+                    <rect x="887.065" y="-451.037" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip2)">
+                    <path d="M887.065,56.44L912.526,56.44" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,403.132,508.166)">
+                <clipPath id="_clip3">
+                    <rect x="909.885" y="-428.188" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip3)">
+                    <path d="M909.885,56.455L935.376,56.455" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,402.39,511.068)">
+                <clipPath id="_clip4">
+                    <rect x="918.086" y="-430.285" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip4)">
+                    <path d="M918.086,51.306L933.278,51.306" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,406.954,510.826)">
+                <clipPath id="_clip5">
+                    <rect x="917.403" y="-417.388" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip5)">
+                    <path d="M917.403,58.096L946.176,58.096" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,407.836,511.028)">
+                <clipPath id="_clip6">
+                    <rect x="917.975" y="-414.894" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip6)">
+                    <path d="M917.975,59.057L948.67,59.057" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,407.743,513.262)">
+                <clipPath id="_clip7">
+                    <rect x="924.288" y="-415.158" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip7)">
+                    <path d="M924.288,55.768L948.406,55.768" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,409.663,512.428)">
+                <clipPath id="_clip8">
+                    <rect x="921.93" y="-409.731" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip8)">
+                    <path d="M921.93,59.66L953.832,59.66" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,408.047,517.28)">
+                <clipPath id="_clip9">
+                    <rect x="935.642" y="-414.298" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip9)">
+                    <path d="M935.642,50.521L949.265,50.521" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,409.204,518.263)">
+                <clipPath id="_clip10">
+                    <rect x="938.42" y="-411.028" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip10)">
+                    <path d="M938.42,50.767L952.536,50.767" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,410.522,519.097)">
+                <clipPath id="_clip11">
+                    <rect x="940.778" y="-407.305" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip11)">
+                    <path d="M940.778,51.45L956.259,51.45" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,412.298,517.339)">
+                <clipPath id="_clip12">
+                    <rect x="935.81" y="-402.284" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip12)">
+                    <path d="M935.81,56.444L961.28,56.444" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,413.25,521.764)">
+                <clipPath id="_clip13">
+                    <rect x="948.315" y="-399.593" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip13)">
+                    <path d="M948.315,51.537L963.97,51.537" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,413.003,522.554)">
+                <clipPath id="_clip14">
+                    <rect x="950.548" y="-400.293" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip14)">
+                    <path d="M950.548,50.071L963.271,50.071" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,418.969,517.13)">
+                <clipPath id="_clip15">
+                    <rect x="935.219" y="-383.43" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip15)">
+                    <path d="M935.219,66.167L980.134,66.167" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,417.882,519.284)">
+                <clipPath id="_clip16">
+                    <rect x="941.306" y="-386.504" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip16)">
+                    <path d="M941.306,61.586L977.06,61.586" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,414.603,522.581)">
+                <clipPath id="_clip17">
+                    <rect x="950.624" y="-395.77" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip17)">
+                    <path d="M950.624,52.294L967.794,52.294" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,414.529,523.179)">
+                <clipPath id="_clip18">
+                    <rect x="952.315" y="-395.98" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip18)">
+                    <path d="M952.315,51.343L967.584,51.343" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,416.815,526.289)">
+                <clipPath id="_clip19">
+                    <rect x="961.102" y="-389.518" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip19)">
+                    <path d="M961.102,50.181L974.045,50.181" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,419.794,523.833)">
+                <clipPath id="_clip20">
+                    <rect x="954.162" y="-381.1" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip20)">
+                    <path d="M954.162,57.86L982.463,57.86" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,419.52,524.126)">
+                <clipPath id="_clip21">
+                    <rect x="954.992" y="-381.873" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip21)">
+                    <path d="M954.992,57.059L981.69,57.059" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,422.307,521.882)">
+                <clipPath id="_clip22">
+                    <rect x="948.648" y="-373.997" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip22)">
+                    <path d="M948.648,64.169L989.567,64.169" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,423.921,520.791)">
+                <clipPath id="_clip23">
+                    <rect x="945.564" y="-369.435" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip23)">
+                    <path d="M945.564,67.992L994.129,67.992" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,425.227,519.505)">
+                <clipPath id="_clip24">
+                    <rect x="941.93" y="-365.745" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip24)">
+                    <path d="M941.93,71.654L997.818,71.654" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,421.838,528.271)">
+                <clipPath id="_clip25">
+                    <rect x="966.705" y="-375.323" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip25)">
+                    <path d="M966.705,54.477L988.24,54.477" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,421.127,530.047)">
+                <clipPath id="_clip26">
+                    <rect x="971.723" y="-377.331" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip26)">
+                    <path d="M971.723,50.964L986.232,50.964" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,421.569,530.671)">
+                <clipPath id="_clip27">
+                    <rect x="973.487" y="-376.084" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip27)">
+                    <path d="M973.487,50.706L987.479,50.706" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,428.468,529.187)">
+                <clipPath id="_clip28">
+                    <rect x="969.295" y="-356.584" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip28)">
+                    <path d="M969.295,62.551L1006.98,62.551" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,424.805,533.938)">
+                <clipPath id="_clip29">
+                    <rect x="982.72" y="-366.937" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip29)">
+                    <path d="M982.72,50.663L996.627,50.663" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,425.783,533.481)">
+                <clipPath id="_clip30">
+                    <rect x="981.43" y="-364.174" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip30)">
+                    <path d="M981.43,52.69L999.39,52.69" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,433.108,526.679)">
+                <clipPath id="_clip31">
+                    <rect x="962.205" y="-343.472" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip31)">
+                    <path d="M962.205,72.653L1020.09,72.653" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,435.018,524.789)">
+                <clipPath id="_clip32">
+                    <rect x="956.865" y="-338.075" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip32)">
+                    <path d="M956.865,78.021L1025.49,78.021" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,426.007,534.866)">
+                <clipPath id="_clip33">
+                    <rect x="985.344" y="-363.54" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip33)">
+                    <path d="M985.344,51.049L1000.02,51.049" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,426.736,534.156)">
+                <clipPath id="_clip34">
+                    <rect x="983.335" y="-361.481" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip34)">
+                    <path d="M983.335,53.083L1002.08,53.083" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,443.439,522.83)">
+                <clipPath id="_clip35">
+                    <rect x="951.327" y="-314.275" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip35)">
+                    <path d="M951.327,92.69L1049.29,92.69" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,429.502,538.391)">
+                <clipPath id="_clip36">
+                    <rect x="995.307" y="-353.662" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip36)">
+                    <path d="M995.307,51.007L1009.9,51.007" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,444.337,528.394)">
+                <clipPath id="_clip37">
+                    <rect x="967.052" y="-311.738" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip37)">
+                    <path d="M967.052,86.096L1051.83,86.096" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,433.878,542.088)">
+                <clipPath id="_clip38">
+                    <rect x="1005.75" y="-341.296" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip38)">
+                    <path d="M1005.75,51.966L1022.27,51.966" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,433.992,543.06)">
+                <clipPath id="_clip39">
+                    <rect x="1008.5" y="-340.975" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip39)">
+                    <path d="M1008.5,50.754L1022.59,50.754" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,444.617,553.971)">
+                <clipPath id="_clip40">
+                    <rect x="1039.34" y="-310.945" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip40)">
+                    <path d="M1039.34,50.351L1052.62,50.351" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,448.323,551.351)">
+                <clipPath id="_clip41">
+                    <rect x="1031.93" y="-300.472" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip41)">
+                    <path d="M1031.93,59.289L1063.09,59.289" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,458.31,563.986)">
+                <clipPath id="_clip42">
+                    <rect x="1067.64" y="-272.247" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip42)">
+                    <path d="M1067.64,55.547L1091.32,55.547" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,497.905,601.941)">
+                <clipPath id="_clip43">
+                    <rect x="1174.91" y="-160.346" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip43)">
+                    <path d="M1174.91,57.864L1203.22,57.864" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,403.757,491.401)">
+                <clipPath id="_clip44">
+                    <rect x="862.505" y="-426.423" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip44)">
+                    <path d="M862.505,81.027L937.141,81.027" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,398.938,503.748)">
+                <clipPath id="_clip45">
+                    <rect x="897.4" y="-440.042" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip45)">
+                    <path d="M897.4,56.77L923.521,56.77" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,424.245,504.307)">
+                <clipPath id="_clip46">
+                    <rect x="898.98" y="-368.52" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip46)">
+                    <path d="M898.98,91.741L995.043,91.741" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,446.363,504.831)">
+                <clipPath id="_clip47">
+                    <rect x="900.46" y="-306.013" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip47)">
+                    <path d="M900.46,122.255L1057.55,122.255" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,462.16,505.194)">
+                <clipPath id="_clip48">
+                    <rect x="901.486" y="-261.367" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip48)">
+                    <path d="M901.486,144.065L1102.2,144.065" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,446.304,545.823)">
+                <clipPath id="_clip49">
+                    <rect x="1016.31" y="-306.177" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip49)">
+                    <path d="M1016.31,64.247L1057.39,64.247" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,453.962,560.787)">
+                <clipPath id="_clip50">
+                    <rect x="1058.6" y="-284.537" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip50)">
+                    <path d="M1058.6,53.923L1079.03,53.923" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,477.587,548.998)">
+                <clipPath id="_clip51">
+                    <rect x="1025.28" y="-217.768" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip51)">
+                    <path d="M1025.28,103.965L1145.8,103.965" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,462.588,571.544)">
+                <clipPath id="_clip52">
+                    <rect x="1089" y="-260.157" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip52)">
+                    <path d="M1089,50.913L1103.41,50.913" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,483.671,582.782)">
+                <clipPath id="_clip53">
+                    <rect x="1120.76" y="-200.573" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip53)">
+                    <path d="M1120.76,64.824L1162.99,64.824" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,503.519,595.254)">
+                <clipPath id="_clip54">
+                    <rect x="1156.01" y="-144.48" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip54)">
+                    <path d="M1156.01,75.247L1219.08,75.247" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,513.52,618.648)">
+                <clipPath id="_clip55">
+                    <rect x="1222.12" y="-116.217" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip55)">
+                    <path d="M1222.12,56.322L1247.35,56.322" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-0.35384,-0.35384,0,530.006,634.481)">
+                <clipPath id="_clip56">
+                    <rect x="1266.87" y="-69.625" width="326.16" height="608.727" clip-rule="nonzero"/>
+                </clipPath>
+                <g clip-path="url(#_clip56)">
+                    <path d="M1266.87,57.244L1293.94,57.244" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+                </g>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-158.027px" y="376.302px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">133.102</text>
+                <text x="-175.194px" y="380.067px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">147.08</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-150.446px" y="393px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">195.117</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-128.852px" y="404.32px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">237.164</text>
+                <text x="-113.417px" y="412.396px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">267.174</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-169.902px" y="424.787px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">313.181</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-177.209px" y="436.098px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">355.192</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-141.795px" y="442.016px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">377.172</text>
+                <text x="-179.339px" y="445.79px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">391.187</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-169.494px" y="461.95px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">451.209</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-162.118px" y="478.11px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">511.231</text>
+            </g>
+            <g transform="matrix(0,-1,1,0,0,0)">
+                <text x="-175.511px" y="494.807px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">573.245</text>
+                <text x="-174.858px" y="510.963px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:4.416px;fill:rgb(27,27,27);">633.269</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(0,-2.94867,-2.94867,0,774.547,2850.33)">
+        <path d="M635.465,206.789L961.625,206.789" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;"/>
+    </g>
+    <g transform="matrix(2.94867,0,0,2.94867,-2189.85,847.67)">
+        <path d="M798.545,43.709L1407.27,43.709" style="fill:none;fill-rule:nonzero;stroke:rgb(33,33,33);stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;"/>
+    </g>
+    <g transform="matrix(8.33333,0,0,8.33333,-2662.29,-575.214)">
+        <clipPath id="_clip57">
+            <rect x="339.25" y="70.804" width="215.392" height="115.408" clip-rule="nonzero"/>
+        </clipPath>
+        <g clip-path="url(#_clip57)">
+            <g transform="matrix(0,-0.35384,-0.35384,0,478.576,503.853)">
+                <path d="M897.696,169.156L1148.59,169.156" style="fill:none;fill-rule:nonzero;stroke:rgb(27,27,27);stroke-width:1.2px;stroke-linecap:round;"/>
+            </g>
+        </g>
+    </g>
+</svg>
