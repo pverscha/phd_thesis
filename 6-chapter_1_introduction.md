@@ -108,7 +108,7 @@ It allows us to study the functional profile of an organism and goes one step fu
 In this work, we focus on analysing the metaproteome of an ecosystem.
 We will first explain how proteins can be identified from a biological sample by using a very advanced device called a **mass spectrometer**.
 Currently, most researchers are using a technique called **shotgun proteomics** when analysing a protein sample and follow a pre-defined set of steps.
-Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaproteomics}) will be explained in this section.
+Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaproteomics}) will be covered in detail in this section.
 
 ![Overview of the different steps in shotgun metaproteomics. When processing an input sample using a shotgun metaproteomics pipeline, the proteins in the input sample are first digested by trypsin. The sample containing the remaining peptides is then fed into a mass spectrometer that produces a collection of observed mass spectra. \label{fig:shotgun_metaproteomics}](resources/figures/chapter1_input_trypsin_mass_spec.svg)
 
@@ -116,6 +116,7 @@ Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaprot
 Since a protein is typically a molecule too big to be analysed by a mass spectrometer, it first needs to be cut into smaller pieces or **peptides**.
 The process of cutting a protein into smaller peptides is called **protein digestion** and is performed using a specific enzyme: trypsin.
 Other proteases (i.e. enzymes that can be used to digest proteins) exist, but trypsin is by far the most popular one since it digests and *cuts* the protein at a fixed position: everytime the amino acids lysine (K) or arginine (R) are encountered, the protein will be cleaved by trypsin (except when lysine or arginine are directly followed by proline (P)).
+All peptides that are the result of a tryptic degist of proteins are called **tryptic peptides**.
 See \autoref{fig:trypsin_digestion} for an example of a tryptic digestion of 2 proteins.
 
 ![Digestion of two proteins using the protease trypsin. The amino acids depicted in red are either lysine (K) or arginine (R) and indicate the location where trypsin will cleave the protein (except if one of these is directly followed by proline (P). In the second protein there will be no cleave after the second occurrence of lysine, since the next amino acid is proline. \label{fig:trypsin_digestion}](resources/figures/chapter1_trypsin_digestion.svg)
@@ -136,9 +137,38 @@ These search engines contain a list of peptides and the corresponding expected m
 
 How exactly this is done is out-of-scope for this work, but more information can be found in [@BenchmarkImprovingMethods2022].
 The most important thing to realize at this point is that the data that comes out of the mass spectrometer (i.e. the mass spectra) can be converted into the peptide sequences that most probably occur in the input sample.
+The CompOmics group at Ghent University, led by Prof. Lennart Martens, is specialised in the development of novel search engines, such as MS2Rescore.
+Once a list of peptide sequences has been determined, the data is finally ready to be sent to Unipept for further downstream analysis (\autoref{fig:spectra_to_unipept}).
+
+![The mass spectra identified by a mass spectrometer can be mapped onto a list of peptides by a search engine. Finally, these peptides can be transferred to Unipept for further downstream analysis. \label{fig:spectra_to_unipept}](resources/figures/chapter1_spectra_to_unipept.svg)
+
+
+### Unipept
+Unipept is an ecosystem of software tools that are mainly focussed on the analysis of metaproteomics datasets.
+Prof. Dr. Bart Mesuere, co-supervisor of this PhD thesis, initially started the Unipept project at Ghent University in 2010 in the context of his PhD.
+Since its early days, Unipept has undergone a big transition, while still maintaining its initial focus of providing an excellent user experience and top-of-the-line performance.
+
+All of the tools in the Unipept ecosystem work by taking a list of tryptic peptide sequences as input and matching these peptides with the proteins of a **protein reference database**.
+At this point, Unipept relies solely on the UniProtKB protein reference database [@theuniprotconsortiumUniProtWorldwideHub2019] for all of its knowledge and transforms it in such a way that all of this information can be summarized on a per-peptide basis.
+
+### Peptide reference database
+Before Unipept can match the input peptides with the UniProtKB database, it needs to *in-silico* transform the proteins of the UniProtKB and cleave them according to the rules imposed by trypsin.
+Since peptides are much shorter than peptides, it happens regularly that identical peptides are found in different proteins.
+If no additional information is provided, Unipept has no way of knowing from which of these matched proteins a specific peptide occurs and only reports information that it is certain about.
+
+
+
+#### The Unipept ecosystem
+Unipept initially started as a web application that works by taking a list of peptide sequences as input and matching these with the proteins found in a **protein reference database**.
+At this point, Unipept relies solely on the UniProtKB protein reference database for all of its knowledge and derives both taxonomic and functional information from this database.
+
+
 
 ##### Taxonomic analysis
-
+By performing a taxonomic analysis on a metaproteomics sample, Unipept provides an overview of which organisms are potentially present in an ecosystem under study.
+It does so by matching 
 
 ##### Functional analysis
+
+
 
