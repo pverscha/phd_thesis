@@ -87,7 +87,7 @@ In this thesis, we mainly discuss the terms **meta**genome, **meta**transcriptom
 Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a collection of different organisms (typically of the same biological environment).
 See \autoref{fig:proteome_metaproteome} for a schematic dispaly of the proteome and metaproteome.
 
-![Schematic display of the differences between the proteome and the metaproteome. The items on the left of this figure are organisms, the chains on the right represent different proteins. A) The proteome can be defined as the set of proteins that can be expressed by a single organism. B) The metaproteome then corresponds to the set of proteins that can be expressed by a collection of organisms. \label{fig:proteome_metaproteome}](resources/figures/chapter1_proteome_metaproteome.svg)
+![A schematic overview of the proteome and the metaproteome. The proteome is defined as the proteins that can be expressed by a single organism. The metaproteome, on the other hand, is then defined as the set of proteins that can be defined by a collection of organisms. \label{fig:proteome_metaproteome}](resources/figures/chapter1_proteome_metaproteome.svg)
 
 Since our DNA provides the instructions for all proteins that can possible by expressed, it provides no suitable information about which proteins are really being expressed at a specific moment in time.
 By exploring the genome, it is thus possible to dedice what an organism is capable of doing, but not what it actually *is* doing right now.
@@ -131,13 +131,14 @@ Each peptide that's fed into the mass spectrometer produces a mass spectrum, whi
 ![Example of a mass spectrum. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.png)
 
 ##### Matching mass spectra with peptide sequences
-Now, in order to map mass spectra back to peptide sequences, researchers use "search engines".
+Now, in order to map mass spectra back to peptide sequences, researchers use **search engines**.
 These search engines contain a list of peptides and the corresponding expected mass spectra and try to convert the experimentally obtained spectra with the theoretically modelled mass spectra in the database.
 
 How exactly this is done is out-of-scope for this work, but more information can be found in [@BenchmarkImprovingMethods2022].
 The most important thing to realize at this point is that the data that comes out of the mass spectrometer (i.e. the mass spectra) can be converted into the peptide sequences that most probably occur in the input sample.
 
 ##### Taxonomic analysis
+
 
 ##### Functional analysis
 
