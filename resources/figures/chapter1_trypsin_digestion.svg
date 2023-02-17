@@ -2,53 +2,53 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 884 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
     <g transform="matrix(1,0,0,1,-52.1455,-79)">
-        <text x="50px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">MEV<tspan x="103.066px 118.923px 135.3px " y="112.5px 112.5px 112.5px ">AVG</tspan>D</text>
+        <text x="50px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">MEV<tspan x="103.066px 118.923px 135.3px " y="112.5px 112.5px 112.5px ">AVG</tspan>D</text>
         <text x="170.06px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="186.36px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">VI<tspan x="209.618px 225.03px " y="112.5px 112.5px ">YS</tspan>GTEYIIV</text>
+        <text x="186.36px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">VI<tspan x="209.618px 225.03px " y="112.5px 112.5px ">YS</tspan>GTEYIIV</text>
         <text x="334.756px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="351.057px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">AAL<tspan x="395.478px " y="112.5px ">T</tspan>E</text>
+        <text x="351.057px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">AAL<tspan x="395.478px " y="112.5px ">T</tspan>E</text>
         <text x="425.769px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">R</text>
         <text x="441.777px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">...</text>
     </g>
     <g transform="matrix(1,0,0,1,4.85449,-10)">
-        <text x="626px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">MEV<tspan x="679.066px 694.923px 711.3px " y="43.5px 43.5px 43.5px ">AVG</tspan>D</text>
+        <text x="626px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">MEV<tspan x="679.066px 694.923px 711.3px " y="43.5px 43.5px 43.5px ">AVG</tspan>D</text>
         <text x="746.06px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="626px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">VI<tspan x="649.258px 664.67px " y="81.5px 81.5px ">YS</tspan>GTEYIIV</text>
+        <text x="626px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">VI<tspan x="649.258px 664.67px " y="81.5px 81.5px ">YS</tspan>GTEYIIV</text>
         <text x="774.396px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="626px" y="119.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">AAL<tspan x="670.421px " y="119.5px ">T</tspan>E</text>
+        <text x="626px" y="119.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">AAL<tspan x="670.421px " y="119.5px ">T</tspan>E</text>
         <text x="700.712px" y="119.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">R</text>
         <text x="626px" y="157.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">...</text>
     </g>
-    <g transform="matrix(1,0,0,1,-52.1455,131)">
-        <text x="50px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">MEV<tspan x="103.066px 118.923px 135.3px " y="112.5px 112.5px 112.5px ">AVG</tspan>D</text>
+    <g transform="matrix(1,0,0,1,-52.1455,128)">
+        <text x="50px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">MEV<tspan x="103.066px 118.923px 135.3px " y="112.5px 112.5px 112.5px ">AVG</tspan>D</text>
         <text x="170.06px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="186.36px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">VI<tspan x="209.618px 225.03px " y="112.5px 112.5px ">YS</tspan>GTEYIIV</text>
+        <text x="186.36px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">VI<tspan x="209.618px 225.03px " y="112.5px 112.5px ">YS</tspan>GTEYIIV</text>
         <text x="334.756px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
         <text x="351.057px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(30,136,229);">P</text>
-        <text x="365.707px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">AL<tspan x="393.167px " y="112.5px ">T</tspan>E</text>
+        <text x="365.707px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">AL<tspan x="393.167px " y="112.5px ">T</tspan>E</text>
         <text x="423.458px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">R</text>
         <text x="439.467px" y="112.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">...</text>
     </g>
-    <g transform="matrix(1,0,0,1,4.85449,200)">
-        <text x="626px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">MEV<tspan x="679.066px 694.923px 711.3px " y="43.5px 43.5px 43.5px ">AVG</tspan>D</text>
+    <g transform="matrix(1,0,0,1,4.85449,197)">
+        <text x="626px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">MEV<tspan x="679.066px 694.923px 711.3px " y="43.5px 43.5px 43.5px ">AVG</tspan>D</text>
         <text x="746.06px" y="43.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
-        <text x="626px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">VI<tspan x="649.258px 664.67px " y="81.5px 81.5px ">YS</tspan>GTEYIIV</text>
+        <text x="626px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">VI<tspan x="649.258px 664.67px " y="81.5px 81.5px ">YS</tspan>GTEYIIV</text>
         <text x="774.396px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">K</text>
         <text x="790.696px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(30,136,229);">P</text>
-        <text x="805.347px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">AL<tspan x="832.807px " y="81.5px ">T</tspan>E</text>
+        <text x="805.347px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">AL<tspan x="832.807px " y="81.5px ">T</tspan>E</text>
         <text x="863.098px" y="81.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(229,57,53);">R</text>
         <text x="626px" y="119.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">...</text>
     </g>
-    <g transform="matrix(1.41489,0,0,1.15,-245.592,-77.8)">
-        <path d="M500,279L500,265L577.744,265L577.744,252L594,272L577.744,292L577.744,279L500,279Z" style="fill-opacity:0;stroke:black;stroke-width:3.1px;"/>
+    <g transform="matrix(1.51836,0,0,0.548387,-66.8429,-98.4839)">
+        <path d="M344,237.85L344,216.15L428.804,216.15L428.804,196L440,227L428.804,258L428.804,237.85L344,237.85Z" style="fill:rgb(84,110,122);stroke:rgb(84,110,122);stroke-width:3.5px;"/>
     </g>
-    <g transform="matrix(1.41489,0,0,1.15,-245.592,-287.8)">
-        <path d="M500,279L500,265L577.744,265L577.744,252L594,272L577.744,292L577.744,279L500,279Z" style="fill-opacity:0;stroke:black;stroke-width:3.1px;"/>
+    <g transform="matrix(1,0,0,1,-16.6455,-21)">
+        <text x="502.731px" y="85.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">T<tspan x="517.292px 526.319px " y="85.5px 85.5px ">ry</tspan>psin</text>
     </g>
-    <g transform="matrix(1,0,0,1,-16.6455,-16)">
-        <text x="502.731px" y="85.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">T<tspan x="517.292px 526.319px " y="85.5px 85.5px ">ry</tspan>psin</text>
+    <g transform="matrix(1.51836,0,0,0.548387,-66.8429,108.516)">
+        <path d="M344,237.85L344,216.15L428.804,216.15L428.804,196L440,227L428.804,258L428.804,237.85L344,237.85Z" style="fill:rgb(84,110,122);stroke:rgb(84,110,122);stroke-width:3.5px;"/>
     </g>
-    <g transform="matrix(1,0,0,1,-16.6455,194)">
-        <text x="502.731px" y="85.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;">T<tspan x="517.292px 526.319px " y="85.5px 85.5px ">ry</tspan>psin</text>
+    <g transform="matrix(1,0,0,1,-16.6455,186)">
+        <text x="502.731px" y="85.5px" style="font-family:'Roboto-Regular', 'Roboto';font-size:26px;fill:rgb(84,110,122);">T<tspan x="517.292px 526.319px " y="85.5px 85.5px ">ry</tspan>psin</text>
     </g>
 </svg>
