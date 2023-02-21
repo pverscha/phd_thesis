@@ -50,7 +50,7 @@ A gene is a well-defined piece of the DNA that corresponds to the instructions r
 
 The DNA is made up of a sequence of nucleotides (simple molecules that can be chained together) that are represented by the four letters A, C, G and T.
 
-![Relation between a cell, chromosomes, genes and DNA. All chromosomes are collected in the cell nucleus. A chromosome is a structure that consists of DNA and the DNA consists of well-defined pieces that we refer to as genes. \label{fig:cell_chromosome_gene}](resources/figures/chapter1_cell_chromosome_gene.svg)
+![Relation between a cell, chromosomes, genes and DNA. All chromosomes are collected in the cell nucleus. A chromosome is a structure that consists of DNA and the DNA consists of well-defined pieces that we refer to as genes. \label{fig:cell_chromosome_gene}](resources/figures/chapter1_cell_chromosome_gene.eps)
 
 ##### RNA
 RNA stands for **R**ibo**N**ucleic **A**cid and is chemically very similar to DNA.
@@ -76,7 +76,7 @@ A protein will be constructed from an mRNA strand by the **ribosomes**.
 These are large molecules that link amino acids together to form proteins in a process called protein synthesis.
 See \autoref{fig:dna_transcription_translation} for a schematic overview of the protein synthesis process.
 
-![Schematic depiction of how information recorded in a gene is converted (or synthesized) into a protein. The DNA in a gene is first converted to mRNA (transcription). The mRNA will then be read in groups of 3 nucleotides at a time and matched with amino acids. The final sequence of amino acids constructed this way corresponds with a protein. \label{fig:dna_transcription_translation}](resources/figures/chapter1_dna_transcription_translation.svg)
+![Schematic depiction of how information recorded in a gene is converted (or synthesized) into a protein. The DNA in a gene is first converted to mRNA (transcription). The mRNA will then be read in groups of 3 nucleotides at a time and matched with amino acids. The final sequence of amino acids constructed this way corresponds with a protein. \label{fig:dna_transcription_translation}](resources/figures/chapter1_dna_transcription_translation.eps)
 
 #### (Meta)genome, (meta)transcriptome and (meta)proteome
 The **genome** of an organism can be defined as the collection of all genes that are part of the DNA of this organism.
@@ -119,7 +119,7 @@ Other proteases (i.e. enzymes that can be used to digest proteins) exist, but tr
 All peptides that are the result of a tryptic degist of proteins are called **tryptic peptides**.
 See \autoref{fig:trypsin_digestion} for an example of a tryptic digestion of 2 proteins.
 
-![Digestion of two proteins using the protease trypsin. The amino acids depicted in red are either lysine (K) or arginine (R) and indicate the location where trypsin will cleave the protein (except if one of these is directly followed by proline (P). In the second protein there will be no cleave after the second occurrence of lysine, since the next amino acid is proline. \label{fig:trypsin_digestion}](resources/figures/chapter1_trypsin_digestion.svg)
+![Digestion of two proteins using the protease trypsin. The amino acids depicted in red are either lysine (K) or arginine (R) and indicate the location where trypsin will cleave the protein (except if one of these is directly followed by proline (P). In the second protein there will be no cleave after the second occurrence of lysine, since the next amino acid is proline. \label{fig:trypsin_digestion}](resources/figures/chapter1_trypsin_digestion.eps)
 
 ##### Mass spectrometry
 Before we can start to explain the different steps in shotgun metaproteomics, we need to provide a basic understanding of the mass spectrometer.
@@ -140,7 +140,7 @@ The most important thing to realize at this point is that the data that comes ou
 The CompOmics group at Ghent University, led by Prof. Lennart Martens, is specialised in the development of novel search engines, such as MS2Rescore.
 Once a list of peptide sequences has been determined, the data is finally ready to be sent to Unipept for further downstream analysis (\autoref{fig:spectra_to_unipept}).
 
-![The mass spectra identified by a mass spectrometer can be mapped onto a list of peptides by a search engine. Finally, these peptides can be transferred to Unipept for further downstream analysis. \label{fig:spectra_to_unipept}](resources/figures/chapter1_spectra_to_unipept.svg)
+![The mass spectra identified by a mass spectrometer can be mapped onto a list of peptides by a search engine. Finally, these peptides can be transferred to Unipept for further downstream analysis. \label{fig:spectra_to_unipept}](resources/figures/chapter1_spectra_to_unipept.eps)
 
 
 ### Unipept
@@ -219,7 +219,11 @@ Instead of thus reporting all organisms that are associated with a peptide, Unip
 
 **Summarizing functional information**
 
-In order to summarize the functional information of a single peptide, Unipept is simply going  
+In order to summarize the functional information of a single peptide, Unipept is simply going count how many times each functional annotation appears in the matched set of proteins.
+Concrete, if a peptide occurs in proteins A, B and C, and function X is associated with protein B and C, and function Y is associated with protein A, then function X will be reported as occurring twice for this peptide and function Y will be reported to occur once.
 
-
+##### Processing a metaproteomics dataset
+In order now to process a list of peptides, Unipept will match each of the input peptides with its peptide reference database and report all lowest common ancestors and functional annotations found per peptide.
+For a single sample, it will then provide something in the line of "species x was found to occur in 12 out of 153 total peptides" (and it will do so for every identified taxon).
+This information is not only presented in a textual fashion, but will also be rendered by a collection of interactive data visualizations (which have been designed and implemented in-house [@verschaffeltUnipeptVisualizationsInteractive2022]).
 
