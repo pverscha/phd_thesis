@@ -17,5 +17,6 @@ pandoc \
   --include-before-body="3-samenvatting.front.tex" \
   --include-before-body="4-publications_summary.front.tex" \
   --include-before-body="5-conferences_summary.front.tex" \
+  --include-before-body="6-repositories_summary.front.tex" \
   $MD_FILES \
   -o thesis.pdf
