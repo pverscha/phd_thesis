@@ -1,7 +1,7 @@
 ## Future work
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ The future of Unipept}}}
 
-*No scientific work is ever complete and there remains a lot of challenges in the field of metaproteomics and proteogenomics that still need to be solved. In this section, I discuss some issues and challenges that currently arise and what needs to be overcome in order to solve these.*
+*No scientific work is ever complete and there remain a lot of challenges in the field of metaproteomics and proteogenomics that still need to be solved. In this section, I discuss some issues and challenges that currently arise and what needs to be overcome in order to solve these.*
 
 \newpage
 
@@ -121,3 +121,41 @@ This will increase the insight of users into the ecosystem that they are current
 
 ### Differential analysis of metaproteomics data
 
+#### Current situation
+Dedicated data analysis methods for differential metaproteomics are currently lacking.
+Different tools for the analysis of metaproteomics data exist at this point, but none of them provide a statistically sound framework for the **comparative** analysis of metaproteomics data.
+
+By devising a framework that allows for filtering and normalisation, we can take advantage of the parallel data structures in metaproteomics and we can extent beyond two-group comparisons by building on the general linear model (GLM) framework.
+This approach provides researchers with the tools to assess differential abundance in both taxa, as well as in functional annotations between conditions.
+Moreover, we could also devise methods to detect shifts in the population or the use of functions induced by treatment or biological processes such as diseases.
+
+Ideally, this comparative analysis pipeline can be integrated and embedded into user-friendly workflows for Unipept. 
+
+#### Proposed work plan
+
+##### Develop and validate normalisation and filtering strategies for metaproteomics applications
+A Unipept analysis will map peptides to taxa and functions resulting in a count table, but these counts can be largely driven by library size, i.e., the total number of peptides in a sample.
+Hence, the data need to be normalised, which will be done by calculating normalisation offsets for the GLMs that will be developed in the next step.
+Besides library size, we also have to evaluate the use of other features, e.g., average peptide length, for more advanced normalisation using a CQN approach [@hansenRemovingTechnicalVariability2012].
+
+##### Establish a generalized linear model (GLM)
+The second step in my proposed work plan consists of establishing a generalised linear model (GLM) framework for count regression in metaproteomics.
+Development will start from well-established tools for modelling bulk RNA sequencing (RNA-seq) data.
+A preliminary edgeR [@robinsonEdgeRBioconductorPackage2010] analysis that we’ve performed shows that metaproteomics counts exhibit a similar mean-dispersion relation as RNA-seq data.
+Hence, negative binomial (NB) count regression and existing empirical Bayes methods to stabilise the dispersion estimation seem to be promising for metaproteomics data analysis applications.
+The GLM framework also naturally extends the analysis beyond two group comparisons and enables for normalisation.
+Indeed, experiments with more complex designs can be accommodated for by including factors with multiple levels and even continuous covariates in the model, and normalisation offsets can be included in the linear predictor.
+Finally, the challenge to detect shifts in communities, e.g., at a certain taxonomic level, shows many similarities with assessing differential transcript usage in bulk RNA-seq experiments, where researchers try to discover shifts in the relative abundance of isoforms within a gene.
+Again, we will have to port and tailor these tools towards metaproteomics.
+
+##### Perform statistical inference
+Within the GLM framework, likelihood ratio tests, score tests and Wald tests can be conducted.
+We can evaluate their performance within an empirical Bayes context and in terms of computational efficiency.
+Next, false discovery rate (FDR) methods should be adopted and more advanced FDR methods will be developed for metaproteomics applications.
+Specifically, we can build upon stage-wise testing procedures that have proven their merits for transcript level analysis and gene-set enrichment analysis [@vandenbergeStageRGeneralStagewise2017].
+
+##### Develop a user-friendly workflow and integrate into Unipept
+The last step that I can propose for this workplan is to integrate all of the methods and strategies that where developed during the previous tasks into a user-friendly workflow for the Unipept web application.
+For each of the steps we will have to consider whether to implement the step in JavaScript and run it directly in the browser, or to offload it to an R instance running server-side.
+The latter will probably require less implementation work because of the available R packages but comes at the cost of less flexibility and interactivity.
+During the implementation phase, it is extremely important to gather feedback from end-users to iterate on the proposed solution.
