@@ -163,4 +163,58 @@ The authors declare no conflict of interest.
 
 ### Highlighting taxonomic diversity of metaproteomic samples in metabolic pathways
 
+\newpage
+
+### Efficiently sharing data between different threads in the browser
+
+#### Introduction
+JavaScript is one of the most popular programming languages at this point in time.
+According to a report of GitHub, it was the number one most used programming language in 2022 ^[See https://octoverse.github.com/2022/top-programming-languages].
+In recent years, web applications have become a viable alternative for desktop applications and are increasingly favored by software developers.
+Because of the increased functionality that is provided by these web applications, they have also grown in complexity and started to adopt some of the programming paradigms that are traditionally used by desktop applications.
+
+In order to efficiently process large amounts of data, software developers try to split up hard tasks into smaller tasks that can be processed in parallel by the different cores in modern-day CPUs.
+Since web applications are almost exclusively relying on JavaScript, this programming language of the web has adopted support for multithreading by implementing the "Web Workers" construct.
+
+A "Web Worker" is a JavaScript script that is executed by the browser using a background thread.
+Web applications can provide them with a collection of input data, instruct it to process the data and receive the results when done, all without occupying the browser's "main thread".
+
+In order to understand what the "main thread" is in JavaScript, you need to realise that JavaScript is an event-driven programming language.
+Every single operation that is performed by a piece of JavaScript code will be send to a queue that is systematically queried and emptied by the "Event loop".
+The main JavaScript thread is constantly checking this event queue for new tasks that need to be taken care of and executes them one-by-one in a specific order.
+Because only one thread is available to process the tasks pushed onto this queue, a long-running task blocks the execution of other tasks and can cause the web browser to "hang" on a specific operation.
+It will only continue to process interactions of the user with a web app's user interface once this long-running task is completed (which is not user-friendly).
+
+In the past, this was never really an issue since JavaScript was typically only used for providing some simple interactivity to a web page, but since the advent of complex web apps, this is becoming a major hurdle.
+The amount of data that needs to be handled by modern-day web applications has seen a tremendous growth and can no longer be efficiently processed with a single thread.
+
+#### Web Workers to the rescue
+An initial proposal to add a "Web Workers" construct to the JavaScript programming language was first suggested in the ECMAScript 5 standard and has been formally adopted by all major browsers at this point.
+A Web Worker can be defined as a task that receives some data as input, processes in the background and notifies the main thread when it is done.
+These workers are typically managed by a separate browser process and can thus be executed in parallel to the tasks of the main JavaScript process.
+
+Since each web worker runs in a separate process, they don't share the same memory space.
+A reference to an object or piece of data that lives in one thread cannot be simply transferred to a web worker.
+Instead, every object that needs to be sent between a web worker and the main JavaScript thread needs to be serialized on the sender's side and reconstructed on the receiver's side.
+
+The "structured clone algorithm" is a mechanism in JavaScript that allows for the deep copying of complex objects in order to transmit or store them in a serialized format.
+If an object is transferred between contexts in JavaScript, this algorithm will be used.
+This works very well for simple and small objects, but becomes very slow very soon when large chunks of data need to be transferred and partially negates some of the benefits of web workers.
+
+To make matters even worse, either one of the serialization or deserialization of an object is always performed by the main JavaScript thread, causing the application to hang again (which is one of the problems we are trying to overcome).
+
+##### Near zero-cost copy of ArrayBuffers
+Since a few years, JavaScript exposes a new type of object called an "ArrayBuffer".
+An ArrayBuffer is a built-in object that represents a fixed-length raw binary data buffer.
+This means that it allows a software developer to store a sequence of bytes that can be accessed and manipulated in a low-level way.
+Such an ArrayBuffer is similar to a normal JavaScript array in that it is a collection of values, but the values in this ArrayBuffer are binary data instead of rich values such as numbers or strings.
+
+Since the ArrayBuffer is just a series of binary values, it can also be thought of as a block of memory.
+Because of its very simple structure, an ArrayBuffer can be copied and transferred between different Web Workers much faster.
+These buffers do not need to be processed by the structured clone algorithm, but can instead be copied using a fast and low-level instruction in a JavaScript engine (i.e. the browser's software implementation of JavaScript).
+
+##### Sharing data between different Web Workers
+
+
+#### A HashMap to 
 
