@@ -32,6 +32,7 @@ header-includes:
     - \renewcommand{\cftpartpresnum}{Part\ }
     - \renewcommand{\cftpartnumwidth}{0.7in}
     - \renewcommand{\cftpartdotsep}{\cftdotsep}
+    - \newfontfamily\myriad[]{Myriad Pro Regular}
 ---
 
 \makeatletter
