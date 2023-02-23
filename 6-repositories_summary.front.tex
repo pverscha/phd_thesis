@@ -1,14 +1,49 @@
 \chapter*{List of repositories}
 
 Below you can find a listing of all repositories and code packages that have (in part) been developed or maintained by me over the course of my PhD.
-These repositories are all publicly accessible on \href{https://github.com}{https://github.com}.
+These repositories are all publicly accessible on GitHub.
 Some of the repositories that I worked on are no longer maintained or are migrated to a different location.
 Only actively used and maintained repositories are listed here.
+Repositories set up for temporary experiments or deprecated projects are omitted for brevity.
 
-\textbf{unipept-web:} \href{https://github.com/unipept/unipept-web}{@GitHub}.
-This repository contains the implementation of the Unipept Web application (which is deployed at \href{https://unipept.ugent.be}{https://unipept.ugent.be}).
-The web application itself is written in TypeScript and uses the Vue and Vuetify frameworks for constructing the graphical user interface.
+\begin{large}\textbf{\textsf{unipept-web}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-web}{\textsf{/unipept/unipept-web}} \hfill \faTag ~ \textsf{5.0.4} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify} \\
+The Unipept Web application is developed using TypeScript, in combination with the Vue and Vuetify frameworks.
+Because of Vue, the application is structured as a collection of web components that can be reused between different pages and parts of the web app.
+By browsing to \href{https://unipept.ugent.be}{https://unipept.ugent.be}, researchers have direct access to a browser-based application for the analysis of metaproteomics datasets.
 
-\textbf{unipept-api:} Implementation of Unipept's API in
+\begin{large}\textbf{\textsf{unipept-desktop}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-desktop}{\textsf{/unipept/unipept-desktop}} \hfill \faTag ~ \textsf{2.0.0} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify, Electron} \\
+All code related to the Unipept Desktop application can be found in this repository.
+The desktop application, in contrast to the Unipept Web application, focuses on the analysis of very large metaproteomics samples and a better (hierarhical) organization of samples that somehow belong together.
+Because we wanted to maximize the amount of code that can be shared between the Unipept Web and Desktop application, we chose to use the Electron framework for primary development of our most recent tool.
+Electron \footnote{See https://www.electronjs.org/} is a software framework that allows desktop applications to be developed using web-based technologies (such as TypeScript, HTML, etc.).
+
+\begin{large}\textbf{\textsf{unipept-web-components}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-web-components}{\textsf{/unipept/unipept-web-components}} \hfill \faTag ~ \textsf{2.0.0} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify} \\
+Both the Unipept Web and Desktop application are internally structured using web components, a type of reusable custom web element that is responsible for a well-defined function.
+This repository is a software library that contains a lot of these web components that are being used by both Unipept applications.
+By doing so, we only need to make a change once in order to update both apps simultaneously.
+
+\begin{large}\textbf{\textsf{unipept-api}}\end{large} \hfill \faTag ~ \textsf{4.6.4} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-api}{\textsf{/unipept/unipept-api}} \\
+\faCode ~ \textsf{Ruby-on-Rails} \\
+The Unipept API repository contains the ``backend`` code that powers all data analysis requests that are made by the Unipept Web and Desktop application.
+Unipept's API is responsible for instructing the Unipept database and extracting the required information out of it, processing it further and providing a valid response to API-calls made by the web app, the desktop app, or other third-party applications.
+
+\begin{large}\textbf{\textsf{unipept-cli}}\end{large} \hfill \faTag ~ \textsf{3.0.2} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-cli}{\textsf{/unipept/unipept-cli}} \\
+\faCode ~ \textsf{Ruby-on-Rails} \\
+The Unipept command line interface (CLI) can be directly instructed by machines (it works without a graphical user interface) and can therefor easily be plugged into existing data analysis pipelines.
+All code in this repository has been written in Ruby-on-Rails and is mainly responsible for parsing data from the command line, sending it to the Unipept API in chuncks and properly formatting the result.
+Ruby is a interpreted programming language that is compatible with all major operating systems, which makes the Unipept CLI easily accessible for most users.
+
+\begin{large}\textbf{\textsf{make-database}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/make-database}{\textsf{/unipept/make-database}} \\
+\faCode ~ \textsf{Bash, Java, JavaScript, SQL} \\
+
 
 \newpage
