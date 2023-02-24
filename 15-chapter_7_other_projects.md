@@ -165,7 +165,7 @@ The authors declare no conflict of interest.
 
 \newpage
 
-### Efficiently sharing data between different threads in the browser
+### Efficiently exploiting parallelism in modern web applications
 
 #### Introduction
 JavaScript is one of the most popular programming languages at this point in time.
@@ -199,22 +199,34 @@ Instead, every object that needs to be sent between a web worker and the main Ja
 
 The "structured clone algorithm" is a mechanism in JavaScript that allows for the deep copying of complex objects in order to transmit or store them in a serialized format.
 If an object is transferred between contexts in JavaScript, this algorithm will be used.
-This works very well for simple and small objects, but becomes very slow very soon when large chunks of data need to be transferred and partially negates some of the benefits of web workers.
+This works very well for simple and small objects, but becomes slow very soon when large chunks of data need to be transferred and partially negates some important benefits of using Web Workers.
 
 To make matters even worse, either one of the serialization or deserialization of an object is always performed by the main JavaScript thread, causing the application to hang again (which is one of the problems we are trying to overcome).
 
 ##### Near zero-cost copy of ArrayBuffers
-Since a few years, JavaScript exposes a new type of object called an "ArrayBuffer".
-An ArrayBuffer is a built-in object that represents a fixed-length raw binary data buffer.
+Since a few years, JavaScript exposes a new type of object called an `ArrayBuffer`.
+An `ArrayBuffer` is a built-in object that represents a fixed-length raw binary data buffer.
 This means that it allows a software developer to store a sequence of bytes that can be accessed and manipulated in a low-level way.
-Such an ArrayBuffer is similar to a normal JavaScript array in that it is a collection of values, but the values in this ArrayBuffer are binary data instead of rich values such as numbers or strings.
+Such an `ArrayBuffer` is similar to a normal JavaScript array in that it is a collection of values, but the values in this `ArrayBuffer` are binary data instead of rich values such as numbers or strings.
 
-Since the ArrayBuffer is just a series of binary values, it can also be thought of as a block of memory.
-Because of its very simple structure, an ArrayBuffer can be copied and transferred between different Web Workers much faster.
+Since the `ArrayBuffer` is just a series of binary values, it can also be thought of as a block of memory.
+Because of its very simple structure, an `ArrayBuffer` can be copied and transferred between different Web Workers much faster.
 These buffers do not need to be processed by the structured clone algorithm, but can instead be copied using a fast and low-level instruction in a JavaScript engine (i.e. the browser's software implementation of JavaScript).
 
-##### Sharing data between different Web Workers
+##### Sharing data between Web Workers
+Next to `ArrayBuffers`, modern JavaScript specifications also describe a new concept called a `SharedArrayBuffer`.
+Contrary to `ArrayBuffers`, `SharedArrayBuffers` no longer need to be "transferred" between Web Workers.
+Instead, a `SharedArrayBuffer` object provides a "view" on a contiguous block of memory and can be "transmitted" to other workers in which case a new `SharedArrayBuffer` object will be created on the receiving side which is simply a view onto the same block of memory.
+The shared data block referenced by the two `SharedArrayBuffer` objects is the same block of data, and a side change made to this block of memory in one worker, will also become visible to the other worker.
 
+If we compare `ArrayBuffers` to `SharedArrayBuffers` when it comes to the transfer of information from one Web Worker to another, we can conclude that `SharedArrayBuffers` provide an even faster and more efficient way to distribute information.
+This hidden feature of JavaScript is something that we decided to exploit in order to speed up the Unipept Web and Unipept Desktop applications.
+How we were able to do so is explained in depth in the next section.
 
-#### A HashMap to 
+#### A shared-memory HashMap in JavaScript
+At this point, it is clear that there are constructs that allow the communication of large data sets between different Web Workers.
+For most structured data, however, it is not trivial to encode it as a stream of raw bits and bytes.
+In order to accommodate for this issue, we decided to implement a `HashMap` that allows arbitrary data and objects to be encoded as a stream of bits in an `ArrayBuffer` or `SharedArrayBuffer` that can then easily be transferred between threads.
+
+Our `HashMap` implements the interface that is provided by JavaScript and is thus fully compatible and interchangeable with pieces of code that use the default `Map` implementation of JavaScript.
 
