@@ -231,6 +231,8 @@ How we were able to do so is explained in depth in the next section.
 ![SharedArrayBuffers point to a specific block of memory that can be modified and used by different workers at the same time. This allows applications to split intensive operations and let them be executed by different workers in parallel which can then all read and write from the same HashMap.  \label{fig:hashmap_shared_memory}](resources/figures/chapter7_hashmap_shared_memory.eps)
 
 #### A shared-memory HashMap in JavaScript
+
+##### General structure of the HashMap
 At this point, it is clear that there are constructs that allow the communication of large data sets between different Web Workers.
 For most structured data, however, it is not trivial to encode it as a stream of raw bits and bytes.
 In order to accommodate for this issue, we decided to implement a `HashMap` that allows arbitrary data and objects to be encoded as a stream of bits in an `ArrayBuffer` or `SharedArrayBuffer` that can then easily be transferred between threads.
@@ -246,13 +248,31 @@ Another advantage of this hashing algorithm is that there already exists a good 
 
 Each generated hash is represented as a large number.
 In order to map this number onto a specific position in the index table, we simply compute the remainder of the hash when divided by $n$ (the size of the index table).
-So, in order to retrieve the value that's associated with a specific key, we first compute the hash of the key, then find out its remainder when divided by $n$ and look at the value in the index table at this position.
-\autoref{fig:hashmap_lookup_example} shows a detailled example of how a lookup for a key "cat" is performed.
+So, in order to retrieve the value that's associated with a specific key, we first compute the hash of the key, then find out its remainder when divided by $n$ and look at the pointer in the index table at this position.
+\autoref{fig:hashmap_lookup_example} shows a detailed example of how a lookup for the key "cat" is performed.
+Note that it might happen that multiple keys are mapped onto the same position in the index table, which is why every value object always keeps track of the original key and a pointer to the next item that is mapped onto the same index.
+When retrieving a value for a key, this linked list of value objects needs to be processed until the key is found, or until the list ends.
+See this article on Wikipedia for more information on how a `HashMap` works internally: [https://en.wikipedia.org/wiki/Hash_table](https://en.wikipedia.org/wiki/Hash_table).
 
 ![Looking up a value in the HashMap consists of several steps. First the key is hashed, then the position of this hash in the index table is computed. At last, the pointer at this computed position in the index table can be used to retrieve the value associated with the key. \label{fig:hashmap_lookup_example}](resources/figures/chapter7_hashmap_hash_function.eps)
 
-The `HashMap` implementation requires us to reserve two blocks of memory:
+##### Internal memory lay-out
+My `HashMap` implementation requires the reserve two blocks of memory:
 
-* **index block:** 
-* **data block:**
+* **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block").
+* **data block:** This block of memory keeps track of all data objects that actually store the values that the user put into the `HashMap`.
+
+Each of the values that are provided by the user need to somehow be translated into bytes before we can store them in a raw block of memory.
+
+For some of the most common data types in JavaScript (e.g. string, integer, etc), a default serialization implementation is provided.
+This is not the way that most `HashMaps` are implemented in other programming languages.
+Normally, the values themselves are not serialized and stored as part of the `HashMap`, but rather a pointer to each of the values is kept, decreasing the amount of memory required.
+Because this is a high-level implementation of a `HashMap`, we don't have access to the raw object pointers that are used internally by the JavaScript engine and we have to reside to this workaround.
+
+##### Serialization of complex objects
+Since serialization of objects can be very slow in some cases, the `ShareableHashMap` allows the user to provide a custom serialization (and deserialization) function.
+These allow for some really nice optimizations and can circumvent the need to convert objects to strings and bytes altogether, leading to a significant speed up.
+By cleverly exploiting the structure of some objects, we can encode objects as streams of bytes and directly extract those bytes that are associated with a specific property of the object.
+
+#### Case study: keeping track of peptides in Unipept
 
