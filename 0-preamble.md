@@ -10,6 +10,7 @@ geometry: margin=3cm
 mainfont: Adobe Caslon Pro
 sansfont: Myriad Pro
 classoption: x11names, table
+codeBlockCaptions: true
 header-includes:
     - \usepackage{microtype}
     - \usepackage{sectsty}

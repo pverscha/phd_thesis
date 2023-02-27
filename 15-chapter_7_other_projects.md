@@ -259,7 +259,7 @@ See this article on Wikipedia for more information on how a `HashMap` works inte
 ##### Internal memory lay-out
 My `HashMap` implementation requires the reserve two blocks of memory:
 
-* **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block").
+* **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block"). Some extra bytes are also reserved as part of this memory black at the beginning for internal housekeeping of the `HashMap`.
 * **data block:** This block of memory keeps track of all data objects that actually store the values that the user put into the `HashMap`.
 
 Each of the values that are provided by the user need to somehow be translated into bytes before we can store them in a raw block of memory.
@@ -275,4 +275,24 @@ These allow for some really nice optimizations and can circumvent the need to co
 By cleverly exploiting the structure of some objects, we can encode objects as streams of bytes and directly extract those bytes that are associated with a specific property of the object.
 
 #### Case study: keeping track of peptides in Unipept
+In order to demonstrate the power of this specific `HashMap` implementation in JavaScript, we will be looking at its specific use in the Unipept Web and Desktop application.
+For each metaproteomic analysis, both Unipept applications need to keep track of the taxa and functions associated with each peptide that was provided by the user.
+This information is queried from Unipept's API, but since this querying process takes a long amount of time, it is performed by a Web Worker in the background and once done, a big `Map` containing the peptide/results mapping is passed onto the main thread.
 
+If we use JavaScript's default implementation of `Map` for this, it takes around ... s to transfer the `Map` between the Web Worker and the main thread.
+During all of this time, the deserialization of all information is performed by the main thread and the application is thus unresponsive to all interactions of the user.
+
+Every `(key, value)` pair in this mapping has a specific structure.
+The keys will always be peptides (i.e. strings) and the values are JSON-objects that keep track of some annotations for this peptide.
+Since most properties in this object have a fixed length, or the property value lengths are known beforehand, we can encode these objects as streams of bytes in an ArrayBuffer.
+See \autoref{fig:hashmap_object_encoding} for an example of how the information that's tracked by Unipept can be respresented by a stream of bytes.
+Using this information, it is no longer required to serialize this object to a string-based representation (such as JSON).
+
+![Example of how a complex object (in the case of Unipept) can be encoded as a simple stream of bytes that direclty fits into an ArrayBuffer. We know that the lowest common ancestor is always an unsigned integer, so we can store it in the first 4 bytes of a block of memory. The lineage in this example is a numeric array that always contains 3 unsigned integers, thus the next three places in the ArrayBuffer are reserved for this array. By continuing this strategy, each of the properties can directly be encoded in the memory block and can be recovered very efficiently. \label{fig:hashmap_object_encoding}](resources/figures/chapter7_hashmap_object_encoding.eps)
+
+#### Conclusion and remarks
+Based on the results from the case study, it is fair to conclude that this `HashMap` is not suitable for all projects, but can be of very high value in a specific environment (as is the case with Unipept).
+In order to counteract the effects of some serious vulnerabilities that were dedected in x86 CPUs (i.e. the Spectre [@Kocher2018spectre] and Meltdown [@Lipp2018meltdown] attacks), most major browsers have taken serious precautions to counteracts these attacks and blocked the use of `SharedArrayBuffers` in most cases.
+Only websites that pack a specific set of HTTP headers into their HTTP responses ^[See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements ] are allowed to use SharedArrayBuffers.
+
+This means that consumers of our `HashMap` implementation either need to resort to regular `ArrayBuffers` if they don't need multiple Web Workers to manipulate the `HashMap` simultaneously or that they need to properly configure their servers in order to take care of the required Cross-Origin Isolation headers.
