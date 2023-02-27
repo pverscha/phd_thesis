@@ -197,11 +197,13 @@ Since each web worker runs in a separate process, they don't share the same memo
 A reference to an object or piece of data that lives in one thread cannot be simply transferred to a web worker.
 Instead, every object that needs to be sent between a web worker and the main JavaScript thread needs to be serialized on the sender's side and reconstructed on the receiver's side.
 
-The "structured clone algorithm" is a mechanism in JavaScript that allows for the deep copying of complex objects in order to transmit or store them in a serialized format.
+The "structured clone algorithm" is a mechanism in JavaScript that allows for the deep copying of complex objects in order to transmit or store them in a serialized format (see \autoref{fig:hashmap_serialization}).
 If an object is transferred between contexts in JavaScript, this algorithm will be used.
 This works very well for simple and small objects, but becomes slow very soon when large chunks of data need to be transferred and partially negates some important benefits of using Web Workers.
 
 To make matters even worse, either one of the serialization or deserialization of an object is always performed by the main JavaScript thread, causing the application to hang again (which is one of the problems we are trying to overcome).
+
+![If a normal JavaScript Object is being sent from one worker (or the main thread) to another, it first needs to be serialized on the sending side using the "structured clone algorithm". On the receiving end, it will then be completely deserialized again. \label{fig:hashmap_serialization}](resources/figures/chapter7_hashmap_serialize.eps)
 
 ##### Near zero-cost copy of ArrayBuffers
 Since a few years, JavaScript exposes a new type of object called an `ArrayBuffer`.
@@ -210,18 +212,23 @@ This means that it allows a software developer to store a sequence of bytes that
 Such an `ArrayBuffer` is similar to a normal JavaScript array in that it is a collection of values, but the values in this `ArrayBuffer` are binary data instead of rich values such as numbers or strings.
 
 Since the `ArrayBuffer` is just a series of binary values, it can also be thought of as a block of memory.
-Because of its very simple structure, an `ArrayBuffer` can be copied and transferred between different Web Workers much faster.
-These buffers do not need to be processed by the structured clone algorithm, but can instead be copied using a fast and low-level instruction in a JavaScript engine (i.e. the browser's software implementation of JavaScript).
+Because of its very simple structure, an `ArrayBuffer` does not need to be copied between different Web Workers, but instead only "ownership" of this memory block needs to be transferred (see \autoref{fig:hashmap_arraybuffer_transfer}).
+The thread or Web Worker that currently has the "ownership" of an ArrayBuffer is the only one that is allowed to make changes (or read from) the block of memory at that point.
+Transferring ownership is almost instantly.
+
+![When sending an ArrayBuffer from one worker to another, it's ownership will be transferred. This means that no data needs to be copied which makes this operation a lot faster than for normal JavaScript Objects since the "structured clone algorithm" is not involved. \label{fig:hashmap_arraybuffer_transfer}](resources/figures/chapter7_hashmap_transfer_ownership.eps)
 
 ##### Sharing data between Web Workers
 Next to `ArrayBuffers`, modern JavaScript specifications also describe a new concept called a `SharedArrayBuffer`.
 Contrary to `ArrayBuffers`, `SharedArrayBuffers` no longer need to be "transferred" between Web Workers.
-Instead, a `SharedArrayBuffer` object provides a "view" on a contiguous block of memory and can be "transmitted" to other workers in which case a new `SharedArrayBuffer` object will be created on the receiving side which is simply a view onto the same block of memory.
+Instead, a `SharedArrayBuffer` object provides a "view" on a contiguous block of memory and can be "transmitted" to other workers in which case a new `SharedArrayBuffer` object will be created on the receiving side which is simply a view onto the same block of memory (see \autoref{fig:hashmap_shared_memory}).
 The shared data block referenced by the two `SharedArrayBuffer` objects is the same block of data, and a side change made to this block of memory in one worker, will also become visible to the other worker.
 
-If we compare `ArrayBuffers` to `SharedArrayBuffers` when it comes to the transfer of information from one Web Worker to another, we can conclude that `SharedArrayBuffers` provide an even faster and more efficient way to distribute information.
+If we compare `ArrayBuffers` to `SharedArrayBuffers` when it comes to the transfer of information from one Web Worker to another, we can conclude that `SharedArrayBuffers` allow multiple Web Workers to read and write to the same block of memory at the same time.
 This hidden feature of JavaScript is something that we decided to exploit in order to speed up the Unipept Web and Unipept Desktop applications.
 How we were able to do so is explained in depth in the next section.
+
+![SharedArrayBuffers point to a specific block of memory that can be modified and used by different workers at the same time. This allows applications to split intensive operations and let them be executed by different workers in parallel which can then all read and write from the same HashMap.  \label{fig:hashmap_shared_memory}](resources/figures/chapter7_hashmap_shared_memory.eps)
 
 #### A shared-memory HashMap in JavaScript
 At this point, it is clear that there are constructs that allow the communication of large data sets between different Web Workers.
@@ -229,4 +236,23 @@ For most structured data, however, it is not trivial to encode it as a stream of
 In order to accommodate for this issue, we decided to implement a `HashMap` that allows arbitrary data and objects to be encoded as a stream of bits in an `ArrayBuffer` or `SharedArrayBuffer` that can then easily be transferred between threads.
 
 Our `HashMap` implements the interface that is provided by JavaScript and is thus fully compatible and interchangeable with pieces of code that use the default `Map` implementation of JavaScript.
+It follows the idea of most `HashMaps` that are already implemented in other programming languages such as Java.
+In short, there is one block of memory that can keep track of $n$ pointers (referred to as the "index table" from now on).
+Since every element in a `HashMap` has both a key and a value, we hash the value of the key and use this hash to determine at what position in the "index block" a point to the corresponding value can be found.
+
+For a `HashMap`, a hash function typically needs to generate hashes as fast as possible that are distributed evenly.
+We chose the Fowler-Noll-Vo hash function [@fowlerFNVNonCryptographicHash], which can be computed really fast on modern CPUs and produces hashes that are evenly distributed.
+Another advantage of this hashing algorithm is that there already exists a good implementation of it for JavaScript ^[See https://www.npmjs.com/package/fnv-plus].
+
+Each generated hash is represented as a large number.
+In order to map this number onto a specific position in the index table, we simply compute the remainder of the hash when divided by $n$ (the size of the index table).
+So, in order to retrieve the value that's associated with a specific key, we first compute the hash of the key, then find out its remainder when divided by $n$ and look at the value in the index table at this position.
+\autoref{fig:hashmap_lookup_example} shows a detailled example of how a lookup for a key "cat" is performed.
+
+![Looking up a value in the HashMap consists of several steps. First the key is hashed, then the position of this hash in the index table is computed. At last, the pointer at this computed position in the index table can be used to retrieve the value associated with the key. \label{fig:hashmap_lookup_example}](resources/figures/chapter7_hashmap_hash_function.eps)
+
+The `HashMap` implementation requires us to reserve two blocks of memory:
+
+* **index block:** 
+* **data block:**
 
