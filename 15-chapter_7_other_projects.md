@@ -30,11 +30,14 @@ Recently, these two tools were compared in the first multilab comparison study i
 
 The process of grouping proteins is unfortunately not as straightforward as it might first appear [@martensProteomicsDataValidation2007; @uszkoreitPIAIntuitiveProtein2015; @audainIndepthAnalysisProtein2017; @nesvizhskiiInterpretationShotgunProteomic2005].
 Identified peptide sequences have to be assembled into a list of identified proteins, but when a peptide can be mapped to multiple proteins, this leads to the protein inference problem [@nesvizhskiiInterpretationShotgunProteomic2005].
+
 In metaproteomics, this problem is exacerbated due to the presence of homologous proteins from multiple species in its necessarily large protein databases [@schiebenhoeferChallengesPromiseInterface2019].
 Protein grouping is therefore commonly used to generate a more manageable list of identified protein groups that can be used for further downstream analysis.
 However, different protein grouping algorithms can be chosen, leading to different lists of protein groups from a single set of identified peptides [@martensProteomicsDataValidation2007].
+
 In the past, many protein grouping methods have been developed, as reviewed in Audain et al., [@audainIndepthAnalysisProtein2017] but these typically do not interface well with post-processing tools like Percolator, [@kallSemisupervisedLearningPeptide2007] which are able to increase the number of peptide-to-spectrum matches (PSMs) due to a better separation of true and false matches [@bouwmeesterAgeDataDrivenProteomics2020].
 Moreover, the common strategy used by these tools is the Occam’s razor strategy, which is not always ideal [@vandenbosscheCriticalAssessmentMetaProteome2021].
+
 We here therefore present a new tool, Pout2Prot, which provides users with two relevant protein inference options that are tailored toward metaproteomics use cases: Occam’s razor and anti-Occam’s razor.
 Occam’s razor is based on the principle of maximum parsimony and provides the smallest set of proteins that explains all observed peptides.
 Here, however, proteins that are not matched by a unique peptide are discarded, and their associated taxonomy and functions, which might actually be present in the sample, are lost.
