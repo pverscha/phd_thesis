@@ -1,0 +1,123 @@
+%%----------------------------------------------------------------------------------------------------------------------
+%% Copyright (C) 2019 by Niko Strijbol
+%%
+%% This file may be distributed and/or modified under the conditions of the LaTeX Project Public License, either
+%% version 1.3c of this license or (at your option) any later version. The latest version of this license is in:
+%%
+%%      http://www.latex-project.org/lppl.txt
+%%
+%% and version 1.3c or later is part of all distributions of LaTeX version 2006/05/20 or later.
+%%----------------------------------------------------------------------------------------------------------------------
+%
+% This package provides building blocks and assets for use with other packages, or for standalone use if you want to
+% use high-quality images/colours without any effort. It uses Ghent University's official assets. Last asset update
+% was february 2019.
+%
+% Provided are following components:
+% - Colours, both for the university and for the faculties
+% - Utility methods to use the university font (requires seperate installation, see below.) as \panno
+% - Logos for various entities, such as the university, the faculties and campusses.
+%
+% Note that this package requires the University's font, UGent Panno Text, to be installed and available as a system
+% font. Consult the documentation of your LaTeX-distribution for more information; using non-TeX fonts will often
+% require LuaLaTeX or XeteX.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugent2016-assets}[2020/05/28 package ugent2016-assets]
+
+% Load our packages at the end of the preamble. This allows the user to override loaded packages.
+\RequirePackage{etoolbox}
+% Compare strings
+\RequirePackage{xstring}
+
+\AtEndPreamble{
+    % Required for provinding the colours
+    \RequirePackage{xcolor}
+    % Used to simplify getting the correct resources for the language.
+    \RequirePackage{translations}
+
+    % Show a warning if fontspec has not been loaded.
+    \@ifpackageloaded{fontspec}{
+        \PackageInfo{\@currname}{Package 'fontspec' is loaded, attempting to load UGent Panno}
+        % Provide the font family as \panno
+        \IfFontExistsTF{UGent Panno Text}{%
+            % The font exists, so load it.
+            \PackageInfo{\@currname}{UGent Panno is available, it will be available}
+            \newfontfamily\panno{UGent Panno Text}[
+                BoldFont	= UGent Panno Text SemiBold
+            ]
+        }{%
+            % The font does not exist, so issue a warning and define a command that does nothing.
+            \PackageWarningNoLine{\@currname}{UGent Panno is not available, so it will not be available. Download and install it from https://www.ugent.be/intranet/nl/op-het-werk/huisstijl/panno-lettertype.htm}
+            \newcommand{\panno}{\sffamily}
+        }
+
+    }{%
+        \PackageWarningNoLine{\@currname}{Package 'fontspec' is not defined. UGent Panno will not be available}
+    }
+
+    % Global Ghent University colours
+    \definecolor{ugent-blue}{RGB}{30, 100, 200}		% traffic blue		/ verkeersblauw
+    \definecolor{ugent-yellow}{RGB}{255, 210, 0}	% zinc yellow		/ zinkgeel
+
+    % Faculty colours
+    \definecolor{ugent-lw}{RGB}{241, 164, 43}		% signal yellow		/ signaalgeel
+    \definecolor{ugent-re}{RGB}{220, 78, 40}		% vermilion			/ vermiljoen
+    \definecolor{ugent-we}{RGB}{45, 140, 168}		% no match
+    \definecolor{ugent-ge}{RGB}{232, 94, 113}		% rose				/ bleekrood
+    \definecolor{ugent-ea}{RGB}{111, 113, 185}		% distant blue		/ verblauw
+    \definecolor{ugent-eb}{RGB}{174, 176, 80}		% no match
+    \definecolor{ugent-di}{RGB}{130, 84, 145}		% signal violet		/ signaalviolet
+    \definecolor{ugent-pp}{RGB}{251, 126, 58}		% deep orange		/ dieporanje
+    \definecolor{ugent-bw}{RGB}{39, 171, 173}		% turquoise blue	/ turkooisblauw
+    \definecolor{ugent-fw}{RGB}{190, 81, 144}		% traffic purple	/ verkeerspurper
+    \definecolor{ugent-ps}{RGB}{113, 168, 96}		% yellow green		/ geelgroen
+
+    % Define the names of all faculties
+    \NewTranslationFallback{we}{Faculteit Wetenschappen}
+    \NewTranslation{english}{we}{Faculty of Sciences}
+    \NewTranslationFallback{re}{Faculteit Recht en Criminologie}
+    \NewTranslation{english}{re}{Faculty of Law and Criminology}
+    \NewTranslationFallback{lw}{Faculteit Letteren en Wijsbegeerte}
+    \NewTranslation{english}{lw}{Faculty of Arts and Philosophy}
+    \NewTranslationFallback{ge}{Faculteit Geneeskunde en Gezondheidswetenschappen}
+    \NewTranslation{english}{ge}{Faculty of Medicine and Heath Sciences}
+    \NewTranslationFallback{ea}{Faculteit Ingenieurswetenschappen en Architectuur}
+    \NewTranslation{english}{ea}{Faculty of Engineering and Architecture}
+    \NewTranslationFallback{eb}{Faculteit Economie en Bedrijfskunde}
+    \NewTranslation{english}{eb}{Faculty of Economics and Business Administration}
+    \NewTranslationFallback{di}{Faculteit Dierengeneeskunde}
+    \NewTranslation{english}{di}{Faculty of Veterinary Medicine}
+    \NewTranslationFallback{pp}{Faculteit Psychologie en Pedagogische Wetenschappen}
+    \NewTranslation{english}{pp}{Faculty of Psychology and Educational Sciences}
+    \NewTranslationFallback{bw}{Faculteit Bio-Ingenieurswetenschappen}
+    \NewTranslation{english}{bw}{Faculty of Bioscience Engineering}
+    \NewTranslationFallback{fw}{Faculteit Farmaceutische Wetenschappen}
+    \NewTranslation{english}{fw}{Faculty of Pharmaceutical Sciences}
+    \NewTranslationFallback{ps}{Faculteit Politieke en Sociale Wetenschappen}
+    \NewTranslation{english}{ps}{Faculty of Political and Social Sciences}
+
+
+    % By default, use Dutch.
+    \NewTranslationFallback{assets}{nl}
+    % Otherwise, use English.
+    \NewTranslation{english}{assets}{en}
+
+    % We could define the following two commands as one with an optional parameter. However, this causes
+    % issues because an optional argument makes it non-expandable, meaning the command can no longer be
+    % used as a path in \includegraphics.
+    \newcommand*{\ugentlogo}[1]{ugent2016-logo-#1-\GetTranslation{assets}}
+    \newcommand*{\ugentlogoenglish}[1]{ugent2016-logo-#1-en}
+    \newcommand*{\ugentlogodutch}[1]{ugent2016-logo-#1-nl}
+
+    % Needs some expansion magic, see https://tex.stackexchange.com/a/326191/92083
+    \newcommand*{\facultyname}[1]{%
+        \edef\transkey{#1}%
+        \expandafter\GetTranslation\expandafter{\transkey}%
+    }
+}
+
+% Define the block sizes for the typographic grid.
+\newlength{\bigblock}
+\setlength{\bigblock}{\dimexpr\paperheight/7\relax}
+\newlength{\smallblock}
+\setlength{\smallblock}{\dimexpr\bigblock/4\relax}

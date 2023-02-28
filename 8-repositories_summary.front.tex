@@ -1,0 +1,87 @@
+\chapter*{List of repositories}
+
+Below you can find a listing of all repositories and code packages that have (in part) been developed or maintained by me over the course of my PhD.
+These repositories are all publicly accessible on GitHub.
+Some of the repositories that I worked on are no longer maintained or are migrated to a different location.
+Only actively used and maintained repositories are listed here.
+Repositories set up for temporary experiments or deprecated projects are omitted for brevity.
+
+\begin{large}\textbf{\textsf{unipept-web}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-web}{\textsf{/unipept/unipept-web}} \hfill \faTag ~ \textsf{5.0.4} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify} \\
+The Unipept Web application is developed using TypeScript, in combination with the Vue and Vuetify frameworks.
+Because of Vue, the application is structured as a collection of web components that can be reused between different pages and parts of the web app.
+By browsing to \href{https://unipept.ugent.be}{https://unipept.ugent.be}, researchers have direct access to a browser-based application for the analysis of metaproteomics datasets.
+
+\begin{large}\textbf{\textsf{unipept-desktop}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-desktop}{\textsf{/unipept/unipept-desktop}} \hfill \faTag ~ \textsf{2.0.0} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify, Electron} \\
+All code related to the Unipept Desktop application can be found in this repository.
+The desktop application, in contrast to the Unipept Web application, focuses on the analysis of very large metaproteomics samples and a better (hierarhical) organization of samples that somehow belong together.
+Because we wanted to maximize the amount of code that can be shared between the Unipept Web and Desktop application, we chose to use the Electron framework for primary development of our most recent tool.
+Electron\footnote{See https://www.electronjs.org/} is a software framework that allows desktop applications to be developed using web-based technologies (such as TypeScript, HTML, etc.).
+
+\begin{large}\textbf{\textsf{unipept-web-components}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-web-components}{\textsf{/unipept/unipept-web-components}} \hfill \faTag ~ \textsf{2.0.0} \\
+\faCode ~ \textsf{TypeScript, Vue, Vuetify} \\
+Both the Unipept Web and Desktop application are internally structured using web components, a type of reusable custom web element that is responsible for a well-defined function.
+This repository is a software library that contains a lot of these web components that are being used by both Unipept applications.
+By doing so, we only need to make a change once in order to update both apps simultaneously.
+
+\begin{large}\textbf{\textsf{unipept-api}}\end{large} \hfill \faTag ~ \textsf{4.6.4} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-api}{\textsf{/unipept/unipept-api}} \\
+\faCode ~ \textsf{Ruby-on-Rails} \\
+The Unipept API repository contains the ``backend`` code that powers all data analysis requests that are made by the Unipept Web and Desktop application.
+Unipept's API is responsible for instructing the Unipept database and extracting the required information out of it, processing it further and providing a valid response to API-calls made by the web app, the desktop app, or other third-party applications.
+
+\begin{large}\textbf{\textsf{unipept-cli}}\end{large} \hfill \faTag ~ \textsf{3.0.2} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-cli}{\textsf{/unipept/unipept-cli}} \\
+\faCode ~ \textsf{Ruby-on-Rails} \\
+The Unipept command line interface (CLI) can be directly instructed by machines (it works without a graphical user interface) and can therefor easily be plugged into existing data analysis pipelines.
+All code in this repository has been written in Ruby-on-Rails and is mainly responsible for parsing data from the command line, sending it to the Unipept API in chuncks and properly formatting the result.
+Ruby is a interpreted programming language that is compatible with all major operating systems, which makes the Unipept CLI easily accessible for most users.
+
+\begin{large}\textbf{\textsf{unipept-visualizations}}\end{large} \hfill \faTag ~ \textsf{2.1.0} \\
+\faGithub ~ \href{https://github.com/unipept/unipept-visualizations}{\textsf{/unipept/unipept-visualizations}} \\
+\faCode ~ \textsf{TypeScript, D3} \\
+An important aspect of the popularity of Unipept are its interactive data visualizations.
+These are not only suitable for visualizing the results of a metaproteomics data analysis, but can instead be used in a wide range of different applications (as long as the input data format adheres to certain properties).
+In order to promote the reuse of our visualizations by third-party app developers, we have extracted all of Unipept's visualizations into a separate software package which is available through NPM.
+
+\begin{large}\textbf{\textsf{make-database}}\end{large} \\
+\faGithub ~ \href{https://github.com/unipept/make-database}{\textsf{/unipept/make-database}} \\
+\faCode ~ \textsf{Bash, Java, JavaScript, SQL} \\
+A big portion of Unipept's performance is the result of a lof of preprocessing that takes place during the construction of the Unipept database.
+This database contains a list of all tryptic peptides that are generated from the information present in the UniProtKB.
+The digestion of the UniProtKB and all of the associated preprocessing steps are implemented in Java and JavaScript.
+All separate database construction steps are then ``glued`` together using a shell-script that finally produces a series of \texttt{tsv}-files that can be imported into a relational database.
+
+\begin{large}\textbf{\textsf{docker-images}}\end{large} \hfill \faTag ~ \textsf{1.1.1} \\
+\faGithub ~ \href{https://github.com/unipept/docker-images}{\textsf{/unipept/docker-images}} \\
+\faCode ~ \textsf{Docker} \\
+This repository contains a collection of Docker images that can be used to easily set-up a local instance of the Unipept Database and the Unipept API.
+These images are important for the Unipept Desktop application to function since it allows researchers to build their own custom protein reference databases, which are then hosted locally through Docker containers based upon these images.
+
+\begin{large}\textbf{\textsf{MegaGO}}\end{large} \hfill \faTag ~ \textsf{1.0.0.2021.04} \\
+\faGithub ~ \href{https://github.com/MEGA-GO/MegaGO}{\textsf{/MEGA-GO/MegaGO}} \\
+\faCode ~ \textsf{Python, Flask, TypeScript, Vue, Vuetify} \\
+The MegaGO project started as a hackathon project at the EuBIC Developers meeting in 2020.
+MegaGO is a tool that allows to compute the similarity of multiple sets of GO-terms.
+This similarity can be computed by using our web application (which is implemented in TypeScript, using Vue and Vuetify) or the command line interface.
+Computation of the similarity score is not performed by the web application, but by a Python package that exposes a HTTP REST API (which is developed using the Flask framework).
+
+\begin{large}\textbf{\textsf{Pout2Prot}}\end{large} \hfill \faTag ~ \textsf{1.2.1} \\
+\faGithub ~ \href{https://github.com/compomics/pout2prot}{\textsf{/compomics/pout2prot}} \\
+\faCode ~ \textsf{Python, JavaScript, Vue} \\
+Pout2Prot aims at performing protein grouping on files generated by the Percolator software.
+This repository contains a Python implementation of the protein grouping algorithm and the implementation of a web application that exposes the functionality of the Python script through an easy-to-use app.
+The Python implementation of the protein grouping script has been transpiled to JavaScript using Transcrypt\footnote{See: \href{https://www.transcrypt.org/}{https://www.transcrypt.org/}} and is directly executed by the browser itself.
+No user data is ever transmitted to the Pout2Prot web server.
+
+\begin{large}\textbf{\textsf{SharedMemoryDatastructures}}\end{large} \hfill \faTag ~ \textsf{0.1.9} \\
+\faGithub ~ \href{https://github.com/pverscha/SharedMemoryDatastructures}{\textsf{/pverscha/SharedMemoryDatastructures}} \\
+\faCode ~ \textsf{TypeScript} \\
+This repository contains an implementation of a HashMap that can be transferred between different JavaScript threads at a very low cost.
+This HashMap is still in an alpha-status (not all Map-operations are supported at this point), but is already being used by Unipept under-the-hood on a daily basis since 2021 and allows for a dramatic increase in performance.
+
+\newpage

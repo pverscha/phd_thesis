@@ -13,6 +13,7 @@ classoption: x11names, table
 codeBlockCaptions: true
 header-includes:
     - \usepackage{microtype}
+    - \usepackage{pdfpages}
     - \usepackage{sectsty}
     - \usepackage[labelfont=bf]{caption}
     - \usepackage{hyperref}
