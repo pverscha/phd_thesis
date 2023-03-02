@@ -146,36 +146,36 @@ Once a list of peptide sequences has been determined, the data is finally ready 
 ### Unipept
 Unipept is an ecosystem of software tools that are mainly focussed on the analysis of metaproteomics datasets.
 Prof. Dr. Bart Mesuere, co-supervisor of this PhD thesis, initially started the Unipept project at Ghent University in 2010 in the context of his PhD.
-Since its early days, Unipept has undergone a big transition, while still maintaining its initial focus of providing an excellent user experience and top-of-the-line performance.
+Since its early days, Unipept has undergone a big transition, while still maintaining its initial focus of providing an excellent user experience and top-of-the-line performance when compared to similar tools.
 
-All of the tools in the Unipept ecosystem work by taking a list of tryptic peptide sequences as input and matching these peptides with the proteins in a **protein reference database** in order to provide a taxonomic and functional summary for this sample.
+All tools in the Unipept ecosystem work by taking a list of tryptic peptide sequences as input and matching these peptides with the proteins in a **protein reference database** in order to provide a taxonomic and functional summary for this input sample.
 Every Unipept tool has its own target audience and functionality.
-See the list below for more information on the tools that currently exist and what each of these is aimed at.
+See the list in the next subsection for more information on the tools that currently exist and what each of these is aimed at.
 
 #### The Unipept ecosystem
 
 ##### Unipept Web application
-The first real Unipept tool that is presented to the outside world, is the Unipept Web application.
+The first real Unipept tool that was presented to the outside world, is the Unipept Web application.
 This app is accessible at [https://unipept.ugent.be](https://unipept.ugent.be) and provides a user friendly web component that allows users to perform metaproteomics analysis and consult the results that are presented to them as a collection of visualizations and tables.
 All information that is provided by our web application can easily be exported (and can subsequently be imported into other tools for further analysis).
 
 ##### Unipept CLI
 For power-users that require the metaproteomics analysis of many large samples, we provide the Unipept command line interface (CLI).
 This command line interface allows Unipept's analysis to be plugged into existing analysis pipelines and allows machines to automate specific steps.
-Unlike the web application, the CLI mainly provides textual output (support for visualizations is very limited).
+Unlike the web application, the CLI has no graphical user interface and mainly provides textual output (support for visualizations is also limited).
 
 ##### Unipept API
-The Unipept API (Application Programming Interface) is a collection of endpoints that allows third-party applications to integrate some of Unipept's functionality into their own workloads.
-Data can be send to each endpoint using HTTP POST or GET requests to our servers, after which the Unipept server will respond with the requested results as a JSON-formatted object.
+The Unipept API (Application Programming Interface) is a collection of endpoints that allow third-party applications to integrate some of Unipept's functionality into their own workloads.
+Data can be send to each endpoint using `HTTP POST` or `GET` requests to our servers, after which the Unipept server will respond with the requested results as a `JSON`-formatted object.
 
 ##### Unipept Desktop
 Unlike the previous three tools, the Unipept Desktop application has been added to our ecosystem very recently and does not necessarily needs to communicate with the Unipept servers in order to function.
-The desktop application combines some of the advantages of the web app, CLI and API into one and allows users to process large metaproteomic samples using a user friendly graphical user interface.
+The desktop application combines some of the advantages of the web app, CLI and API into one and allows users to process large metaproteomic samples using a user friendly graphical user interface (making it more accessible to less tech-savvy users).
 It is similar to the CLI in the way that it allows to process much larger samples than the web application, and requires less technical skills to operate.
 The biggest difference with the web application is the fact that it cannot be plugged into existing analysis pipelines as easily, but it's also not designed to do so.
 
 ##### UMGAP (Unipept MetaGenomics Analysis Pipeline)
-UMGAP, or the Unipept MetaGenomics Analysis Pipeline, is a bit of an outsider because it focusses on the analysis of metagenomics data.
+UMGAP, or the Unipept MetaGenomics Analysis Pipeline, is a bit of an outsider because it focuses on the analysis of metagenomics data (instead of metaproteomics data).
 This pipeline has been developed by Dr. Felix Van der Jeugt and is only accessible from the command line.
 Since all tools presented in this thesis focus solely on the analysis of metaproteomics data, we will not go into more detail here.
 
@@ -185,29 +185,29 @@ Every input sample consists of a list of tryptic peptide sequences.
 Non-tryptic peptides will be ignored by Unipept, since they cannot be matched with the information in our **peptide reference database**.
 
 ##### Construction of the peptide reference database
-This peptide reference database is already one of the most important concepts that help to understand how Unipept matches the peptides from an input sample with taxonomic and functional information.
+Grasping how a peptide reference database is being used by Unipept is already one of the most important things that help to understand how Unipept processes input samples and generates a taxonomic and functional profile for an ecosystem.
 A peptide reference database can be seen as some kind of information resource that maps peptides onto organisms and functions, associated with these peptides.
 In order to construct this database, we extract all proteins (including their mapping to organisms and functions) from the UniProtKB resource [@theuniprotconsortiumUniProtWorldwideHub2019].
-UniProt is an organization that focusses on providing a protein database that is complete as possible.
-It contains full protein seequences and information about the organisms and functions that these proteins are associated with.
+UniProt is an organization that focuses on providing a protein database that is as complete as possible.
+It contains full protein sequences and information about the organisms and functions that these proteins are associated with.
 
-Since Unipept expects a user to provide a list of peptides (and not proteins), we need to transform the information from the UniProtKB into a peptide reference database.
+Since Unipept expects a user to provide a list of peptides (instead of proteins), we need to transform the information from the UniProtKB resource into a peptide reference database.
 Internally, Unipept does so by performing an in-silico tryptic digest of the proteins encountered and cleaves them by the rules imposed by trypsin (see \autoref{fig:protein_to_peptide_db}).
 Note that one tryptic peptide typically matches with more than one protein.
-It makes sense that the proteins from organisms that have co-evolved closely over the years can be very similar to each other and that some of the peptides that result from tryptic digestion of these proteins are identical.
+This makes sense since the proteins from organisms that have co-evolved closely over the years can be very similar to each other and that some of the peptides that result from tryptic digestion of these proteins are identical.
 This actually happens relatively frequently and can even occur between organisms of very different lineages (sometimes purely due to chance).
 
 ![The Unipept database is constructed by extracting the proteins from the UniProtKB resource and performing an in-silico tryptic digest on each of the proteins. \label{fig:protein_to_peptide_db}](resources/figures/chapter1_protein_to_peptide_db.eps)
 
-Since users only provide peptides to Unipept (and no other information), it is impossible to distinguish between the different proteins that match with one of the peptides from the input (e.g. if a an input peptide appears in three different proteins A, B and C, it is impossible for Unipept to know if it should draw conclusions from protein A, B or C).
-In order to overcome this issue, we simply report only information that is applicable to all matched proteins (or thus information that is correct in either the situation that the peptide originated from protein A, B or C in the example above).
+Since users only provide peptides to Unipept (and no other information), it is impossible to distinguish between the different proteins that match with one of the peptides from the input (e.g. if an input peptide appears in three different proteins A, B and C, it is impossible for Unipept to know if it should draw conclusions from protein A, B or C).
+In order to overcome this issue, we simply report only information that is applicable to all matched proteins (or thus information that is correct in either the situation that the peptide originated from either protein A, protein B or protein C in the example above).
 
 **Summarizing taxonomic information**
 
 For taxonomic information, we aggregate all organisms that are associated with the protein matches of a single peptide and compute the lowest common ancestor for this set of organisms.
-This lowest common ancestor is the most specific taxon in the NCBI taxonomy that is a parent of all organisms in the collection.
+This lowest common ancestor is the most specific taxon in the NCBI taxonomy that is a direct or indirect parent of all organisms in the collection.
 In \autoref{fig:lca_example1}, the lowest common ancestor of the organisms in the input set is the root node.
-This example is one that occurs relatively frequently and in which case no valuable information is reported (apart from the fact that an organism was indeed found).
+This example is one that occurs relatively frequently and in which case no valuable information can be reported by Unipept (apart from the fact that an organism was indeed found).
 Compare this example to the one given in \autoref{fig:lca_example2}.
 In this case, the lowest common ancestor of the two viruses from the input set is the *Coronaviridae* taxon.
 
@@ -219,8 +219,8 @@ Instead of thus reporting all organisms that are associated with a peptide, Unip
 
 **Summarizing functional information**
 
-In order to summarize the functional information of a single peptide, Unipept is simply going count how many times each functional annotation appears in the matched set of proteins.
-Concrete, if a peptide occurs in proteins A, B and C, and function X is associated with protein B and C, and function Y is associated with protein A, then function X will be reported as occurring twice for this peptide and function Y will be reported to occur once.
+In order to summarize the functional information of a single peptide, Unipept simply counts how many times each functional annotation appears in the matched set of proteins.
+To make this more concrete, if a peptide occurs in proteins A, B and C, and function X is associated with protein B and C, and function Y is associated with protein A, then function X will be reported as occurring twice for this peptide and function Y will be reported to occur once.
 
 ##### Processing a metaproteomics dataset
 In order now to process a list of peptides, Unipept will match each of the input peptides with its peptide reference database and report all lowest common ancestors and functional annotations found per peptide.
