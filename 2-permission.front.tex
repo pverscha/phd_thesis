@@ -1,3 +1,17 @@
+\makeatletter
+\renewcommand*\@makeschapterhead[1]{%
+%       \vspace*{50\p@}%
+        {%
+        \singlespacing\parindent\z@\raggedright\normalfont
+        \interlinepenalty\@M
+        \sffamily\Huge\bfseries
+        #1\par
+        \nobreak\vskip 20\p@
+        \onehalfspacing
+    }
+}
+\makeatother
+
 \chapter*{Permission for use of content}
 The author gives permission to make this dissertation available for consultation and to copy parts of this dissertation for personal use.
 
