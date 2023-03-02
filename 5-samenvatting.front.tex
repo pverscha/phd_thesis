@@ -3,29 +3,56 @@
 Eiwitten zijn alomtegenwoordig.
 Ze vormen een essentieel onderdeel voor alle leven op aarde en staan in voor een heleboel levensbelangrijke functies.
 Zo zorgen enzymen er bijvoorbeeld voor dat ons lichaam op een efficiënte manier voedingsstoffen kan omzetten in energie en andere bouwstenen.
-Of zorgen onze hormonen ervoor dat verschillende cellen en organen met elkaar kunnen communiceren en essentiële levensprocessen kunnen reguleren.
-Niet alleen mensen, maar elk levend organisme op onze planeet steunt op de goede werking van eiwitten voor z'n voorbestaan.
+Of zorgen onze hormonen ervoor dat verschillende cellen en organen met elkaar kunnen communiceren en reguleren ze essentiële levensprocessen.
+Niet alleen mensen, maar alle levend organismen op onze planeet steunen op de goede werking van eiwitten voor hun voorbestaan en dus kan efficiënt onderzoek naar deze grote moleculen van enorm belang zijn.
 
-Eiwitten bestaan zelf uit kleinere bouwstenen die we aminozuren noemen.
-Deze moleculen zweven rond in ons lichaam en worden aan elkaar gekoppeld om een eiwit met een bepaalde functie en structuur te kunnen opbouwen.
-De exacte volgorde van deze aminozuren bepaalt waarvoor het eiwit gebruikt kan worden en ligt vast in ons DNA.
+Een eiwit is een zogenaamde macromolecule die opgebouwd wordt uit aminozuren.
+Deze aminozuren zweven rond in ons lichaam en worden in een strikte volgorde aan elkaar gekoppeld om een eiwit met een bepaalde functie en structuur op te bouwen.
+De exacte volgorde van deze aminozuren bepaalt wat de functie van het eiwit wordt en ligt vast in ons DNA.
+Een kleine wijziging aan het DNA van een organisme kan er dus voor zorgen dat bepaalde eiwitten niet langer geproduceerd gaan worden, of dat ze zich anders gaan gedragen.
 Sinds de eerste ontdekking van eiwitten in de natuur, is er reeds een heleboel onderzoek naar deze grote moleculen uitgevoerd en hebben onderzoekers een grote databank opgesteld waarin ze voor elk gekend eiwit bijhouden bij welk organisme het hoort en wat zijn functie is (indien gekend).
 
-Dankzij de massaspectrometer, een erg complex en duur toestel, is het mogelijk om te achterhalen welke eiwitsequenties er voorkomen in een bepaalde omgeving (zoals het bloed, de stoelgang, de grond rondom een bepaalde plant, etc.) wat ons daarna ook weer in staat stelt om deze eiwitsequenties op te zoeken in de bestaande eiwitdatabank.
+Dankzij de massaspectrometer, een erg complex en duur toestel, en een reeks van geavanceerde analyses op een computer, is het mogelijk om te achterhalen welke eiwitsequenties er voorkomen in een bepaalde omgeving (zoals het bloed, de stoelgang, de grond rondom een bepaalde plant, etc.) wat ons daarna ook weer in staat stelt om deze eiwitsequenties op te zoeken in de bestaande eiwitdatabank.
 Door elk van de geïdentificeerde eiwitsequenties op te zoeken in deze databank, kunnen we een rapport opstellen met de organismen die voorkomen in de onderzochte omgeving en welke functies ze daar mogelijks aan het uitvoeren zijn.
 
-Unipept is een softwarepakket dat precies dit doet.
-Onderzoekers dienen een lijstje van geïdentificeerde eiwitsequenties op te geven, waarna deze stuk-voor-stuk opgezocht worden door Unipept in een eiwitdatabank.
-Naderhand worden al deze resultaten geaggregeerd en presenteert Unipept een mooi overzicht aan de gebruikers waarin alle geïdentificeerde organismen, en welke functies ze op dat moment uitvoeren, aanwezig zijn.
+Om dit hele proces zo eenvoudig mogelijk te maken werd Unipept ontwikkeld.
+Unipept is een softwarepakket dat een reeks van geïdentificeerde eiwitfragmenten zal opzoeken en proberen koppelen aan de eiwitten uit de grote eiwitdatabank en met behulp van deze informatie een taxonomisch en functioneel profiel zal opstellen voor het ecosysteem dat door onderzoekers momenteel verkend wordt.
+Samen met een heleboel interactieve datavisualisaties zal het taxonomisch profiel van een staal de onderzoekers een duidelijk beeld geven van \textbf{wie} (e.g. welke organismen) er in een ecosysteem actief zijn.
+Om daarnaast ook een dieper inzicht te verkrijgen in \textbf{wat} deze organismen op een bepaald moment aan het doen zijn, zullen onderzoekers verder kijken naar het functioneel profiel, zoals dat door Unipept wordt gegenereerd.
+Deze redenering maakt ook onmiddellijk duidelijk waar de kracht in het onderzoeken van eiwitten nu in schuilt.
+In plaats van enkel onderzoek te voeren naar \textit{wie} in een ecosysteem aanwezig is (zoals dat typisch gebeurd bij een genetisch experiment), wordt het opeens ook mogelijk om na te gaan \textit{wat} er op een bepaald moment in de tijd gebeurt.
 
-De laatste jaren zijn de stalen die onderzoekers willen analyseren met Unipept steeds groter geworden waardoor een webapplicatie niet langer voldoet.
-In hoofdstuk \ref{chapter:unipept_desktop_v1} kan u lezen hoe ik dit probleem heb aangepakt door de Unipept Desktop applicatie te ontwikkelen.
-De eerste versie van Unipept Desktop biedt de mogelijkheid om stalen te verwerken die tot 10 keer groter zijn dan wat vroeger mogelijk was, en maakt het mogelijk om de resultaten van verschillende stalen met elkaar te gaan vergelijken.
+Technologie staat nooit stil en de laatste 10 jaar werden er steeds krachtigere massaspectrometers ontwikkeld.
+Een gevolg hiervan is dat het voor eiwitonderzoekers eenvoudiger wordt om grotere stalen in 1 keer te gaan verwerken en is het aantal eiwitfragmentjes die door Unipept geanalyseerd moeten worden constant aan het toenemen.
+Omdat Unipept initieel ontwikkeld werd als webapplicatie en dus steeds door een webbrowser (zoals Google Chrome) uitgevoerd moet worden, werd het steeds moeilijker om te kunnen bijbenen met de huidige verbeteringen in massaspectrometer-technologie en de enorme hoeveelheid aan data die daarbij komt kijken.
+In hoofdstuk \ref{chapter:unipept_desktop_v1} kan u lezen hoe ik dit probleem heb aangepakt door de \textbf{Unipept Desktop} applicatie te ontwikkelen.
+De eerste versie van Unipept Desktop biedt de mogelijkheid om stalen te verwerken die tot 10 keer groter zijn dan wat vroeger mogelijk was met Unipept en maakt het mogelijk om de resultaten van verschillende stalen met elkaar te gaan vergelijken.
+Daarnaast kan u hier ook lezen dat het vanaf nu mogelijk is om stalen op een overzichtelijke manier te ordenen en gelijkaardige experimenten met elkaar te koppelen.
 
-In hoofdstuk \ref{chapter:unipept_desktop_v2} gaan we een stapje verder en stel ik versie 2.0 van de Unipept Desktop applicatie voor.
-Deze biedt ondersteuning voor het analyseren van "proteogenomics" stalen.
-Proteogenomics is een nieuwe onderzoeksdiscipline die momenteel sterk aan het opkomen is, en die genetische informatie (afkomstig uit DNA-experimenten) zal combineren met de informatie die we vanuit eiwitstalen extraheren.
-Sommige eiwitten worden door een grote verscheidenheid aan verschillende organismen geproduceerd, wat het onmogelijk maakt om te weten te komen welke organismen er precies aanwezig zijn in een staal, wat het op zijn beurt moeilijker maakt om uit te zoeken wat die organismen op dat moment aan het doen zijn.
+In hoofdstuk \ref{chapter:unipept_desktop_v2} gaan we nog een stapje verder en stel ik versie 2.0 van de Unipept Desktop applicatie voor.
+Deze versie biedt als eerste ondersteuning voor het analyseren van \textbf{proteogenomics} stalen.
+Proteogenomics is een nieuwe onderzoeksdiscipline die momenteel sterk aan het opkomen is, en bestaat eruit om genetische informatie (afkomstig uit DNA-experimenten) te combineren met de informatie die we vanuit een eiwitstaal kunnen verkrijgen.
+Eiwitten die door verschillende organismen geproduceerd worden, kunnen vaak toch sterk op elkaar lijken waardoor het voor Unipept in dit geval onmogelijk is om te weten welke organismen er exact aanwezig zijn in een ecosysteem.
+In plaats van een lijst met gedetailleerde taxonomische informatie te rapporteren, zal Unipept typisch een klasse van organismen die \textit{mogelijk} aanwezig zijn in het ecosysteem genereren.
+Soms is deze informatie voldoende voor onderzoekers om verder te kunnen gaan met hun experiment, maar vaak komt het ook voor dat als gevolg hiervan het functionele profiel voor het ecosysteem dat men onderzoekt niet informatief genoeg is.
+
 Binnen het proteogenomics onderzoeksgebied gaan onderzoekers eerst een genetisch experiment uitvoeren om uit te zoeken welke organismen potentieel aanwezig kunnen zijn binnen een ecosysteem en gaat men op basis daarvan de groep met potentiële eiwitmatches verkleinen.
-Enkel de eiwitten van die organismen die volgens het eerste experiment aanwezig kunnen zijn, worden ter beschouwing genomen.
+Enkel de eiwitten van die organismen die volgens het eerste experiment aanwezig kunnen zijn, worden ter beschouwing genomen en kunnen de resolutie van het taxonomisch en functioneel profiel van een eiwitstaal dat door Unipept gegenereerd werd verhogen.
 
+Er bestaan een heleboel verschillende classificaties waarmee de functies die door een organisme uitgevoerd worden aangeduid kunnen worden.
+Unipept biedt ondersteuning voor Enzyme Commission numbers (i.e. EC-numbers), Gene Ontology terms (i.e. GO-terms) en InterPro entries.
+Elk van deze classificaties heeft zijn eigen voor- en nadelen en richt zich typisch op een andere klasse van eiwitten.
+
+In hoofdstuk \ref{chapter:unipept_cli_v2} kan u lezen hoe we de \textbf{Unipept API en CLI} uitgebreid hebben met ondersteuning voor het rapporteren van dergelijke functionele annotaties.
+De API (Application Programming Interface) is een verzameling van resources die door Unipept worden aangeboden en die het mogelijk maken om de analyses van Unipept op te nemen in externe softwarepakketten
+Unipept's CLI (Command Line Interface) is een apart stukje software dat niet over een grafische gebruikersinterface beschikt, maar dat net om die reden eenvoudig ingeplugt kan worden in bestaande analysepipelines en het mogelijk maakt om grotere stalen te verwerken.
+
+Een van de sterktes van Unipept, is de collectie aan visualizaties die we aanbieden en het inzicht van een gebruiker in de taxonomische en functionele compositie van een staal sterk kunnen verbeteren.
+Elk van deze visualisaties werden ontwikkeld binnen ons eigen team en zijn niet enkel bruikbaar voor het visualiseren van de resultaten uit een eiwitanalyse, maar kunnen gebruikt worden om een veel ruimere klasse aan data visueel voor te stellen.
+In \ref{chapter:unipept_visualizations} beschrijf ik kort hoe we deze visualisaties hebben ontwikkeld en dat deze beschikbaar zijn voor externe gebruikers door middel van een publieke softwarebibliotheek.
+
+Voor elk geanalyseerd eiwitstaal zal Unipept typisch een hele reeks aan GO-termen kunnen rapporteren, en wordt het voor onderzoekers interessant om te kunnen bepalen hoe sterk twee stalen op elkaar \textbf{gelijken}.
+In hoofdstuk \ref{chapter:megago} kan u lezen hoe ik, samen met een groep wetenschappers uit heel Europa, een metriek heb ontwikkeld die aangeeft hoe sterk twee verzamelingen van Gene Ontology termen overeenkomen.
+De metriek zal voor twee verzamelingen van GO-termen een getal tussen $0$ en $1$ produceren waarbij een groter getal (dus dichter bij $1$) aangeeft dat de twee verzamelingen sterker op elkaar gelijken.
+
+Naast alle toevoegingen waar ik aan heb gewerkt die rechtstreeks in Unipept geïntegreerd werden, vindt u in hoofdstuk \ref{chapter:other_projects} een overzicht van een aantal projecten waar ik ook een grote rol in heb gespeeld en kan u in hoofdstuk \ref{chapter:future_work} lezen wat de toekomst voor Unipept mogelijk inhoudt.
