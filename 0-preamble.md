@@ -35,6 +35,7 @@ header-includes:
     - \renewcommand{\cftpartnumwidth}{0.7in}
     - \renewcommand{\cftpartdotsep}{\cftdotsep}
     - \newfontfamily\myriad[]{Myriad Pro Regular}
+    - \renewcommand{\chapterautorefname}{Chapter}
 ---
 
 \makeatletter
