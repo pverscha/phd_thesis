@@ -74,7 +74,7 @@ Search schemes were first proposed by (Lam et al.) and were further generalised 
 
 ##### Design and implement a new index structure for Unipept
 The first step that should be performed in order to allow Unipept to match peptides of arbitrary format, is to design a new index structure for our database, using FM-indices, and to implement this new index structure.
-For each protein in the protein reference database, we can construct an FM-index of the protein sequence, which allows us to match any kind of peptide with this protein and keep it in our new index structure.
+Each protein in the protein reference database, will be added to a generalised FM-index that will eventually contain all proteins from the reference database and which allows us to match any kind of peptide.
 We can use the Rust programming language since it is designed with performance and parallelization in mind, and it already provides a very good, open-source implementation of the FM-index data structure ^[https://docs.rs/fm-index/latest/fm_index/].
 These changes will allow us to match arbitrary peptides and peptides with missed cleavages using Unipept.
 
