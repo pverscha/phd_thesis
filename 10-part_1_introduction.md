@@ -3,16 +3,16 @@
 
 # Unipept Desktop
 
-On February 3, 2011, the first version of the Unipept web application was released.
-This date marked the start of Unipept as a tool that could be used by outside researchers.
+On February 3, 2011, the first version of the Unipept Web application was released.
+This date marked the start of Unipept as a tool that could be used by researchers outside of Ghent University.
 The web application has undergone an enormous evolution since then and has been expanded with numerous new tools and features in order to aid researchers in analysing metaproteomics data.
-Over the years, the Unipept ecosystem has further been expanded with an API that allows our analysis pipelines to be integrated with third-party tools, a command line interface (CLI) that can be used to automate the analysis of large datasets and a desktop application.
+Over the years, the Unipept ecosystem has further been expanded with an API that allows our analysis pipelines to be integrated with third-party tools and a command line interface (CLI) that can be used to automate the analysis of large datasets.
 Lately, the size and complexity of metaproteomics datasets have both increased, making it harder for a web application to process and produce the expected results.
 Since web applications are managed by a web browser, access to compute resources and storage space on the user's local machine is limited (to ensure stability and security of the web apps managed by the browser).
 
 In order to power the next generation of metaproteomics data analysis, I started working on the Unipept Desktop application.
 This application is developed using the Electron framework ^[https://www.electronjs.org/] which allows us to use web technologies (such as JavaScript, HTML, CSS, etc.) to build desktop applications.
-Since we already have a functioning web application, we want to reuse as much of the work we have put into this for this new desktop application (which is why Electron is the perfect choice).
+Since we already have a functioning web application, we want to reuse as much of the work we have put into this for the new desktop application (which is why Electron is the perfect choice).
 Most of the rationale and reasoning behind this is explained in \autoref{chapter:unipept_desktop_v1}.
 
 Once the desktop application reached feature parity with the web application, I started on expanding it with new features that could not be realised with our web application.
