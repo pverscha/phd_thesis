@@ -2,12 +2,13 @@
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Proteogenomics analysis in Unipept Desktop}}}
 
 *On February 10, 2023, version 2.0 of the Unipept Desktop application was released.
-A lot of work has gone into the development of this new version, since it first introduced the concept of targeted protein reference databases.
-These targeted databases contain only those proteins that are associated with a list of organisms (provided by the user).
+A lot of work has gone into the development of this new version since it first introduced the concept of targeted protein reference databases.
+These targeted databases contain only those proteins that are associated with a list of organisms that is provided by the user.
 This not only increases the taxonomic and functional resolution of a metaproteomics analysis (by decreasing the chance of random protein matches), but also provides basic support for proteogenomics analysis.*
 
 *I have taken the lead in the creation of the manuscript that I included in this chapter.
-The case study that's presented here could not have been written without the fantastic help of Dr. Alessandro Tanca.*
+The case study that's presented here could not have been written without the fantastic help of Dr. Alessandro Tanca and Dr. Marcello Abbondio of the University of Sassari, Italy.
+Both of them helped me validating the results produced of the latest iteration of the Unipept Desktop application and performed a lot of in-depth analyses to figure out where possible inconsistencies were coming from.*
 
 \newpage
 
@@ -213,7 +214,7 @@ On this machine, it took approximately 21 hours and 25 minutes to construct a cu
 All proteins from the UniProtKB resource are preprocessed the first time a targeted database is constructed and took approximately 5 hours and 30 minutes on this machine (this preprocessing step will automatically be performed when the UniProtKB resource updates).
 The final size of the database cache is 52GiB, and the 46 million and 1 million protein databases are respectively 255GiB and 5.76GiB in size.
 
-![Four analyses have been performed on the same metaproteomic sample, but with a different underlying protein reference database. In the main visualization (left), we compare the number of peptides with a taxon match at a specific rank (or lower) in the NCBI taxonomy. In most cases the analyses performed by using a reference database constructed from families or genera performs as well as or better than the full UniProtKB database. However, these databases contain only a fraction of the proteins (right) and therefore require much less computational resources. At the species level, all protein reference databases behave almost identically. At higher ranks, we can see that the reference database constructed from a set of species is probably too restricted.\label{fig:desktop_case_study_results}](resources/figures/chapter3_desktop_case_study_results.svg)
+![Four analyses have been performed on the same metaproteomic sample, but with a different underlying protein reference database. In the main visualization (left), we compare the number of peptides with a taxon match at a specific rank (or lower) in the NCBI taxonomy. In most cases the analyses performed by using a reference database constructed from families or genera performs as well as or better than the full UniProtKB database. However, these databases contain only a fraction of the proteins (right) and therefore require much less computational resources. At the species level, all protein reference databases behave almost identically. At higher ranks, we can see that the reference database constructed from a set of species is probably too restricted.\label{fig:desktop_case_study_results}](resources/figures/chapter3_desktop_case_study_results.eps)
 
 #### Concluding Remarks
 The newest iteration of the Unipept Desktop app builds upon the strength of the existing Unipept infrastructure to enable support for the analysis of proteogenomics samples.
