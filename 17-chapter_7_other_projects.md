@@ -166,6 +166,34 @@ The authors declare no conflict of interest.
 
 ### Highlighting taxonomic diversity of metaproteomic samples in metabolic pathways
 
+#### Introduction
+Since version 4.0 of the Unipept Web application, a functional analysis pipeline for metaproteomics samples was added.
+This pipeline initially supported EC-numbers and GO-terms, but was soon expanded to include support for InterPro entries.
+Over the last few years, interest in the functional analysis of metaproteomics samples has been increasing and researchers are more and more trying to gain a deeper understanding of what is happening in an ecosystem of interest.
+
+In addition to the ontologies that are supported by Unipept thus far, the Kyoto Encyclopedia of Genes and Genomes (KEGG) [@kanehisaKEGGKyotoEncyclopedia2000] provides a database with a big collection of metabolic pathways.
+Metabolic pathways are a series of chemical reactions that occur within a living organism to maintain life.
+These pathways allow for the synthesis and breakdown of molecules necessary for energy production, growth, and maintenance of cellular processes.
+
+The KEGG resource provides a collection of maps that visualize the reactions that are taking place in a specific metabolic pathway, which enzymes are involved in this reaction and what the start and end product of each reaction is.
+Because proteins play a major role in these metabolic reactions, we have developed a tool that highlights which parts of a pathway have been identified to be active in a protein sample.
+
+#### Implementation
+
+![Once a peptide or protein input sample has been analysed, the web application displays a list of all metabolic pathway maps that are applicable for the provided input and requests the user to select a map of interest. \label{fig:pathways_selection_wizard}](resources/figures/chapter7_pathways_selection_wizard.png)
+
+The pathway visualization library that we decided to build counts on the pathway maps that our provided by the publicly accessible KEGG `API`.
+This KEGG `API` allows third-party applications to integrate KEGG pathway maps into their own software applications and to highlight specific nodes of these maps in one or more colours.
+A machine-readable format for each of the pathway map images is also provided, but we soon found out that these are typically incomplete.
+Since the KEGG service overlays each pathway map image with a collection of HTML elements (including their size and positioning), we were able to extract the required information from their.
+
+Our web application is implemented in TypeScript and uses the Vue and Vuetify frameworks for the development of a concise graphical user interface.
+It accepts a wide range of different input formats containing either peptide or protein related information and quickly analyses each of the input files to detect in which metabolic pathway reactions each of the input peptides or proteins are involved.
+Afterwards, the application will show a list of all pathway maps that are applicable to the input sample and highlights all identified metabolic reactions on the map. 
+\autoref{fig:pathways_selection_wizard} shows the pathway selection tool of the web application and \autoref{fig:pathways_final_result} shows an image of the final visualization result that is produced by the application.
+
+![After selecting a pathway map and a series of organisms, the final results are visualised by the web application. \label{fig:pathways_final_result}](resources/figures/chapter7_pathways_final_result.png)
+
 \newpage
 
 ### Efficiently exploiting parallelism in modern web applications
