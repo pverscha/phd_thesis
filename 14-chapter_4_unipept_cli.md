@@ -1,10 +1,10 @@
 ## Unipept CLI 2.0: adding support for visualisations and functional annotations {#chapter:unipept_cli_v2}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Functional annotations in the Unipept CLI and API}}}
 
-*Release 4.0 of the Unipept Web application is the first release of Unipept to provide a functional analysis pipeline for metaproteomics datasets.
+*Release 4.0 of the Unipept Web application is the first release of Unipept that provides a functional analysis pipeline for metaproteomics datasets.
 This initial release provided support for Enzyme Commission numbers and Gene Ontology numbers.
 Together with Philippe Van Thienen (a master student that I guided during the first year of my PhD), we further expanded Unipept's functional analysis pipeline with support for InterPro annotations.
-In order to expose this new functionality to powerusers and third-party applications, we have also implemented support for this novel functional analysis pipeline to the Unipept CLI and API.*
+In order to expose this new functionality to powerusers and third-party applications, we have also implemented support for this novel functional analysis pipeline in the Unipept CLI and API.*
 
 \newpage
 
