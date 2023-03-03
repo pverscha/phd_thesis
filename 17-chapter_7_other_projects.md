@@ -1,8 +1,8 @@
 ## Other projects {#chapter:other_projects}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Other projects conducted during my PhD}}}
 
-*During the course of my career as a PhD student, I have also been working on a lot of different research projects for which I was not the main contributor, but for which I, nonetheless, provided a significant addition.
-I have selected two of these projects and included them as sections in this chapter.*
+*During the course of my career as a PhD student, I have also been working on a lot of different research projects for which I was either not the main contributor (but still provided a significant addition), or which are smaller side-projects that I wanted to experiment with.
+I have selected three of these projects and included them as sections in this chapter.*
 
 \newpage
 
@@ -59,7 +59,7 @@ First, different protein subgroups can have the same peptide and therefore have 
 Second, when removing proteins using Occam’s razor or when assigning subgroups using anti-Occam’s razor, “undecidable” cases can occur as illustrated in \autoref{fig:pout2prot_undecidable_cases}.
 In these undecidable cases, the naive approach might produce inconsistent results when the algorithm is run multiple times.
 
-![Illustration of undecidable cases. Undecidable cases are situations where peptides and proteins are matched in such a way that the naive interpretation of the algorithm cannot make a clear decision. Specifically, this occurs in Occam’s razor when one of two or more proteins can be removed to explain the remaining peptides (top), and this occurs in anti-Occam’s razor when a protein can be put into a subgroup with two or more other proteins that cannot be subgrouped together (bottom). \label{fig:pout2prot_undecidable_occam}](resources/figures/chapter7_pout2prot_undecidable_cases.eps)
+![Illustration of undecidable cases. Undecidable cases are situations where peptides and proteins are matched in such a way that the naive interpretation of the algorithm cannot make a clear decision. Specifically, this occurs in Occam’s razor when one of two or more proteins can be removed to explain the remaining peptides (top), and this occurs in anti-Occam’s razor when a protein can be put into a subgroup with two or more other proteins that cannot be subgrouped together (bottom). \label{fig:pout2prot_undecidable_cases}](resources/figures/chapter7_pout2prot_undecidable_cases.eps)
 
 In this manuscript, we describe a new command line tool and web application that can convert .pout files from different experiments into two files containing protein groups and subgroups either as .tsv for direct use with Prophane or as human readable .csv files.
 Furthermore, we include a file converter that turns Proteome Discoverer output files into the .pout file format.
