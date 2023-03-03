@@ -93,10 +93,10 @@ Because projects are folder-based, they can contain both the raw input data as w
 In addition, previously performed analyses do not need to be recomputed when the application is restarted, as opposed to analyses that were run on the Unipept website, which need to be recomputed every time the website is closed.
 
 #### Comparative analysis
-![Screenshot of the inter-assay comparative analysis pipeline. Note that it is possible to select multiple assays from the project explorer. A heatmap is constructed from the set of items that were selected for comparison at the top of the page.](resources/figures/chapter2_comparative_analysis_screenshot.png)
+![Screenshot of the inter-assay comparative analysis pipeline. Note that it is possible to select multiple assays from the project explorer. A heatmap is constructed from the set of items that were selected for comparison at the top of the page.\label{fig:comparative_analysis_pipeline}](resources/figures/chapter2_comparative_analysis_screenshot.png)
 
 The Unipept Desktop Application provides both intra-assay and inter-assay comparative analyses that are rendered as heatmap visualizations.
-The intra-assay comparison can be started from the single assay analysis page by selecting the heatmap tab and provides a wizard to guide users through the set-up process of the comparison (Figure 2).
+The intra-assay comparison can be started from the single assay analysis page by selecting the heatmap tab and provides a wizard to guide users through the set-up process of the comparison (\autoref{fig:comparative_analysis_pipeline}).
 Users are required to select two types of data sources (one for each axis of the heatmap) and indicate which items should be compared.
 Four different data sources are currently supported: NCBI taxa, GO terms [@thegeneontologyconsortiumGeneOntologyResource2019], EC numbers and InterPro entries [@finnInterPro2017Protein2017].
 
@@ -115,7 +115,7 @@ A comparison between the various functionalities offered by these different serv
 
 \begin{table*}\centering
 \ra{1.3}
-\begin{tabular}{@{}p{30mm}cccc@{}}\toprule
+\begin{tabular}{@{}p{50mm}cccc@{}}\toprule
 & desktop app & web app & CLI & API\\ \midrule
 visualizations & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \faMinus & \faMinus \\
 basic metaproteomics analysis pipeline & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
