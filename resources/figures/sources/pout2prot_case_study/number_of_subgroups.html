@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unipept Desktop Case Study - Main visualization</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  </head>
+  <body>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        const materialBlue = "#1E88E5";
+        const materialGreen = "#7CB342";
+        const materialRed = "#E53935";
+        const materialYellow = "#FDD835"
+
+        const vlSpec = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "width": 1000,
+          "height": 500,
+          "autosize": {
+            "type": "fit",
+            "contains": "padding"
+          },
+          "config": {
+            "axis": {"labelFont": "Myriad Pro", "titleFont": "Myriad Pro", "labelFontSize": 16, "titleFontSize": 24},
+            "legend": {"labelFont": "Myriad Pro", "titleFont": "Myriad Pro", "labelFontSize": 16, "titleFontSize": 24},
+            "header": {"labelFont": "Myriad Pro", "titleFont": "Myriad Pro"},
+            "mark": {"font": "Myriad Pro", "fontSize": 16 },
+            "title": {"font": "Myriad Pro", "subtitleFont": "Myriad Pro"},
+          },
+          "data": {
+            "values": [
+              {"category":"S03", "group": "Groups (X!Tandem / MPA)", "value": 4044},
+              {"category":"S03", "group": "Groups (Percolator)", "value": 4735},
+              {"category":"S03", "group": "Subgroups (X!Tandem / MPA)", "value": 4503},
+              {"category":"S03", "group": "Subgroups (Percolator)", "value": 5552},
+              {"category":"S05", "group": "Groups (X!Tandem / MPA)", "value": 4483},
+              {"category":"S05", "group": "Groups (Percolator)", "value": 5559},
+              {"category":"S05", "group": "Subgroups (X!Tandem / MPA)", "value": 4950},
+              {"category":"S05", "group": "Subgroups (Percolator)", "value": 6429},
+              {"category":"S07", "group": "Groups (X!Tandem / MPA)", "value": 2420},
+              {"category":"S07", "group": "Groups (Percolator)", "value": 2731},
+              {"category":"S07", "group": "Subgroups (X!Tandem / MPA)", "value": 2724},
+              {"category":"S07", "group": "Subgroups (Percolator)", "value": 3289},
+              {"category":"S08", "group": "Groups (X!Tandem / MPA)", "value": 3550},
+              {"category":"S08", "group": "Groups (Percolator)", "value": 4177},
+              {"category":"S08", "group": "Subgroups (X!Tandem / MPA)", "value": 3985},
+              {"category":"S08", "group": "Subgroups (Percolator)", "value": 4987},
+              {"category":"S11_F1-4", "group": "Groups (X!Tandem / MPA)", "value": 4223},
+              {"category":"S11_F1-4", "group": "Groups (Percolator)", "value": 5132},
+              {"category":"S11_F1-4", "group": "Subgroups (X!Tandem / MPA)", "value": 4692},
+              {"category":"S11_F1-4", "group": "Subgroups (Percolator)", "value": 6050},
+              {"category":"S14_Rep1", "group": "Groups (X!Tandem / MPA)", "value": 2429},
+              {"category":"S14_Rep1", "group": "Groups (Percolator)", "value": 2860},
+              {"category":"S14_Rep1", "group": "Subgroups (X!Tandem / MPA)", "value": 2720},
+              {"category":"S14_Rep1", "group": "Subgroups (Percolator)", "value": 3371},
+              {"category":"Total", "group": "Groups (X!Tandem / MPA)", "value": 6070},
+              {"category":"Total", "group": "Groups (Percolator)", "value": 8178},
+              {"category":"Total", "group": "Subgroups (X!Tandem / MPA)", "value": 6575},
+              {"category":"Total", "group": "Subgroups (Percolator)", "value": 9197}
+            ]
+          },
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": {"expr": 3}
+          },
+          "encoding": {
+            "x": {
+              "field": "category",
+              "scale": {
+                "paddingInner": 0.20,
+                "paddingOuter": 0.20
+              },
+              "axis": {
+                "title": "Sample",
+              }
+            },
+            "y": {
+              "field": "value",
+              "type": "quantitative",
+              "axis": {
+                "title": "Number of protein subgroups",
+                "titlePadding": 20
+              }
+            },
+            "xOffset": {"field": "group"},
+            "color": {
+              "field": "group",
+              "type": "nominal",
+              "scale": {"domain": ["Groups (X!Tandem / MPA)", "Groups (Percolator)", "Subgroups (X!Tandem / MPA)", "Subgroups (Percolator)"], "range": [materialBlue, materialRed, materialGreen, materialYellow]},
+              "legend": {
+                "title": null,
+                "labelFontSize": 24,
+                "symbolSize": 200,
+                "orient": "bottom"
+              }
+            }
+          }
+        }
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
+</html>
