@@ -4,6 +4,16 @@
 *During the course of my career as a PhD student, I have also been working on a lot of different research projects for which I was either not the main contributor (but still provided a significant addition), or which are smaller side-projects that I wanted to experiment with.
 I have selected three of these projects and included them as sections in this chapter.*
 
+*Pout2Prot is a project that I did together with Dr. Tim Van Den Bossche and Dr. Kay Schallert. 
+Tim and Kay dedicated a lot of time on writing the manuscript, while I mainly focused on the implementation of a scalable web application that allows researchers to perform protein grouping on Percolator files.*
+
+*The second side-project that I included in this chapter does not have a final name yet, but consists of a new approach at improving the interpretation of metabolic pathways and how specific proteins are involved in these metabolic processes.
+This project started at the EuBIC 2023 hackathon in Switzerland where I've worked on the tool with a whole team.
+Tibo Vande Moortele is the lead developer of the pathway visualization web application and together with him, we are currently in the process of trying to incorporate some of these features into the Unipept ecosystem.*
+
+*Lastly, I am presenting a special type of `HashMap`, implemented in JavaScript, that is tailored at web applications that are wanting to exploit the parallelism provided by modern multi-core CPUs.
+This project first started as an experiment and is currently completely managed by myself.*
+
 \newpage
 
 ### Pout2Prot: An efficient tool to create protein (sub)groups from Percolator output files
