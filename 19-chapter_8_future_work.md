@@ -53,8 +53,7 @@ For this comparison, we expect the taxonomic and functional resolution of the en
 #### Current situation
 Unipept requires that all input peptides are tryptic in order to be able to match them with peptides in its reference database.
 However, researchers are transitioning to experiment with datasets that contain other peptide formats that Unipept currently can not use for downstream analysis.
-In this work package, I will therefore design a new index structure for Unipept based on bidirectional FM-indices and search schemes.
-This new index will no longer require the input peptides to adhere to a fixed format.
+In order to accomodate this change, we could design a new index structure for Unipept based on bidirectional FM-indices and search schemes which will no longer require the input peptides to adhere to a fixed format.
 
 Over the last 10 years, a lot of research has gone into the development and improvement of efficient data structures for sequence alignment.
 One such highly-used data structure that offers excellent performance is the FM-index [@ferraginaOpportunisticDataStructures2000].
@@ -103,7 +102,7 @@ This taxonomic profile can then be used in a subsequent step as a guide for cons
 As a possible future addition to Unipept, I propose to further integrate data from different “omics” sources such as transcriptomics and metagenomics into Unipept
 Building on the individual strength of these techniques, an aggregated view enables researchers to gain a much deeper insight into and understanding of what exactly is taking place in a complex ecosystem.
 By augmenting Unipept with support for both metagenomics and metatranscriptomics analyses, it has the potential to become the “go-to” tool for all analyses related to the “meta-omics” research disciplines.
-The ultimate goal of this work package is to transform Unipept into the first tool that provides a complete global overview of multi-disciplinary “meta-omics” experiments.
+The ultimate goal of this addition would be to transform Unipept into the first tool that provides a complete global overview of multi-disciplinary “meta-omics” experiments.
 
 #### Proposed work plan
 
