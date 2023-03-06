@@ -282,7 +282,7 @@ See this article on Wikipedia for more information on how a `HashMap` works inte
 ![Looking up a value in the HashMap consists of several steps. First the key is hashed, then the position of this hash in the index table is computed. At last, the pointer at this computed position in the index table can be used to retrieve the value associated with the key. \label{fig:hashmap_lookup_example}](resources/figures/chapter7_hashmap_hash_function.eps)
 
 ##### Internal memory lay-out
-My `HashMap` implementation requires the reserve two blocks of memory:
+My `HashMap` implementation requires the reservation of two blocks of memory:
 
 * **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block"). Some extra bytes are also reserved as part of this memory black at the beginning for internal housekeeping of the `HashMap`.
 * **data block:** This block of memory keeps track of all data objects that actually store the values that the user put into the `HashMap`.
@@ -304,7 +304,6 @@ In order to demonstrate the power of this specific `HashMap` implementation in J
 For each metaproteomic analysis, both Unipept applications need to keep track of the taxa and functions associated with each peptide that was provided by the user.
 This information is queried from Unipept's API, but since this querying process takes a long amount of time, it is performed by a Web Worker in the background and once done, a big `Map` containing the peptide/results mapping is passed onto the main thread.
 
-If we use JavaScript's default implementation of `Map` for this, it takes around ... s to transfer the `Map` between the Web Worker and the main thread.
 During all of this time, the deserialization of all information is performed by the main thread and the application is thus unresponsive to all interactions of the user.
 
 Every `(key, value)` pair in this mapping has a specific structure.

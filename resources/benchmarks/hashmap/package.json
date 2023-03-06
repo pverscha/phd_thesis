@@ -1,0 +1,14 @@
+{
+  "name": "hashmap-benchmark",
+  "version": "1.0.0",
+  "description": "Benchmarking the Unipept HashMap implementation that allows zero-cost transfer of information between Web Workers.",
+  "main": "hashmap_benchmark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shared-memory-datastructures": "^0.1.9"
+  }
+}
