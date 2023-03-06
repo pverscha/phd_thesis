@@ -6,7 +6,7 @@ bibliography: all_publications.bib
 csl: bioinformatics.csl
 documentclass: book
 papersize: a5
-geometry: margin=2cm
+geometry: bindingoffset=5mm, margin=2cm
 mainfont: Adobe Caslon Pro
 sansfont: Myriad Pro
 classoption: x11names, table
@@ -21,6 +21,7 @@ header-includes:
     - \usepackage{booktabs}
     - \usepackage{fontawesome}
     - \usepackage{setspace}
+    - \usepackage{tocloft}
     - \fancyhead[RE]{}
     - \fancyhead[LE]{\leftmark}
     - \fancyhead[LO]{}

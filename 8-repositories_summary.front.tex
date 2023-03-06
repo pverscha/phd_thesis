@@ -21,6 +21,8 @@ The desktop application, in contrast to the Unipept Web application, focuses on 
 Because we wanted to maximize the amount of code that can be shared between the Unipept Web and Desktop application, we chose to use the Electron framework for primary development of our most recent tool.
 Electron\footnote{See https://www.electronjs.org/} is a software framework that allows desktop applications to be developed using web-based technologies (such as TypeScript, HTML, etc.).
 
+\pagebreak
+
 \begin{large}\textbf{\textsf{unipept-web-components}}\end{large} \\
 \faGithub ~ \href{https://github.com/unipept/unipept-web-components}{\textsf{/unipept/unipept-web-components}} \hfill \faTag ~ \textsf{2.0.0} \\
 \faCode ~ \textsf{TypeScript, Vue, Vuetify} \\
@@ -40,6 +42,8 @@ Unipept's API is responsible for instructing the Unipept database and extracting
 The Unipept command line interface (CLI) can be directly instructed by machines (it works without a graphical user interface) and can therefor easily be plugged into existing data analysis pipelines.
 All code in this repository has been written in Ruby-on-Rails and is mainly responsible for parsing data from the command line, sending it to the Unipept API in chuncks and properly formatting the result.
 Ruby is an interpreted programming language that is compatible with all major operating systems, which makes the Unipept CLI easily accessible for most users.
+
+\pagebreak
 
 \begin{large}\textbf{\textsf{unipept-visualizations}}\end{large} \hfill \faTag ~ \textsf{2.1.0} \\
 \faGithub ~ \href{https://github.com/unipept/unipept-visualizations}{\textsf{/unipept/unipept-visualizations}} \\
@@ -78,8 +82,6 @@ This repository contains a Python implementation of the protein grouping algorit
 The Python implementation of the protein grouping script has been transpiled to JavaScript using Transcrypt\footnote{See: \href{https://www.transcrypt.org/}{https://www.transcrypt.org/}} and is directly executed by the browser itself.
 No user data is ever transmitted to the Pout2Prot web server.
 
-\pagebreak
-
 \begin{large}\textbf{\textsf{SharedMemoryDatastructures}}\end{large} \hfill \faTag ~ \textsf{0.1.9} \\
 \faGithub ~ \href{https://github.com/pverscha/SharedMemoryDatastructures}{\textsf{/pverscha/SharedMemoryDatastructures}} \\
 \faCode ~ \textsf{TypeScript} \\
@@ -87,3 +89,5 @@ This repository contains an implementation of a HashMap that can be transferred 
 This HashMap is still in an alpha-status (not all Map-operations are supported at this point), but is already being used by Unipept under-the-hood on a daily basis since 2021 and allows for a dramatic increase in performance.
 
 \newpage
+\null\newpage
+\null\newpage

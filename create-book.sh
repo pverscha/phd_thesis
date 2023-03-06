@@ -11,7 +11,6 @@ pandoc \
   --top-level-division=part \
   --number-sections \
   --citeproc \
-  --toc \
   -s \
   --include-before-body="1-front_page.front.tex" \
   --include-before-body="2-permission.front.tex" \
@@ -21,5 +20,6 @@ pandoc \
   --include-before-body="6-publications_summary.front.tex" \
   --include-before-body="7-conferences_summary.front.tex" \
   --include-before-body="8-repositories_summary.front.tex" \
+  --include-before-body="9-table_of_contents.front.tex" \
   $MD_FILES \
   -o thesis.pdf
