@@ -7,7 +7,7 @@
 
 \pagestyle{fancy}
 
-*The research presented in this PhD thesis is situated on the verge of computer science and biotechnology.
+*The research presented in this PhD thesis is situated on the overlap of computer science and biotechnology.
 In order to fully understand and grasp the concepts that are presented throughout this thesis, it is important that I first introduce a set of terms, definitions and techniques that are extensively used throughout this work in this chapter.*
 
 ### Biotechnological concepts
@@ -43,18 +43,21 @@ The central dogma explains how proteins in organisms are constructed and is very
 ##### DNA
 DNA stands for **D**eoxyribo**N**ucleic **A**cid and, as explained above, contains the instructions on how all proteins in an organism can be constructed.
 A copy of the complete DNA of an organism is present in every cell of this organism and is organised in chemical structures that we call **chromosomes**.
-These so-called chromosomes always appear in pairs (humans, for example, have 23 pairs of chromosomes).
+These so-called chromosomes mostly appear in pairs (humans, for example, have 23 pairs of chromosomes).
 
 Chromosomes themselves are then further divided into specific regions that we refer to as **genes**.
 A gene is a well-defined piece of the DNA that corresponds to the instructions required to construct one specific protein (and thus corresponds with one recipe of our book of recipes analogy that we used earlier).
 
 The DNA is made up of a sequence of nucleotides (simple molecules that can be chained together) that are always represented by the four letters A, C, G and T.
 
+The famous double helix structure of DNA was first discovered by Francis Crick, James Watson and Rosalind Franklin after Franklin obtained images of DNA using X-ray crystallography.
+This discovery was done in 1953 and is of very big importance for the research that is presented in this work.
+
 ![Relation between a cell, chromosomes, genes and DNA. All chromosomes are collected in the cell nucleus. A chromosome is a structure that consists of DNA and the DNA consists of well-defined pieces that we refer to as genes. \label{fig:cell_chromosome_gene}](resources/figures/chapter1_cell_chromosome_gene.eps)
 
 ##### RNA
 RNA stands for **R**ibo**N**ucleic **A**cid and is chemically very similar to DNA.
-Instead of the 4 nucleotides A, C, G, and T, RNA is composed of A, C, G, and U.
+Instead of Thymine, RNA uses its complement Uracil (represented by U), but the other three nucleotides A, C and G remain the same.
 Unlike DNA, the RNA is found in nature as a single strand folded onto itself, rather than a paired double strand.
 
 There exist different types of RNA that are each responsible for an important process in the creation of proteins.
@@ -93,7 +96,7 @@ See \autoref{fig:proteome_metaproteome} for a schematic dispaly of the proteome 
 Since our DNA provides the instructions for all proteins that can possible by expressed, it provides no suitable information about which proteins are really being expressed at a specific moment in time.
 By exploring the genome, it is thus possible to deduce what an organism is capable of doing, but not what it actually *is* doing right now.
 Not all pieces of an organism's DNA have a "meaning" or will lead to suitable proteins.
-Around 98% of the human genome is **non-coding**, meaning that these parts of the DNA will never be synthesized to a meaningful protein, but rather to regulatory sequences, non-coding genes or nothing.
+Around 98% of the human genome is **non-coding**, meaning that these parts of the DNA will never be synthesized to a meaningful protein, but rather to regulatory sequences, non-coding genes or something that has not been discovered yet.
 
 Studying the transcriptome of an organism has several advantages over studying the genome.
 First of all, it allows researchers to understand dynamic changes that can present themselves during the transcription process in a cell.
@@ -116,7 +119,7 @@ Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaprot
 ##### Protein digestion
 Since a protein is typically a molecule that is too big to be analysed by a mass spectrometer, it first needs to be cut into smaller fragments or **peptides**.
 The process of cutting a protein into peptides is called **protein digestion** and is performed using a specific enzyme: trypsin.
-Other proteases (i.e. enzymes that can be used to digest proteins) exist, but trypsin is by far the most popular one since it digests and *cuts* the protein at a fixed position: everytime the amino acids lysine (K) or arginine (R) are encountered, the protein will be cleaved by trypsin (except when lysine or arginine are directly followed by proline (P)).
+Other proteases (i.e. enzymes that can be used to digest proteins) exist, but trypsin is by far the most popular one since it digests and usually *cuts* the protein at a fixed position: whenever the amino acids lysine (K) or arginine (R) are encountered, the protein will most-probably be cleaved by trypsin (except when lysine or arginine are directly followed by proline (P) or because trypsin missed a cleavage site, which does happen sometimes).
 All peptides that are the result of a tryptic digest of proteins are called **tryptic peptides**.
 See \autoref{fig:trypsin_digestion} for an example of a tryptic digestion of 2 proteins.
 
