@@ -1,11 +1,12 @@
 \mainmatter
 
-\pagestyle{fancy}
-
 \renewcommand{\chaptermark}[1]{\markboth{\textsf{Chapter \thechapter.~ Introduction}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Introduction}}}
 
 ## Introduction
+
+\pagestyle{fancy}
+
 *The research presented in this PhD thesis is situated on the verge of computer science and biotechnology.
 In order to fully understand and grasp the concepts that are presented throughout this thesis, it is important that I first introduce a set of terms, definitions and techniques that are extensively used throughout this work in this chapter.*
 

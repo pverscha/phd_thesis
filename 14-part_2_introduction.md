@@ -1,4 +1,7 @@
 # The Unipept ecosystem
+
+\pagestyle{empty}
+
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Part \thepart.~ Introduction}}}
 
 Unipept is not a single tool, but rather a collection of tools that support the analysis of metaproteomics and metagenomics datasets.

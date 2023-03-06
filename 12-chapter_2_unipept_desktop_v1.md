@@ -1,5 +1,7 @@
 ## Unipept Desktop: a faster, more powerful metaproteomics analysis tool {#chapter:unipept_desktop_v1}
 
+\pagestyle{fancy}
+
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ High-throughput metaproteomics analysis}}}
 
 *I first started working on the Unipept Desktop application in August of 2019 (I started my PhD around the same time).

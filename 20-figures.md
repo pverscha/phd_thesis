@@ -1,5 +1,7 @@
 ## Figure attributions {-}
 
+\pagestyle{empty}
+
 Some of the figures used in this document originate from sources that I would like to attribute here.
 
 **\autoref{fig:recipe_book_analogy}**

@@ -1,4 +1,7 @@
 ## Unipept CLI 2.0: adding support for visualisations and functional annotations {#chapter:unipept_cli_v2}
+
+\pagestyle{fancy}
+
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ Functional annotations in the Unipept CLI and API}}}
 
 *Release 4.0 of the Unipept Web application is the first release of Unipept that provides a functional analysis pipeline for metaproteomics datasets.

@@ -3,6 +3,8 @@
 
 # Unipept Desktop
 
+\pagestyle{empty}
+
 On February 3, 2011, the first version of the Unipept Web application was released.
 This date marked the start of Unipept as a tool that could be used by researchers outside of Ghent University.
 The web application has undergone an enormous evolution since then and has been expanded with numerous new tools and features in order to aid researchers in analysing metaproteomics data.
