@@ -60,7 +60,7 @@ As previously explained, this low similarity is likely the result of the limitat
 
 There is thus a clear need for a more sophisticated GO term comparison that takes into account the existing relationships in the full GO tree.
 However, most existing tools that provide such comparison are based on enrichment analyses [@huangSystematicIntegrativeAnalysis2009; @waardenbergCompGOPackageComparing2015; @fruzangoharComparativeGOWeb2013].
-In such analyses, a list of genes is mapped to GO terms, which are then analyzed for enriched biological phenomena.
+In such analyses, a list of genes is mapped to GO terms, which are then analyzed for ienriched biological phenomena.
 As a result, to the best of our knowledge, no tools allow the direct comparison of large functional data sets against each other, nor are these able to provide metrics to determine how functionally similar data sets are.
 
 We therefore present MegaGO, a tool for comparing the functional similarity between large sets of GO terms.
