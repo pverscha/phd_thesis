@@ -7,7 +7,7 @@
 *Release 4.0 of the Unipept Web application is the first release of Unipept that provides a functional analysis pipeline for metaproteomics datasets.
 This initial release provided support for Enzyme Commission numbers and Gene Ontology numbers.
 Together with Philippe Van Thienen (a master student that I guided during the first year of my PhD), we further expanded Unipept's functional analysis pipeline with support for InterPro annotations.
-In order to expose this new functionality to powerusers and third-party applications, we have also implemented support for this novel functional analysis pipeline in the Unipept CLI and API.*
+In order to expose this new functionality to power users and third-party applications, we have also implemented support for this novel functional analysis pipeline in the Unipept CLI and API.*
 
 \newpage
 
@@ -24,13 +24,6 @@ Unipept initially launched with support for taxonomic analysis of metaproteomics
 Version 4.0 [@gurdeepsinghUnipeptFunctionalAnalysis2019] of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms [@ashburnerGeneOntologyTool2000], Enzyme Commission (EC) numbers [@webbEnzymeNomenclature19921992] and InterPro entries [@hunterInterProIntegrativeProtein2009].
 
 ### Introduction
-Unipept [@mesuereUnipeptTrypticPeptideBased2012] is a collection of tools developed for fast metaproteomics data analysis.
-The Unipept ecosystem consists of a web application, an application programming interface (API) as a web service [@mesuereUnipeptWebServices2016] and a command-line interface (CLI) [@mesuereHighthroughputMetaproteomicsData2018].
-The key strengths of Unipept are its speed, its ease-of-use and the extensive use of interactive data visualization in the analysis results.
-The Unipept database is derived from the UniProt [@theuniprotconsortiumUniProtWorldwideHub2019] KB and consists of tryptic peptides linked with taxonomic and functional annotations.
-Unipept initially launched with support for taxonomic analysis of metaproteomics data in 2012.
-Version 4.0 [@gurdeepsinghUnipeptFunctionalAnalysis2019] of the Unipept web application was launched in November 2018 and extended the web interface with support for functional annotations such as Gene Ontology (GO) terms [@ashburnerGeneOntologyTool2000], Enzyme Commission (EC) numbers [@webbEnzymeNomenclature19921992] and InterPro entries [@hunterInterProIntegrativeProtein2009].
-
 The GO terms are organized into three different domains: ‘cellular components’, ‘molecular functions’ and ‘biological processes’.
 Every GO-term is associated with exactly one domain and consists of a name, an identifier and an exact definition.
 The EC numbers can be used to classify enzymes, based on the chemical reactions that they catalyze.
