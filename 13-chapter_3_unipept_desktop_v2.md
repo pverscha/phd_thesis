@@ -84,7 +84,7 @@ This helps to drastically reduce the search space for a subsequent metaproteomic
 
 Version 2.0 of the Unipept Desktop application is fully focused on the analysis of these proteogenomics datasets and therefore introduces an exciting new feature that allows users to construct targeted protein reference databases in two different ways.
 
-To construct a targeted protein reference database with Unipept Desktop 2.0, researchers need some way of selectingUniProtKB proteins that can be present in the final result.
+To construct a targeted protein reference database with Unipept Desktop 2.0, researchers need some way of selecting UniProtKB proteins that can be present in the final result.
 The first selection method allows to specify which proteins are retained by providing a list of valid NCBI taxon identifiers.
 Unipept will then only include those proteins in the final database that are associated with a taxon that is present in this list, or that are associated with an (in)direct child of one of the provided taxon identifiers.
 Note that there’s also the option to limit the database construction process to SwissProt (instead of SwissProt + TrEMBL) such that only manually-curated proteins are included.
@@ -220,7 +220,7 @@ The final size of the database cache is 52GiB, and the 46 million and 1 million 
 #### Concluding Remarks
 The newest iteration of the Unipept Desktop app builds upon the strength of the existing Unipept infrastructure to enable support for the analysis of proteogenomics samples.
 Leveraging taxonomic information of the environment under study (e.g. generated from a metagenomics experiment), it is possible to construct targeted protein reference databases that include only a (relevant) subset of proteins from the UniProtKB resource.
-These significantly smaller reference databases drastically improves the time and computational resources required to subsequently analyze metaproteomics samples, which ultimately makes it possible to perform these analyses on a local machine.
+These significantly smaller reference databases drastically improve the time and computational resources required to subsequently analyze metaproteomics samples, which ultimately makes it possible to perform these analyses on a local machine.
 
 Since Unipept Desktop 2.0 makes it possible to perform metaproteomics analysis on a local machine, a range of new possibilities opens up. Privacy-sensitive data no longer needs to be transmitted over the internet and users now control which reference database is used.
 We have shown that using targeted protein reference databases can even lead to a metaproteomics analysis with a higher taxonomic resolution (assuming that the selected taxa suits the environment under study).
@@ -234,7 +234,7 @@ This problem could be overcome by allowing Unipept to construct protein referenc
 These additions are considered for future versions of the Unipept Desktop app. 
 
 #### Acknowledgements
-This work has benefited from collaborations facilitated by the Metaproteomics Initiative ( https://metaproteomics.org/) whose goals are to promote, improve, and standardize metaproteomics [@vandenbosscheCriticalAssessmentMetaProteome2021].
+This work has benefited from collaborations facilitated by the Metaproteomics Initiative (https://metaproteomics.org/) whose goals are to promote, improve, and standardize metaproteomics [@vandenbosscheCriticalAssessmentMetaProteome2021].
 This work has furthermore been supported by the Research Foundation - Flanders (FWO) \[1164420N to P.V., 12I5220N to B.M.\] and by the University of Sassari \[Fondo di Ateneo per la Ricerca 2020 to A.T.\].
 We thank the Flemish Supercomputer Center (VSC) funded by the Research Foundation - Flanders (FWO) and the Flemish Government for providing the infrastructure to build the Unipept database and to run the experiments from this manuscript.
 Part of this work was also supported by the Research Foundation - Flanders (FWO) for ELIXIR Belgium \[I002819N\]. 
