@@ -70,7 +70,7 @@ SVG’s are easy-to-use and are scalable by nature but often lack necessary perf
 HTML5 canvas, in contrast, provides much better performance using a rasterized image.
 
 Every visualization is presented as a single JavaScript class and provides a full set of configuration options to extend and configure the visualization.
-New versions of the package will automatically be published on NPM ([https://npmjs.org](https://npmjs.org)) and GitHub ([https://github.com/unipept/unipept-visualizations](https://github.com/unipept/unipept-visualizations)), so that any project depending on it package can always use the latest version.
+New versions of the package will automatically be published on NPM ([https://npmjs.org](https://npmjs.org)) and GitHub ([https://github.com/unipept/unipept-visualizations](https://github.com/unipept/unipept-visualizations)), so that any project depending on the package can always use the latest version.
 
 We also provide an extensive set of documentation resources that ease the adoption process of our package, as well as a collection of live notebooks (see [https://observablehq.com/collection/\@unipept/unipept-visualizations](https://observablehq.com/collection/\@unipept/unipept-visualizations)).
 These notebooks provide interactive and editable examples that demonstrate the full potential and guide users through the different configuration options.

@@ -121,7 +121,7 @@ The MegaGO similarity-based clustering of “cellular component” GO terms (Sup
 Again, these patterns can also be found in previous analyses: 852ws is placed in direct proximity of the ns samples in the principal component analysis (PCA) of the HOMINGS analysis by Rudney et al., and 861ns is closest to 730ns and 733ns in PCA of Rudney et al.’s taxonomic analysis.
 Interestingly, subjects 730 and 852 were the only ones without active carious lesions, which could cause their divergence in the similarity analyses.
 
-![Hierarchically clustered heatmap comparing MegaGO similarities for the GO domain “biological process” for each of the samples from [@easterlyMetaQuantomeIntegratedQuantitative2019] Samples that are treated with sucrose pulsing are labeled as “ws” and are displayed in orange.\label{fig:megago_heatmap}](resources/figures/chapter6_megago_heatmap_example.png)
+![Hierarchically clustered heatmap comparing MegaGO similarities for the GO domain “biological process” for each of the samples from [@easterlyMetaQuantomeIntegratedQuantitative2019]. Samples that are treated with sucrose pulsing are labeled as “ws” and are displayed in orange.\label{fig:megago_heatmap}](resources/figures/chapter6_megago_heatmap_example.png)
 
 Results produced by MegaGO are thus in close agreement with prior analyses of the same data, showing that MegaGO offers a valid and very fast approach for comparing the functional composition of samples.
 

@@ -1,7 +1,7 @@
 ## Future work {#chapter:future_work}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Chapter \thechapter.~ The future of Unipept}}}
 
-*No scientific work is ever complete and there still remain a lot of challenges in the field of metaproteomics and proteogenomics that still need to be solved. In this section, I discuss some issues and challenges that currently arise and what needs to be overcome in order to solve these.*
+*No scientific work is ever complete and there remain a lot of challenges in the field of metaproteomics and proteogenomics that still need to be solved. In this section, I discuss some issues and challenges that currently arise and what needs to be overcome in order to solve these.*
 
 \newpage
 
@@ -58,15 +58,15 @@ In order to accomodate this change, we could design a new index structure for Un
 Over the last 10 years, a lot of research has gone into the development and improvement of efficient data structures for sequence alignment.
 One such highly-used data structure that offers excellent performance is the FM-index [@ferraginaOpportunisticDataStructures2000].
 An FM-index is produced by computing the Burrows-Wheeler transform of a specific string and allows to look up if (and where) a pattern occurs in the preprocessed text in a very efficient manner.
-By adjusting the FM-index and its accompanying query algorithms, we are not limited to matching exact strings but we can also detect if a specific sequence (with up to a certain number of k mismatches) is present in a longer string.
+By adjusting the FM-index and its accompanying query algorithms, we are not limited to matching exact strings but we can also detect if a specific sequence (with up to a certain number of $k$ mismatches) is present in a longer string.
 
 A big advantage of these FM-indices over the approach that Unipept currently follows for matching input peptides with proteins in the protein reference database is that the FM-index allows us to match arbitrary peptide sequences with proteins (instead of only directly matching tryptic peptides as we do today).
 This opens up the possibility to go and analyse semi-tryptic peptides using Unipept, or even matching tryptic peptides with missed cleavages.
 At this point, it is already possible to analyse peptides with missed cleavages, but this drastically slows down the analysis since a lot of Unipept’s precomputed aggregations are not available in this case.
 
-In order to efficiently match a peptide (with up to k mismatches) with a protein, an FM-index by itself does not suffice and we need to look for improved data structures.
+In order to efficiently match a peptide (with up to $k$ mismatches) with a protein, an FM-index by itself does not suffice and we need to look for improved data structures.
 This is where search schemes come into play.
-A search scheme is a strategy that describes how a bi-directional FM-index can be queried such that patterns with up to k mismatches can efficiently be matched with a long string (such as a protein).
+A search scheme is a strategy that describes how a bi-directional FM-index can be queried such that patterns with up to $k$ mismatches can efficiently be matched with a long string (such as a protein).
 Search schemes were first proposed by (Lam et al.) and were further generalised by [@kucherovApproximateStringMatching2014].
 
 #### Proposed work plan
@@ -78,7 +78,7 @@ We can use the Rust programming language since it is designed with performance a
 These changes will allow us to match arbitrary peptides and peptides with missed cleavages using Unipept.
 
 ##### Implement a bi-directional FM-index
-A second step consists of updating the FM-index data structure that was used during the previous step such that supports matching patterns in two directions (backwards *and* forwards).
+A second step consists of updating the FM-index data structure that was used during the previous step such that it supports matching patterns in two directions (backwards *and* forwards).
 This so-called bi-directional FM-index is extensively described in [@lamHighThroughputShort] and is required for efficiently performing approximate pattern matching using search schemes.
 We can improve and expand the existing, open-source Rust FM-index implementation from the previous step such that it allows searching in two directions.
 By contributing to this open-source project we do not need to start from scratch, and we can share our improvements with other researchers around the globe.
@@ -99,7 +99,7 @@ Over the last few years, we have been working very hard to build the Unipept Des
 By first performing a metagenomics experiment on a sample, researchers are able to derive the taxonomic profile of the ecosystem under study.
 This taxonomic profile can then be used in a subsequent step as a guide for constructing a targeted protein reference database (that only contains proteins that are associated with the taxa that were detected during the metagenomics experiment).
 
-As a possible future addition to Unipept, I propose to further integrate data from different “omics” sources such as transcriptomics and metagenomics into Unipept
+As a possible future addition to Unipept, I propose to further integrate data from different “omics” sources such as transcriptomics and metagenomics into Unipept.
 Building on the individual strength of these techniques, an aggregated view enables researchers to gain a much deeper insight into and understanding of what exactly is taking place in a complex ecosystem.
 By augmenting Unipept with support for both metagenomics and metatranscriptomics analyses, it has the potential to become the “go-to” tool for all analyses related to the “meta-omics” research disciplines.
 The ultimate goal of this addition would be to transform Unipept into the first tool that provides a complete global overview of multi-disciplinary “meta-omics” experiments.

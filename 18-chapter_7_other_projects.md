@@ -102,7 +102,7 @@ Therefore, we created 14 test cases (Supporting Information, Figures S3–S16) t
 To resolve the issue of undecidability, we propose that no choice should be made at all.
 For undecidable cases for protein removal (Occam’s razor), no protein should be removed, and for undecidable cases of protein subgroups (anti-Occam’s razor), the protein in question should remain in its own subgroup.
 
-\label{fig:pout2prot_tool_comparison} shows the result of the comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
+\autoref{fig:pout2prot_tool_comparison} shows the result of a comparison between five protein grouping tools: PIA, Fido (integrated into Percolator), MetaProteomeAnalyzer (MPA), X!TandemPipeline, and Pout2Prot.
 To run tests with each tool, appropriate input files that reflect the test cases were created manually, and these are all available on the Pout2Prot GitHub repository.
 If a test case did not produce the expected output, it was investigated more closely to ensure this was not the result of differences between, or potential errors in, these input files.
 For undecidable cases, it was verified that the random choice behavior could be observed (i.e., multiple analyses, different results).
@@ -177,7 +177,7 @@ Because proteins play a major role in these metabolic reactions, we have develop
 The pathway visualization library that we decided to build counts on the pathway maps that our provided by the publicly accessible KEGG `API`.
 This KEGG `API` allows third-party applications to integrate KEGG pathway maps into their own software applications and to highlight specific nodes of these maps in one or more colours.
 A machine-readable format for each of the pathway map images is also provided, but we soon found out that these are typically incomplete.
-Since the KEGG service overlays each pathway map image with a collection of HTML elements (including their size and positioning), we were able to extract the required information from their.
+Since the KEGG service overlays each pathway map image with a collection of HTML elements (including their size and positioning), we were able to extract the required information from there.
 
 ![Once a peptide or protein input sample has been analysed, the web application displays a list of all metabolic pathway maps that are applicable for the provided input and requests the user to select a map of interest. \label{fig:pathways_selection_wizard}](resources/figures/chapter7_pathways_selection_wizard.png)
 
@@ -205,7 +205,7 @@ A "Web Worker" is a JavaScript script that is executed by the browser using a ba
 Web applications can provide them with a collection of input data, instruct it to process the data and receive the results when done, all without occupying the browser's "main thread".
 
 In order to understand what the "main thread" is in JavaScript, you need to realise that JavaScript is an event-driven programming language.
-Every single operation that is performed by a piece of JavaScript code will be send to a queue that is systematically queried and emptied by the "Event loop".
+Every single operation that is performed by a piece of JavaScript code will be sent to a queue that is systematically queried and emptied by the "Event loop".
 The main JavaScript thread is constantly checking this event queue for new tasks that need to be taken care of and executes them one-by-one in a specific order.
 Because only one thread is available to process the tasks pushed onto this queue, a long-running task blocks the execution of other tasks and can cause the web browser to "hang" on a specific operation.
 It will only continue to process interactions of the user with a web app's user interface once this long-running task is completed (which is not user-friendly).
@@ -238,7 +238,7 @@ Such an `ArrayBuffer` is similar to a normal JavaScript array in that it is a co
 
 Since the `ArrayBuffer` is just a series of binary values, it can also be thought of as a block of memory.
 Because of its very simple structure, an `ArrayBuffer` does not need to be copied between different Web Workers, but instead only "ownership" of this memory block needs to be transferred (see \autoref{fig:hashmap_arraybuffer_transfer}).
-The thread or Web Worker that currently has the "ownership" of an ArrayBuffer is the only one that is allowed to make changes (or read from) the block of memory at that point.
+The thread or Web Worker that currently has the "ownership" of an ArrayBuffer is the only one that is allowed to make changes to, or read from the block of memory at that point.
 Transferring ownership is almost instantly.
 
 ![When sending an ArrayBuffer from one worker to another, it's ownership will be transferred. This means that no data needs to be copied which makes this operation a lot faster than for normal JavaScript Objects since the "structured clone algorithm" is not involved. \label{fig:hashmap_arraybuffer_transfer}](resources/figures/chapter7_hashmap_transfer_ownership.eps)
@@ -284,13 +284,13 @@ See this article on Wikipedia for more information on how a `HashMap` works inte
 ##### Internal memory lay-out
 My `HashMap` implementation requires the reservation of two blocks of memory:
 
-* **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block"). Some extra bytes are also reserved as part of this memory black at the beginning for internal housekeeping of the `HashMap`.
-* **data block:** This block of memory keeps track of all data objects that actually store the values that the user put into the `HashMap`.
+* **index table:** This block of memory keeps track of all pointers to data objects that keep track of the key and value for a `HashMap` entry and also a pointer to the next data objects. Each of these data objects live in the second reserved block of memory (the "data block"). Some extra bytes are also reserved as part of this memory block at the beginning for internal housekeeping of the `HashMap`.
+* **data block:** This block of memory keeps track of all data objects that actually store the values that the user puts into the `HashMap`.
 
 Each of the values that are provided by the user need to somehow be translated into bytes before we can store them in a raw block of memory.
 
-For some of the most common data types in JavaScript (e.g. string, integer, etc), a default serialization implementation is provided.
-This is not the way that most `HashMaps` are implemented in other programming languages.
+For some of the most common data types in JavaScript (e.g. String, Number, etc), a default serialization implementation is provided.
+This is not the way most `HashMaps` are implemented in other programming languages.
 Normally, the values themselves are not serialized and stored as part of the `HashMap`, but rather a pointer to each of the values is kept, decreasing the amount of memory required.
 Because this is a high-level implementation of a `HashMap`, we don't have access to the raw object pointers that are used internally by the JavaScript engine and we have to reside to this workaround.
 
@@ -312,11 +312,16 @@ Since most properties in this object have a fixed length, or the property value 
 See \autoref{fig:hashmap_object_encoding} for an example of how the information that's tracked by Unipept can be respresented by a stream of bytes.
 Using this information, it is no longer required to serialize this object to a string-based representation (such as JSON).
 
-![Example of how a complex object (in the case of Unipept) can be encoded as a simple stream of bytes that direclty fits into an ArrayBuffer. We know that the lowest common ancestor is always an unsigned integer, so we can store it in the first 4 bytes of a block of memory. The lineage in this example is a numeric array that always contains 3 unsigned integers, thus the next three places in the ArrayBuffer are reserved for this array. By continuing this strategy, each of the properties can directly be encoded in the memory block and can be recovered very efficiently. \label{fig:hashmap_object_encoding}](resources/figures/chapter7_hashmap_object_encoding.eps)
+![Example of how a complex object (in the case of Unipept) can be encoded as a simple stream of bytes that directly fits into an ArrayBuffer. We know that the lowest common ancestor is always an unsigned integer, so we can store it in the first 4 bytes of a block of memory. The lineage in this example is a numeric array that always contains 3 unsigned integers, thus the next three places in the ArrayBuffer are reserved for this array. By continuing this strategy, each of the properties can directly be encoded in the memory block and can be recovered very efficiently. \label{fig:hashmap_object_encoding}](resources/figures/chapter7_hashmap_object_encoding.eps)
+
+\pagebreak
+
+In the case of Unipept specifically, we were able to reduce a memory transfer of 30 seconds back to only a few milliseconds because of this custom `HashMap` implementation.
+Not only did an analysis take 30 seconds longer before this improvement, the Unipept Web and Unipept Desktop application where completely unresponsive to user interaction during this timespan.
 
 #### Conclusion and remarks
 Based on the results from the case study, it is fair to conclude that this `HashMap` is not suitable for all projects, but can be of very high value in a specific environment (as is the case with Unipept).
-In order to counteract the effects of some serious vulnerabilities that were dedected in x86 CPUs (i.e. the Spectre [@Kocher2018spectre] and Meltdown [@Lipp2018meltdown] attacks), most major browsers have taken serious precautions to counteracts these attacks and blocked the use of `SharedArrayBuffers` in most cases.
+In order to counteract the effects of some serious vulnerabilities that were dedected in x86 CPUs (i.e. the Spectre [@Kocher2018spectre] and Meltdown [@Lipp2018meltdown] attacks), most major browsers have taken serious precautions to counteract these attacks and blocked the use of `SharedArrayBuffers` in most cases.
 Only websites that pack a specific set of HTTP headers into their HTTP responses ^[See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements ] are allowed to use SharedArrayBuffers.
 
 This means that consumers of our `HashMap` implementation either need to resort to regular `ArrayBuffers` if they don't need multiple Web Workers to manipulate the `HashMap` simultaneously or that they need to properly configure their servers in order to take care of the required Cross-Origin Isolation headers.

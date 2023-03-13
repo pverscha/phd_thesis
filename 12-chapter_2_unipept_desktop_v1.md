@@ -117,7 +117,7 @@ A comparison between the various functionalities offered by these different serv
 
 \begin{table*}\centering
 \ra{1.3}
-\begin{tabular}{@{}p{50mm}cccc@{}}\toprule
+\begin{tabular}{@{}p{45mm}cccc@{}}\toprule
 & desktop app & web app & CLI & API\\ \midrule
 visualizations & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \faMinus & \faMinus \\
 basic metaproteomics analysis pipeline & \textcolor{Green3}{\faCheck} & \textcolor{Green3}{\faCheck} & \textcolor{Red3}{\faClose} & \textcolor{Red3}{\faClose} \\
