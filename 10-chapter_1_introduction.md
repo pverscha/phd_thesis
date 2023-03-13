@@ -7,13 +7,13 @@
 
 \pagestyle{fancy}
 
-*The research presented in this PhD thesis is situated on the overlap of computer science and biotechnology.
-In order to fully understand and grasp the concepts that are presented throughout this thesis, it is important that I first introduce a set of terms, definitions and techniques that are extensively used throughout this work in this chapter.*
+*The research presented in this PhD thesis is situated at the overlap of computer science and biotechnology.
+In order to fully understand and grasp the concepts that are presented throughout this thesis, it is important that I first introduce a set of terms, definitions and techniques that are extensively used throughout this work.*
 
 ### Biotechnological concepts
 
 #### The central dogma in biology
-Every organism in our universe is made up of cells and each of these cells contain the instructions that define what the organism is, how it behaves and how new proteins or other products should be created.
+Every organism in our universe is made up of cells and each of these cells contains the instructions that define what the organism is, how it behaves and how new proteins or other products should be created.
 Each cell contains an exact copy of these instructions.
 These instructions can be compared with a recipe book that describes and instructs a cook to bake a specific kind of cake.
 All recipes are collected in this book, and every cell has an exact copy of this recipe collection.
@@ -35,10 +35,10 @@ Once all the ingredients have been delivered to the construction site, the cell 
 During the translation phase, this mRNA template is read by a ribosome which assembles all required amino acids in the correct order to form a protein.
 
 The concept explained above, is called the **central dogma of biology**.
-It is one of the most fundamental principles of the molecular biology and was first depicted by Francis Crick in 1958 who also reformulated it in a manuscript published in Nature in 1970 [@crickCentralDogmaMolecular1970].
+It is one of the most fundamental principles of molecular biology and was first depicted in 1958 by Francis Crick who also reformulated it in a manuscript published in Nature in 1970 [@crickCentralDogmaMolecular1970].
 The central dogma explains how proteins in organisms are constructed and is very important to grasp in order to understand a lot of the basic principles of biology.
 
-![The central dogma in biology can easily be explained with the recipe book analogy. The DNA corresponds to a recipe book that contains the recipe for every dish that can be made. A copy of a single recipe corresponds to the concept of RNA and a protein corresponds to a single protein that's been completely assembled. \label{fig:recipe_book_analogy}](resources/figures/chapter1_recipe_book.eps)
+![The central dogma in biology can easily be explained with the recipe book analogy. The DNA corresponds to a recipe book that contains the recipe for every dish that can be made. A copy of a single recipe corresponds to the concept of RNA and a dish corresponds to a single protein that's been completely assembled. \label{fig:recipe_book_analogy}](resources/figures/chapter1_recipe_book.eps)
 
 ##### DNA
 DNA stands for **D**eoxyribo**N**ucleic **A**cid and, as explained above, contains the instructions on how all proteins in an organism can be constructed.
@@ -46,11 +46,11 @@ A copy of the complete DNA of an organism is present in every cell of this organ
 These so-called chromosomes mostly appear in pairs (humans, for example, have 23 pairs of chromosomes).
 
 Chromosomes themselves are then further divided into specific regions that we refer to as **genes**.
-A gene is a well-defined piece of the DNA that corresponds to the instructions required to construct one specific protein (and thus corresponds with one recipe of our book of recipes analogy that we used earlier).
+A gene is a well-defined region of DNA that corresponds to the instructions required to construct one specific protein (and thus corresponds with one recipe of our book of recipes analogy that we used earlier).
 
 The DNA is made up of a sequence of nucleotides (simple molecules that can be chained together) that are always represented by the four letters A, C, G and T.
 
-The famous double helix structure of DNA was first discovered by Francis Crick, James Watson and Rosalind Franklin after Franklin obtained images of DNA using X-ray crystallography.
+The famous double helix structure of DNA was first discovered by Francis Crick, James Watson, Rosalind Franklin and Maurice Wilkins after Franklin obtained images of DNA using X-ray crystallography.
 This discovery was done in 1953 and is of very big importance for the research that is presented in this work.
 
 ![Relation between a cell, chromosomes, genes and DNA. All chromosomes are collected in the cell nucleus. A chromosome is a structure that consists of DNA and the DNA consists of well-defined pieces that we refer to as genes. \label{fig:cell_chromosome_gene}](resources/figures/chapter1_cell_chromosome_gene.eps)
@@ -58,7 +58,7 @@ This discovery was done in 1953 and is of very big importance for the research t
 ##### RNA
 RNA stands for **R**ibo**N**ucleic **A**cid and is chemically very similar to DNA.
 Instead of Thymine, RNA uses its complement Uracil (represented by U), but the other three nucleotides A, C and G remain the same.
-Unlike DNA, the RNA is found in nature as a single strand folded onto itself, rather than a paired double strand.
+Unlike DNA, RNA is found in nature as a single strand folded onto itself, rather than a paired double strand.
 
 There exist different types of RNA that are each responsible for an important process in the creation of proteins.
 Cellular organisms (such as humans) use messenger RNA (mRNA) to convey genetic information that is subsequently used to direct the synthesis of specific proteins.
@@ -67,7 +67,7 @@ Lastly, a third important type is the ribosomal RNA (rRNA) that is responsible f
 
 ##### Proteins
 Proteins are large, complex molecules composed of long chains of amino acids.
-Although hundreds of amino acids exist in nature, only 22 of them will appear in proteins.
+Although hundreds of amino acids exist in nature, only 20 of them will appear in proteins.
 Every amino acid has its own chemical properties and is generally represented by a single capital letter: K stands for lysine, R stands for arginine, etc. 
 It is the specific ordering of these amino acids that defines the function and structure of a protein.
 
@@ -82,18 +82,18 @@ These are large molecules that link amino acids together to form proteins in a p
 See \autoref{fig:dna_transcription_translation} for a schematic overview of the protein synthesis process.
 
 #### (Meta)genome, (meta)transcriptome and (meta)proteome
-The **genome** of an organism can be defined as the collection of all genes that are part of the DNA of this organism.
+The **genome** of an organism can be defined as the collection of DNA that is present in this organism.
 It defines which proteins can potentially be constructed by the organism.
 Secondly, the **transcriptome** of an organism is simply the set of all RNA transcripts in an organism and already provides a little more information about which parts of the DNA do actually encode proteins.
 Lastly, the **proteome** of an organism is the collection of all proteins that can be expressed by an organism.
 
 In this thesis, we mainly discuss the terms **meta**genome, **meta**transcriptome and **meta**proteome.
 Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a **collection** of different organisms (typically of the same biological environment).
-See \autoref{fig:proteome_metaproteome} for a schematic dispaly of the proteome and metaproteome.
+See \autoref{fig:proteome_metaproteome} for a schematic display of the proteome and metaproteome.
 
 ![A schematic overview of the proteome and the metaproteome. The proteome is defined as the proteins that can be expressed by a single organism. The metaproteome, on the other hand, is then defined as the set of proteins that can be defined by a collection of organisms. \label{fig:proteome_metaproteome}](resources/figures/chapter1_proteome_metaproteome.eps)
 
-Since our DNA provides the instructions for all proteins that can possible by expressed, it provides no suitable information about which proteins are really being expressed at a specific moment in time.
+Since our DNA provides the instructions for all proteins that can possibly be expressed, it provides no suitable information about which proteins are really being expressed at a specific moment in time.
 By exploring the genome, it is thus possible to deduce what an organism is capable of doing, but not what it actually *is* doing right now.
 Not all pieces of an organism's DNA have a "meaning" or will lead to suitable proteins.
 Around 98% of the human genome is **non-coding**, meaning that these parts of the DNA will never be synthesized to a meaningful protein, but rather to regulatory sequences, non-coding genes or something that has not been discovered yet.
@@ -105,8 +105,8 @@ In contrast, the genome remains mostly static, with relatively stable genetic se
 As the transcriptome of an organism captures the expression of genes at a specific time and in a specific context, it provides more information to a researcher and it might help them to understand the underlying mechanisms of diseases, drug responses and other complex biological processes.
 Finally, the transcriptome can also be used to study the regulation of gene expression, including alternative splicing, post-transcriptional modifications, and non-coding RNA expression.
 
-The proteome is the most informative and tells researchers which proteins are being synthesized by an organism at a specific point in time.
-It allows us to study the functional profile of an organism and goes one step further than a study of the transcriptome.
+The proteome is the most informative piece of information and tells researchers which proteins are being synthesized by an organism at a specific point in time.
+It allows us to study the functional profile of an organism and goes one step further than studying the transcriptome.
 
 #### Shotgun metaproteomics (analysing the metaproteome)
 In this work, we focus on analysing the **metaproteome** of an ecosystem.
@@ -152,11 +152,10 @@ Unipept is an ecosystem of software tools that are mainly focussed on the analys
 Prof. Dr. Bart Mesuere, co-supervisor of this PhD thesis, initially started the Unipept project at Ghent University in 2010 in the context of his PhD.
 Since its early days, Unipept has undergone a big transition, while still maintaining its initial focus of providing an excellent user experience and top-of-the-line performance when compared to similar tools.
 
+#### The Unipept ecosystem
 All tools in the Unipept ecosystem work by taking a list of tryptic peptide sequences as input and matching these peptides with the proteins in a **protein reference database** in order to provide a taxonomic and functional summary for this input sample.
 Every Unipept tool has its own target audience and functionality.
 See the list in the next subsection for more information on the tools that currently exist and what each of these is aimed at.
-
-#### The Unipept ecosystem
 
 ##### Unipept Web application
 The first real Unipept tool that was presented to the outside world, is the Unipept Web application.
@@ -170,7 +169,7 @@ Unlike the web application, the CLI has no graphical user interface and mainly p
 
 ##### Unipept API
 The Unipept API (Application Programming Interface) is a collection of endpoints that allow third-party applications to integrate some of Unipept's functionality into their own workloads.
-Data can be send to each endpoint using `HTTP POST` or `GET` requests to our servers, after which the Unipept server will respond with the requested results as a `JSON`-formatted object.
+Data can be sent to each endpoint using `HTTP POST` or `GET` requests to our servers, after which the Unipept server will respond with the requested results as a `JSON`-formatted object.
 
 ##### Unipept Desktop
 Unlike the previous three tools, the Unipept Desktop application has been added to our ecosystem very recently and does not necessarily needs to communicate with the Unipept servers in order to function.
