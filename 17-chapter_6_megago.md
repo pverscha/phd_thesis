@@ -52,7 +52,7 @@ The terms GO:0043604 and GO:0006518 (in light blue) are more similar than the tw
 ![Excerpt of the biological process domain of the Gene Ontology showing all parent terms up to the root for “translation” (GO:0006412). IC, information content; *, most informative common ancestor.\label{fig:megago_biological_process_excerpt}](resources/figures/chapter6_megago_graph.eps)
 
 Whereas this highly branched graph structure of GO allows flexible annotation at various levels of detail, it also creates problems when the results from one data set are compared to those of another data set.
-Indeed, even though two terms may be closely linked in the GO tree and are therefore highly similar (e.g., as parent and child terms or as sibling terms), the typically employed exact term matching will treat these terms as wholly unrelated, as the actual GO terms (and their accession numbers) are not identical.
+Indeed, even though two terms may be closely linked in the GO tree and are therefore highly similar (e.g., as parent and child terms or as sibling terms), the typically employed exact term matching will treat these terms as wholly unrelated, as the actal GO terms (and their accession numbers) are not identical.
 This problem is illustrated in a study by [@sajulgaSurveyMetaproteomicsSoftware2020], where a multisample data set was analyzed using several metaproteomics tools.
 The resulting GO terms were then compared using exact matching.
 The overlap between the result sets was quantified using the Jaccard index and was found to be low.

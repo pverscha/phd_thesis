@@ -12,6 +12,7 @@ sansfont: Myriad Pro
 classoption: x11names, table
 codeBlockCaptions: true
 header-includes:
+    - \usepackage[dutch,english]{babel}
     - \usepackage{microtype}
     - \usepackage{pdfpages}
     - \usepackage{sectsty}
