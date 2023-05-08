@@ -116,7 +116,7 @@ We will first explain how proteins can be identified from a biological sample by
 Currently, most researchers are using a technique called **shotgun proteomics** when analysing a protein sample and follow a predefined set of steps.
 Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaproteomics}) will be covered in detail in this section.
 
-![Overview of the different steps in shotgun metaproteomics. When processing an input sample using a shotgun metaproteomics pipeline, the proteins in the input sample are first digested by trypsin. The sample containing the remaining peptides is then fed into a mass spectrometer that produces a collection of observed mass spectra. \label{fig:shotgun_metaproteomics}](resources/figures/chapter1_input_trypsin_mass_spec.eps)
+![Overview of the different steps in a typical shotgun metaproteomics analysis pipeline. Each step comes with its own set of challenges that need to be overcome for which dedicated tools have been developed. \label{fig:shotgun_metaproteomics}](resources/figures/chapter1_metaproteomics_pipeline.eps)
 
 ##### Protein digestion
 Since a protein is typically a molecule that is too big to be analysed by a mass spectrometer, it first needs to be cut into smaller fragments or **peptides**.
@@ -146,8 +146,7 @@ Each peptide that's fed into the mass spectrometer produces such a mass spectrum
 
 We have to make a distinction between mass spectrometry consisting of a single step (MS1 mass spectrometry) and tandem mass spectrometry (often denoted as MS/MS or MS\textsuperscript{2}).
 
-###### MS1 vs Tandem Mass Spectrometry (MS/MS)
-
+##### MS1 vs Tandem Mass Spectrometry (MS/MS)
 MS1 is a type of mass spectrometry that measures the mass-to-charge ratio (m/z) of intact peptides or proteins.
 In MS1, the peptide mixture is ionized and then introduced into the mass spectrometer, which separates the ions based on their m/z ratio.
 The resulting spectra represent the mass distribution of the entire peptide population, without any information about the sequence of individual peptides.
@@ -165,9 +164,59 @@ How exactly this is done is out-of-scope for this work, but more information can
 The most important thing to realize at this point is that the data that comes out of the mass spectrometer (i.e. the mass spectra) can be converted into the peptide sequences that most probably occur in the input sample.
 The CompOmics group at Ghent University, led by Prof. Lennart Martens, is specialised in the development of novel search engines, such as IONBOT [@degroeveIonbotNovelInnovative2022].
 
-Once a list of peptide sequences has been determined, the data is finally ready to be sent to Unipept for further downstream analysis (\autoref{fig:spectra_to_unipept}).
+Once a list of peptide sequences has been determined, the data is finally ready to be sent to Unipept (or other tools) for further downstream analysis (\autoref{fig:shotgun_metaproteomics}).
 
-![The mass spectra identified by a mass spectrometer can be mapped onto a list of peptides by a search engine. Finally, these peptides can be transferred to Unipept for further downstream analysis. \label{fig:spectra_to_unipept}](resources/figures/chapter1_spectra_to_unipept.eps)
+##### Protein inference problem
+In metaproteomics, the protein inference problem involves identifying the proteins from the different microorganisms present in the sample, and determining their relative abundances.
+This is difficult because the sample may contain thousands of different microorganisms, each with its own unique set of proteins, and the proteins from different microorganisms may have very similar amino acid sequences or fragment ions.
+
+There exist some approaches in which proteins are inferred based upon a set of identified peptide sequences.
+In this case, every peptide sequence provides *evidence* for a specific set of proteins and specialized algorithms have been developed to perform protein inference by exploiting these evidence values.
+A more in-depth explanation of one of these techniques, called protein grouping, can be found in \autoref{chapter:other_projects}. 
+
+The problem of protein inference is already challenging in the context of proteomics research, where all observed peptides originate from a single organism.
+In metaproteomics, this problem is even harder since different proteins of different organisms can be very similar, making it harder to distinguish them from each other.
+
+##### Taxonomic and functional analysis of metaproteomics
+In order to compile a taxonomic and functional report for an ecosystem under study, downstream analysis tools (such as Unipept) are used.
+These tools typically rely on external databases for retrieving functional and taxonomic annotations and the approach followed to infer these annotations can broadly be classified in three different categories:
+
+1. **Peptide-centric approach:** Tools that are peptide-centric rely solely on identified peptides and do not infer the corresponding proteins, thereby circumventing the protein inference problem. This approach is less complex, but nonetheless, has a drawback, as it does not use the complete protein sequence information. Longer sequences are more likely to be unique to more specific taxa, which improves taxonomic resolution.
+2. **Protein-centric approach:** Tools that are protein-centric will first try to infer which proteins are expressed in the ecosystem under study (by looking at the identified peptide sequences or the mass spectra that were generated by a mass spectrometer). This allows analysis tools to exploit more information in the sample and to build a more complete picture of all taxonomic and functional properties of the microbial community present in the sample, as it considers the biological context of the proteins. On the other hand, the protein-centric approach requires more computational resources and may be more challenging to implement than peptide-centric approaches, particularly for samples with a high degree of complexity. Additionally, the protein-centric approach may miss some proteins that are present in low abundance or that are not well-represented in existing protein databases.
+3. **Hybrid approach:** Some tools can not directly be categorized in one of the first two categories, but instead follow a combined / hybrid approach.
+
+### The metaproteomics analysis tools landscape
+A lot of different tools exist for the analysis of metaproteomics datasets.
+Each of these tools has its own speciality, and different tools typically aim to overcome a different challenge that might occur during the analysis of metaproteomics data.
+A brief overview of the most commonly used tools for **downstream** metaproteomics analysis is presented here.
+
+#### MetaProteomeAnalyzer (MPA)
+First released in 2014, the MetaProteomeAnalyzer (MPA) [@muthMetaProteomeAnalyzerPowerfulOpenSource2015] is an open-source Java tool that performs the taxonomic and functional analysis of metaproteomics data.
+In order to do so, MPA uses a sequence-based and spectral-based approaches to identify the organisms and functional pathways present in a sample.
+This allows researchers to gain insights into the metabolic activities of microbial communities and their interactions with the environment.
+MPA includes multiple search engines and the feature to decrease data redundancy by grouping protein hits to so-called meta-proteins.
+
+The first version of the MetaProteomeAnalyzer follows a client-server architecture where the client is a graphical Java software application that uploads data to a server (which is responsible for processing this data) and keeps track of datasets that have been analysed previously.
+In 2018, MPA Portable [@muthMPAPortableStandAlone2018] was also released.
+In contrast to the original server-based MPA application, MPA portable no longer requires computational expertise for installation, it is independent of any relational database system and it provides support for the latest state-of-the-art database search engines.
+
+Compared to Unipept, MPA expects a list of mass spectra as input and combines the results of different search engines for a later taxonomic and functional analysis.
+In 2020, the MetaProteomeAnalyzer (and PeptideShaker) have been connected to Unipept [@vandenbosscheConnectingMetaProteomeAnalyzerPeptideShaker2020], which allows researchers to further analyse and visualise the identified peptide sequences using Unipept. 
+
+#### Prophane
+Prophane [@schiebenhoeferCompleteFlexibleWorkflow2020] is a software tool that was first released in 2011 and that offers taxonomic and functional annotation of metaproteomes based on various annotation databases, interactive result visualization, and an intuitive web service.
+It integrates results from various data sources such as NCBI, UniProt, eggNOG or PFAMs.
+
+In contrast to Unipept, Prophane follows a protein-centric approach and tries to perform the taxonomic and functional analysis on this basis.
+The tool is available as a Conda package or as a web service.
+
+#### MetaLab / iMetaLab
+MetaLab [@chengMetaLabAutomatedPipeline2017] is an integrated software platform that provides a pipeline for fast microbial identification, quantification and taxonomic profiling.
+In order to do so, MetaLab requires mass spectrometry raw data.
+
+MetaLab follows a hybrid approach and thus combines the information extracted from performing both a peptide-centric and protein-centric metaproteomics analysis.
+Similar to Unipept, MetaLab builds a precomputed index of the UniProtKB and uses this as a source for the taxonomic classification of identified peptides.
+While Unipept also uses UniProt for the retrieval of functional annotations, MetaLab extracts its functional information from the eggNOG [@huerta-cepasEggNOGHierarchicalFunctionally2019] database.
 
 ### Unipept
 Unipept is an ecosystem of software tools that are mainly focussed on the analysis of metaproteomics datasets.
