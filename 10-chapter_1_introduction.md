@@ -38,6 +38,8 @@ The concept explained above, is called the **central dogma of biology**.
 It is one of the most fundamental principles of molecular biology and was first depicted in 1958 by Francis Crick who also reformulated it in a manuscript published in Nature in 1970 [@crickCentralDogmaMolecular1970].
 The central dogma explains how proteins in organisms are constructed and is very important to grasp in order to understand a lot of the basic principles of biology.
 
+See also \autoref{fig:cell_chromosome_gene} for the relation between a cell, chromosomes, genes and DNA. These are all components that play a very important role in the central dogma and form the basis of living organisms.
+
 ![The central dogma in biology can easily be explained with the recipe book analogy. The DNA corresponds to a recipe book that contains the recipe for every dish that can be made. A copy of a single recipe corresponds to the concept of RNA and a dish corresponds to a single protein that's been completely assembled. \label{fig:recipe_book_analogy}](resources/figures/chapter1_recipe_book.eps)
 
 ##### DNA
@@ -85,7 +87,7 @@ See \autoref{fig:dna_transcription_translation} for a schematic overview of the 
 The **genome** of an organism can be defined as the collection of DNA that is present in this organism.
 It defines which proteins can potentially be constructed by the organism.
 Secondly, the **transcriptome** of an organism is simply the set of all RNA transcripts in an organism and already provides a little more information about which parts of the DNA do actually encode proteins.
-Lastly, the **proteome** of an organism is the collection of all proteins that can be expressed by an organism.
+Lastly, the **proteome** of an organism is the collection of all proteins that are expressed by an organism.
 
 In this thesis, we mainly discuss the terms **meta**genome, **meta**transcriptome and **meta**proteome.
 Instead of respectively refering to the collection of genes, transcripts and proteins that can be expressed by a single organism, the **meta** prefix denotes that we are respectively talking about the set of genes, transcripts or proteins that can be expressed by a **collection** of different organisms (typically of the same biological environment).
@@ -105,8 +107,8 @@ In contrast, the genome remains mostly static, with relatively stable genetic se
 As the transcriptome of an organism captures the expression of genes at a specific time and in a specific context, it provides more information to a researcher and it might help them to understand the underlying mechanisms of diseases, drug responses and other complex biological processes.
 Finally, the transcriptome can also be used to study the regulation of gene expression, including alternative splicing, post-transcriptional modifications, and non-coding RNA expression.
 
-The proteome is the most informative piece of information and tells researchers which proteins are being synthesized by an organism at a specific point in time.
-It allows us to study the functional profile of an organism and goes one step further than studying the transcriptome.
+The study of the proteome is important for understanding many aspects of biology and medicine. By analyzing the proteins that are present in a particular cell or tissue, researchers can learn more about how it functions and how it responds to different conditions or treatments.
+This knowledge can be used to develop new therapies for diseases, as well as to improve our understanding of basic biological processes.
 
 #### Shotgun metaproteomics (analysing the metaproteome)
 In this work, we focus on analysing the **metaproteome** of an ecosystem.
@@ -130,10 +132,30 @@ Before we can start to explain the different steps in shotgun metaproteomics, we
 A mass spectrometer is a very advanced and expensive device that allows us to measure the "weight" of molecules.
 Instead of measuring the force of gravity on an object (which is what a traditional scale does), a mass spectrometer uses magnetic and electric fields to measure the **mass-to-charge** ($m/z$) ratio of the particles in the input sample.
 
+Typically, molecules will be ionized (or charged) after which their mass-to-charge ratio is measured.
+Mass spectrometry typically begins by vaporizing or dissolving the sample of interest and injecting it into a mass spectrometer.
+Next, the sample is ionized, usually by bombarding it with high-energy electrons, or by using a laser.
+This process converts the molecules in the sample into charged ions which can then be separated based on their mass-to-charge ratio using a combination of electric and magnetic fields.
+The ions are accelerated through these fields, causing them to be deflected in different directions depending on their mass-to-charge ratio.
+The resulting ion separation creates a mass spectrum, which shows the relative abundance of ions at different mass-to-charge ratios.
+
 These "mass-to-charges" for each of the particles that were found in the input sample can be visualised as a **mass spectrum** (see \autoref{fig:mass_spectrum}).
 Each peptide that's fed into the mass spectrometer produces such a mass spectrum, which is not necessarily unique (i.e. different peptides can produce the same mass spectrum) and the following step in shotgun metaproteomics consists of mapping these mass spectra onto peptide sequences.
 
-![Example of a mass spectrum for the molecule "7,15-O-diacetyl-5-O-benzoyl-3-propanoyl-13,17-oxy-14-oxopremyrsinol", taken from [@bittremieuxSpectrumUtilsPython2020]. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.svg)
+![Example of a mass spectrum for the peptide WNQLQAFWGTGK/2, taken from [@bittremieuxSpectrumUtilsPython2020]. The different peaks in the spectrum correspond with the observed "mass-to-charge" ratio of the different particles of the input sample. \label{fig:mass_spectrum}](resources/figures/chapter1_mass_spectrum.svg)
+
+We have to make a distinction between mass spectrometry consisting of a single step (MS1 mass spectrometry) and tandem mass spectrometry (often denoted as MS/MS or MS\textsuperscript{2}).
+
+###### MS1 vs Tandem Mass Spectrometry (MS/MS)
+
+MS1 is a type of mass spectrometry that measures the mass-to-charge ratio (m/z) of intact peptides or proteins.
+In MS1, the peptide mixture is ionized and then introduced into the mass spectrometer, which separates the ions based on their m/z ratio.
+The resulting spectra represent the mass distribution of the entire peptide population, without any information about the sequence of individual peptides.
+
+MS/MS, also known as tandem mass spectrometry, is a more advanced form of mass spectrometry that provides more detailed information about the peptide sequence.
+In MS/MS, the peptide mixture is first subjected to MS1 analysis to select a particular peptide ion of interest.
+Then, this ion is isolated and fragmented into smaller fragments using collision-induced dissociation.
+The resulting spectra provide information about the amino acid sequence of the peptide, as well as the types and positions of any post-translational modifications.
 
 ##### Matching mass spectra with peptide sequences
 Now, in order to map mass spectra back to peptide sequences, researchers use **search engines**.
@@ -141,7 +163,7 @@ These search engines are complex software applications that contain a list of pe
 
 How exactly this is done is out-of-scope for this work, but more information can be found in [@BenchmarkImprovingMethods2022].
 The most important thing to realize at this point is that the data that comes out of the mass spectrometer (i.e. the mass spectra) can be converted into the peptide sequences that most probably occur in the input sample.
-The CompOmics group at Ghent University, led by Prof. Lennart Martens, is specialised in the development of novel search engines, such as MS2Rescore.
+The CompOmics group at Ghent University, led by Prof. Lennart Martens, is specialised in the development of novel search engines, such as IONBOT [@degroeveIonbotNovelInnovative2022].
 
 Once a list of peptide sequences has been determined, the data is finally ready to be sent to Unipept for further downstream analysis (\autoref{fig:spectra_to_unipept}).
 
@@ -157,32 +179,32 @@ All tools in the Unipept ecosystem work by taking a list of tryptic peptide sequ
 Every Unipept tool has its own target audience and functionality.
 See the list in the next subsection for more information on the tools that currently exist and what each of these is aimed at.
 
-##### Unipept Web application
+##### Unipept Web application (2012)
 The first real Unipept tool that was presented to the outside world, is the Unipept Web application.
 This app is accessible at [https://unipept.ugent.be](https://unipept.ugent.be) and provides a user friendly web component that allows users to perform metaproteomics analysis and consult the results that are presented to them as a collection of visualizations and tables.
 All information that is provided by our web application can easily be exported (and can subsequently be imported into other tools for further analysis).
 
-##### Unipept CLI
+##### Unipept CLI (2015)
 For power-users that require the metaproteomics analysis of many large samples, we provide the Unipept command line interface (CLI).
 This command line interface allows Unipept's analysis to be plugged into existing analysis pipelines and allows machines to automate specific steps.
 Unlike the web application, the CLI has no graphical user interface and mainly provides textual output (support for visualizations is also limited).
 
-##### Unipept API
+##### Unipept API (2015)
 The Unipept API (Application Programming Interface) is a collection of endpoints that allow third-party applications to integrate some of Unipept's functionality into their own workloads.
 Data can be sent to each endpoint using `HTTP POST` or `GET` requests to our servers, after which the Unipept server will respond with the requested results as a `JSON`-formatted object.
 
-##### Unipept Desktop
+##### Unipept Desktop (2021)
 Unlike the previous three tools, the Unipept Desktop application has been added to our ecosystem very recently and does not necessarily needs to communicate with the Unipept servers in order to function.
 The desktop application combines some of the advantages of the web app, CLI and API into one and allows users to process large metaproteomic samples using a user friendly graphical user interface (making it more accessible to less tech-savvy users).
 It is similar to the CLI in the way that it allows to process much larger samples than the web application, and requires less technical skills to operate.
 The biggest difference with the web application is the fact that it cannot be plugged into existing analysis pipelines as easily, but it's also not designed to do so.
 
-##### UMGAP (Unipept MetaGenomics Analysis Pipeline)
+##### UMGAP (Unipept MetaGenomics Analysis Pipeline) (2022)
 UMGAP, or the Unipept MetaGenomics Analysis Pipeline, is a bit of an outsider because it focuses on the analysis of metagenomics data (instead of metaproteomics data).
 This pipeline has been developed by Dr. Felix Van der Jeugt and is only accessible from the command line.
 Since all tools presented in this thesis focus solely on the analysis of metaproteomics data, we will not go into more detail here.
 
-#### The Unipept metaproteomics analysis pipeline
+#### The Unipept MetaProteomics Analysis Pipeline
 In this section, we are going to take a look at how exactly a metaproteomics data sample is processed by Unipept.
 Every input sample consists of a list of tryptic peptide sequences.
 Non-tryptic peptides will be ignored by Unipept, since they cannot be matched with the information in our **peptide reference database**.
@@ -193,6 +215,30 @@ A peptide reference database can be seen as some kind of information resource th
 In order to construct this database, we extract all proteins (including their mapping to organisms and functions) from the UniProtKB resource [@theuniprotconsortiumUniProtWorldwideHub2019].
 UniProt is an organization that focuses on providing a protein database that is as complete as possible.
 It contains full protein sequences and information about the organisms and functions that these proteins are associated with.
+
+The UniProtKB resource consists of two major parts: TrEMBL and SwissProt.
+TrEMBL (Translated EMBL Nucleotide Sequence Data Library), the largest of the two, contains 250 million proteins at this time (version 2023.2) and is an automatically annotated protein database.
+This means that the data is generated by a computer program without manual curation.
+TrEMBL is built from translations of all publicly available nucleotide sequences in the EMBL (European Molecular Biology Laboratory) database, which includes sequences from many different organisms.
+Because TrEMBL is automatically generated, it is much larger than SwissProt, but it is also less accurate and less well-curated.
+The advantage of TrEMBL, however, is that it contains a much larger number of protein sequences and can be useful for discovering new or uncharacterized proteins.
+
+SwissProt, on the other hand, is a high-quality, manually curated protein database, which means that every entry is thoroughly reviewed, annotated and updated by experts to ensure that the information is accurate, consistent and up-to-date.
+The data in SwissProt is carefully selected, filtered, and each entry includes a wealth of information about the protein, including its function, structure, interactions, and post-translational modifications.
+SwissProt 2023.2 contains 596 000 different proteins at the time of writing.
+
+Both TrEMBL and SwissProt are non-redundant databases, which means that they contain a unique set of protein sequences without any duplicates.
+However, due to the different nature of TrEMBL and SwissProt, we have to make an important distinction between both.
+TrEMBL is a non-redundant database in the sense that all identical, full-length protein sequences are represented in a single record (provided they come from the same species).
+Fragments, isoforms, variants, and so on, encoded by the same gene, are stored in separate entries.
+SwissProt is non-redundant in the sense that all protein products encoded by one gene in a given species are represented in a single record.
+This includes alternative splicing isoforms, fragments, genetic variations, etc.
+
+The non-redundancy of these databases is important for a couple of reasons.
+First of all, it improves the performance of applications working with these databases.
+Because identical entries are merged, the size of the database is decreased and the time needed to search through it is lower.
+Secondly, the non-redundancy property of these databases improves the accuracy of the resource.
+If a database contains the same records multiple times, it is harder to maintain this database and errors happen more frequently.
 
 Since Unipept expects a user to provide a list of peptides (instead of proteins), we need to transform the information from the UniProtKB resource into a peptide reference database.
 Internally, Unipept does so by performing an in-silico tryptic digest of the proteins encountered and cleaves them by the rules imposed by trypsin (see \autoref{fig:protein_to_peptide_db}).
