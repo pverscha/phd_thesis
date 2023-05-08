@@ -227,6 +227,9 @@ Since its early days, Unipept has undergone a big transition, while still mainta
 All tools in the Unipept ecosystem work by taking a list of tryptic peptide sequences as input and matching these peptides with the proteins in a **protein reference database** in order to provide a taxonomic and functional summary for this input sample.
 Every Unipept tool has its own target audience and functionality.
 See the list in the next subsection for more information on the tools that currently exist and what each of these is aimed at.
+\autoref{fig:unipept_timeline} presents a timeline with all major milestones that Unipept achieved over the last 13 years.
+
+![Timeline of tools in the Unipept ecosystem and perspective on when I joined the team in 2018. \label{fig:unipept_timeline}](resources/figures/chapter1_unipept_timeline.eps)
 
 ##### Unipept Web application (2012)
 The first real Unipept tool that was presented to the outside world, is the Unipept Web application.
