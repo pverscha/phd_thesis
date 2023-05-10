@@ -18,10 +18,10 @@ Both of them helped me validating the results produced of the latest iteration o
 
 **Abstract** ---
 Unipept Desktop 2.0 is the most recent iteration of the Unipept Desktop tool that adds support for the analysis of proteogenomics datasets.
-Unipept Desktop now supports the automatic construction of targeted protein reference databases that only contain proteins associated with a predetermined list of taxa.
+Unipept Desktop now supports the automatic construction of targeted protein reference databases that only contain proteins (originating from the UniProtKB resource) associated with a predetermined list of taxa.
 This improves both the taxonomic and functional resolution of a metaproteomic analysis and yields several technical advantages.
 By limiting the proteins present in a reference database, it is now also possible to perform (meta)proteogenomics analyses.
-Since the protein reference database now lives on the user’s local machine, they have complete control over the database used during an analysis.
+Since the protein reference database now resides on the user’s local machine, they have complete control over the database used during an analysis.
 Data does no longer need to be transmitted over the internet, decreasing the time required for an analysis and better safeguarding privacy sensitive data.
 As a proof of concept, we present a case study in which a human gut metaproteome dataset is analyzed with Unipept Desktop 2.0 using different targeted databases based on matched 16S rRNA gene sequencing data.
 
@@ -33,6 +33,10 @@ Unipept [@gurdeepsinghUnipeptFunctionalAnalysis2019] was one of the first major 
 Originally starting as a web application, Unipept was quickly accompanied by an application programming interface [@mesuereUnipeptWebServices2016] (API) and command line interface [@verschaffeltUnipeptCLIAdding2020] (CLI) that respectively allow for embedding Unipept’s analyses in other tools and analyzing larger samples directly from the command line.
 API usage metrics currently indicate that more than 500 000 requests are handled by Unipept on a monthly basis, acknowledging the importance of the tool in this field.
 
+After every new release of the UniProtKB database, Unipept performs an *in-silico* tryptic digest of all the proteins in the UniProtKB resource and constructs the Unipept Database.
+During this database construction process, Unipept aggregates all taxonomic and functional annotations on a per-peptide basis and precomputes the lowest common ancestor associated with each peptide.
+This Unipept Database is highly optimized to very efficiently retrieve the annotations associated with a list of peptide sequences (which serves as the input to Unipept).
+
 The advent of recent technological improvements in mass spectrometry and more powerful proteomics approaches have allowed metaproteomics to transition from small studies to large scale experiments [@wilmesDecadeMetaproteomicsWhere2015; @rechenbergerChallengesClinicalMetaproteomics2019].
 Due to Unipept’s inherent web-based nature, it was limited in the size of the samples that could be analyzed because of browser-imposed restrictions on available compute resources.
 This led to the development of the Unipept Desktop application [@verschaffeltUnipeptDesktopFaster2021] in 2020.
@@ -42,7 +46,10 @@ Projects can easily be shared with other researchers, who no longer need to rean
 The Unipept Desktop application also introduces a new inter- and intra-sample comparison pipeline which allows users to gain insight into the taxonomic and functional shift within and between multiple samples.
 
 Over the last few years, interest in a new research area, proteogenomics, has been growing.
-Proteogenomics can be thought of as a logical next step in researching complex microbial ecosystems and combines information from both metagenomics and metaproteomics experiments in order to overcome a few key problems that arise when working with metaproteomics data in isolation [@schiebenhoeferChallengesPromiseInterface2019].
+Proteogenomics sits at the intersection of proteomics and genomics, employing a methodology that involves generating tailored protein sequence databases from genomic and transcriptomic data. This information is used to help identify novel peptides (not present in reference protein sequence databases) from mass spectrometry-based proteomic data [@nesvizhskiiProteogenomicsConceptsApplications2014a].
+
+Metaproteogenomics, on the other hand, is the study of microbial communities based on the combined analysis of genomic and proteomic data. Instead of working with protein data from a single species, metaproteogenomics looks at the protein level information from a microbial community.
+Proteogenomics Metaproteogenomics can be thought of as a logical next step in researching complex microbial ecosystems and combines information from both metagenomics and metaproteomics experiments in order to overcome a few key problems that arise when working with metaproteomics data in isolation [@schiebenhoeferChallengesPromiseInterface2019].
 
 The first major issue that we need to consider is the ever-growing size of the protein reference databases that are being used to match peptides with proteins.
 UniProtKB [@theuniprotconsortiumUniProtUniversalProtein2021; @theuniprotconsortiumUniProtWorldwideHub2019], a freely accessible database containing protein sequences, has seen a rapid increase in size over the last decade and has grown from approximately 19 million proteins in 2012 to 227 million proteins in 2022.
@@ -66,6 +73,7 @@ Since users do not have control over the database that is being used, they canno
 To solve this problem, we introduce version 2.0 of the Unipept Desktop application, which marks the beginning of a new era for the analysis of proteogenomics datasets.
 Unipept Desktop now provides support for the automatic construction of targeted protein reference databases on the user’s local machine.
 Such targeted databases are based on a filtered version of UniProtKB and only contain UniProtKB records that are associated with the taxa provided by the user (\autoref{fig:lca_filtered}).
+The construction of fully custom reference databases (based on custom FASTA-files with metagenomic reads) is not supported by Unipept Desktop 2.0.
 
 ![An example of how the lowest common ancestor (LCA) for a set of identified taxa is computed in Unipept Desktop, using an unfiltered protein reference database. A single input peptide is matched against proteins in a reference database. The taxa associated with all matched proteins are then summarized as the LCA, which is the most specific node in the taxonomy tree that is a parent of all matched taxa. An unfiltered protein reference database is used in the matching process. Since more proteins from a more diverse range of species are matched, the LCA ends up at the root of the taxonomy tree, providing little to no information. b) The reference database is restricted to viral proteins only and a much more specific LCA will be found (mapping onto the Coronaviridae family). \label{fig:lca_unfiltered}](resources/figures/chapter3_lca_unfiltered.eps)
 
@@ -90,6 +98,9 @@ Unipept will then only include those proteins in the final database that are ass
 Note that there’s also the option to limit the database construction process to SwissProt (instead of SwissProt + TrEMBL) such that only manually-curated proteins are included.
 The second selection method requires the user to provide a set of UniProtKB reference proteome identifiers.
 Only the proteins that are found in these reference proteomes will then be selected for the construction of the reference database.
+\autoref{fig:unipept_workflow} summarizes what the Unipept Desktop 2.0 analysis pipeline looks like.
+
+![Unipept Desktop application analysis pipeline. The Unipept Desktop application requires a list of peptides to perform a taxonomic and functional analysis on and optionally accepts a list of NCBI taxonomy IDs that are used to restrict which proteins are taken into account during this metaproteomics analysis. These taxonomy IDs are typically extracted from a prior metagenomics or metatranscriptomics experiment.\label{fig:unipept_workflow}](resources/figures/chapter3_unipept_workflow.eps)
 
 ![Database creation wizard in Unipept Desktop 2.0. This wizard guides the user through the process of building a targeted protein reference database. Researchers can select proteins in two different ways: by providing a set of taxon identifiers, or by providing a list of UniProtKB reference proteome IDs.\label{fig:desktop2_screenshot}](resources/figures/chapter3_desktop_2_screenshot.png)
 
@@ -137,6 +148,7 @@ We use a NodeJS package called Dockerode, which handles all communication betwee
 ##### Filtering UniProtKB by NCBI taxon identifiers
 We described earlier how a targeted protein reference database can be constructed by selecting a list of NCBI taxon identifiers.
 In this case, Unipept selects only those proteins from the UniProtKB resource that are associated with one of these taxa (or children of these taxa) and includes them in the targeted reference database.
+It is important to realize here that all taxa in the NCBI taxonomy are hierarchically ordered and that higher ranked taxa can be used to select lower taxa.
 In this section, we describe how this is implemented so that efficient filtering can be performed on all 227 million UniProtKB proteins.
 
 The first step in the database construction process is downloading and processing all proteins from the UniProtKB database sources.
@@ -150,17 +162,17 @@ Downloading and constructing the reusable database index structure is a process 
 Subsequent targeted protein reference databases will reuse an existing index or will automatically rebuild it if the UniProtKB resource has been updated since the previous time the index was constructed.
 
 To efficiently query the index structure, we first determine which chunks need to be queried.
-This is simply a matter of looking up which ranges the various NCBI IDs provided fall into and only processing the chunks that correspond to those taxon ranges.
+This is simply a matter of looking up which ranges the various NCBI taxon IDs provided fall into and only processing the chunks that correspond to those taxon ranges.
 All of these chunks are completely disjoint from each other and can be processed and filtered in parallel, maximizing the use of modern multi-core CPUs.
 
 
-![To efficiently filter the UniProtKB database, Unipept builds a custom index structure that can be easily filtered by taxon ID. This index structure only needs to be built the first time and will be reused for all subsequent database builds. The NCBI IDs, optionally provided by a user, are used to select which index chunks need to be queried. Each of these chunks is a compressed file containing protein information, which can then be processed in parallel by multiple CPU-cores.\label{fig:uniprot_index_filtering}](resources/figures/chapter3_unipept_index_structure_build.eps)
+![To efficiently filter the UniProtKB database, Unipept builds a custom index structure that can be easily filtered by taxon ID. This index structure only needs to be built the first time and will be reused for all subsequent database builds. The NCBI taxon IDs, optionally provided by a user, are used to select which index chunks need to be queried. Each of these chunks is a compressed file containing protein information, which can then be processed in parallel by multiple CPU-cores.\label{fig:uniprot_index_filtering}](resources/figures/chapter3_unipept_index_structure_build.eps)
 
 #### Case Study
 To assess the strength of proteogenomics analyses in Unipept Desktop, we used Unipept Desktop 2.0 to perform the taxonomic annotation of a metaproteomic dataset obtained from 28 human fecal samples collected from celiac disease patients following a gluten-free diet and previously subjected to a 16S rRNA gene sequencing study [@bibboFecalMicrobiotaSignatures2020].
 Here, we re-analyzed and re-annotated the 16S rRNA gene sequencing data using a robust and up-to-date bioinformatics pipeline based on the amplicon sequence variant (ASV) approach and a newer database [@quastSILVARibosomalRNA2013] (as previously described [@palombaTimerestrictedFeedingInduces2021]), to obtain accurate information about the set of bacterial taxa present in the environment under study.
 In parallel, the residues from the 28 fecal samples underwent protein extraction, filter-aided sample preparation and LC-MS/MS analysis, according to established procedures [@tancaMetaproteomicProfileColonic2022].
-Mass spectra were analyzed by Proteome Discoverer (version 2.4, Thermo Fisher Scientific) [@orsburnProteomeDiscovererCommunity2021], using a publicly available collection of human gut metagenomes [@liIntegratedCatalogReference2014] as the sequence database, Sequest-HT as the search engine and Percolator for peptide validation (search parameters are detailed elsewhere).
+Mass spectra were analyzed by Proteome Discoverer (version 2.4, Thermo Fisher Scientific) [@orsburnProteomeDiscovererCommunity2021], using a publicly available collection of human gut metagenomes [@liIntegratedCatalogReference2014] as the sequence database, Sequest-HT as the search engine (search parameters: precursor mass range 350-5,000 Da; S/N threshold 1.5; enzyme trypsin; maximum missed cleavage sites 2; peptide length range 6-144 amino acids; precursor mass tolerance 10 ppm; fragment mass tolerance 0.02 Da; static modification cysteine carbamidomethylation; dynamic modification methionine oxidation) and Percolator for statistical validation.
 A total of 64 845 microbial peptides (of which 62 363 peptides remained after duplicate filtering) were identified (with 1% as FDR threshold) and used as input for Unipept Desktop annotation.
 We used the online NCBI Taxonomy Browser [@federhenNCBITaxonomyDatabase2012] to convert between taxonomy IDs and taxa names where necessary.
 
