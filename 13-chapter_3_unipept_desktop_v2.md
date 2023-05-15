@@ -13,7 +13,7 @@ Both of them helped me validating the results produced of the latest iteration o
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the manuscript by [@verschaffeltUnipeptDesktopConstruction2023] as submitted to the bioRXiv preprint server.*
+*This chapter contains a verbatim copy of the manuscript by *Verschaffelt* et al., 2023 as submitted to the bioRXiv preprint server.*
 \color{black}
 
 **Abstract** ---

@@ -16,7 +16,7 @@ This application note is included and discussed in this chapter.*
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the application note by [@verschaffeltUnipeptDesktopFaster2021] as published in Journal of Proteome Research.*
+*This chapter contains a verbatim copy of the application note by *Verschaffelt* et al., 2021 as published in Journal of Proteome Research.*
 \color{black}
 
 **Abstract** --- 

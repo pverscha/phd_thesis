@@ -12,7 +12,7 @@ In order to expose this new functionality to power users and third-party applica
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the technical note by [@verschaffeltUnipeptCLIAdding2020] as submitted to Bioinformatics.*
+*This chapter contains a verbatim copy of the technical note by *Verschaffelt* et al., 2020 as submitted to Bioinformatics.*
 \color{black}
 
 **Abstract** ---

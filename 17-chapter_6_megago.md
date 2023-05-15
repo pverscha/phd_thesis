@@ -12,7 +12,7 @@ I was furthermore the lead developer of the web application and contributed a bi
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the manuscript by [@verschaffeltMegaGOFastPowerful2021] as submitted to Journal of Proteome Research.*
+*This chapter contains a verbatim copy of the manuscript by *Verschaffelt*, *Van Den Bossche*, et al., 2021 as submitted to Journal of Proteome Research.*
 \color{black}
 
 ![Screenshot of the MegaGO Web application. This application is accessible at [https://megago.ugent.be](https://megago.ugent.be). \label{fig:megago_screenshot}](resources/figures/chapter6_megago_application_screenshot.png)

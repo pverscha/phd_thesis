@@ -112,6 +112,7 @@ This knowledge can be used to develop new therapies for diseases, as well as to 
 
 #### Shotgun metaproteomics (analysing the metaproteome)
 In this work, we focus on analysing the **metaproteome** of an ecosystem.
+The term metaproteomics was first coined by Paul Wilmes in 2004 [@wilmesApplicationTwodimensionalPolyacrylamide2004] and was previously referred to as **community proteomics** [@wilmesMetaproteomicsStudyingFunctional2006].
 We will first explain how proteins can be identified from a biological sample by using a very advanced device called a **mass spectrometer**.
 Currently, most researchers are using a technique called **shotgun proteomics** when analysing a protein sample and follow a predefined set of steps.
 Each of the different steps in shotgun proteomics (\autoref{fig:shotgun_metaproteomics}) will be covered in detail in this section.
@@ -327,4 +328,3 @@ To make this more concrete, if a peptide occurs in proteins A, B and C, and func
 In order now to process a list of peptides, Unipept will match each of the input peptides with its peptide reference database and report all lowest common ancestors and functional annotations found per peptide.
 For a single sample, it will then provide something in the line of "species x was found to occur in 12 out of 153 total peptides" (and it will do so for every identified taxon).
 This information is not only presented in a textual fashion, but will also be rendered by a collection of interactive data visualizations (which have been designed and implemented in-house [@verschaffeltUnipeptVisualizationsInteractive2022]).
-
