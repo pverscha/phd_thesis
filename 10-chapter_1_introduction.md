@@ -393,4 +393,25 @@ Because of the size of this database, these frequency counts are precomputed bef
 A new release of the MegaGO software package is automatically published on PyPi after each update of the term frequency counts and an new version of the associated web application (accessible at [https://megago.ugent.be](https://megago.ugent.be)) is automatically deployed as well.
 
 ##### Other tools in the Unipept ecosystem
+\textsf{Pout2Prot}
 
+As discussed earlier in this introductory chapter, there are typically two different ways to perform taxonomic and functional annotation of an ecosystem.
+Unipept follows a peptide-centric approach which means that each peptide individually will be annotated and that all proteins in which a peptide occurs are grouped.
+Other tools, such as Prophane [@schiebenhoeferCompleteFlexibleWorkflow2020], follow a protein-centric approach and require that peptides are first grouped into so-called "protein groups".
+Grouping proteins is not a straightforward process and different approaches (resulting in a different grouping result) can be followed.
+Pout2Prot [@schallertPout2ProtEfficientTool2022] is a tool that has been developed by Dr. Kay Schallert, Dr. Tim Van Den Bossche and myself that allows to perform these different types of protein grouping on `.pout` files (typically the results of the Percolator tool [@theFastAccurateProtein2016]).
+
+Other tools that perform protein grouping often produce results that are wrong (this is explained in more detail in \autoref{chapter:other_projects}) or take a very long time to perform the required computations.
+Pout2Prot is a web-based tool for which we have developed a set of new grouping algorithms that correct the mistakes made by other tools and produces a results file that can be directly imported into the Prophane software for further analysis.
+
+\textsf{Shared memory data structures}
+
+One of the main goals of the Unipept Desktop application is to allow researchers to efficiently process larger metaproteomics datasets containing up to one million peptides.
+Because of how the JavaScript programming language is designed and the amount of data that needs to be processed, I decided to move some of the computationally intensive work from the main JavaScript thread to a worker thread in the background.
+This allows the application to react to user interaction while also doing expensive calculations in the background.
+
+During this implementation process, however, I stumbled upon a shortcoming of JavaScript.
+All information that needs to be communicated between the main thread and a worker thread needs to be serialized using the *structured clone algorithm*; a process during which the application is unresponsive and that can take a significant amount of time for large data structures (up to a minute for datasets containing half a million of peptides).
+
+In order to overcome this problem, I implemented a custom key-value store (i.e. a HashMap) in JavaScript that exploits the benefits of shared memory and that overcomes the slow structured clone algorithm.
+Because this special implementation of a HashMap utilizes a portion of the memory that is shared by multiple threads, the information contained in there does not need to be serialized, copied and deserialized, resulting in significant time savings.
