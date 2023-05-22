@@ -13,7 +13,7 @@ The application note that's included in this chapter provides a technical descri
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the application note by *Verschaffelt* et al., 2022 as submitted to Bioinformatics.*
+*This chapter contains a verbatim copy of the application note by Verschaffelt et al., 2022 as submitted to Bioinformatics.*
 \color{black}
 
 **Abstract** ---

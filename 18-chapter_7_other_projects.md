@@ -19,7 +19,7 @@ This project first started as an experiment and is currently completely managed 
 ### Pout2Prot: An efficient tool to create protein (sub)groups from Percolator output files
 
 \color{gray}
-*This section contains a verbatim copy of the manuscript by *Schallert* et al., 2022 as submitted to Journal of Proteome Research.*
+*This section contains a verbatim copy of the manuscript by Schallert et al., 2022 as submitted to Journal of Proteome Research.*
 \color{black}
 
 

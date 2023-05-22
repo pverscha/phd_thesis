@@ -13,7 +13,7 @@ Both of them helped me validating the results produced of the latest iteration o
 \newpage
 
 \color{gray}
-*This chapter contains a verbatim copy of the manuscript by *Verschaffelt* et al., 2023 as submitted to the bioRXiv preprint server.*
+*This chapter contains a verbatim copy of the manuscript by Verschaffelt et al., 2023 as submitted to the bioRXiv preprint server.*
 \color{black}
 
 **Abstract** ---
@@ -250,4 +250,37 @@ This work has benefited from collaborations facilitated by the Metaproteomics In
 This work has furthermore been supported by the Research Foundation - Flanders (FWO) \[1164420N to P.V., 12I5220N to B.M.\] and by the University of Sassari \[Fondo di Ateneo per la Ricerca 2020 to A.T.\].
 We thank the Flemish Supercomputer Center (VSC) funded by the Research Foundation - Flanders (FWO) and the Flemish Government for providing the infrastructure to build the Unipept database and to run the experiments from this manuscript.
 Part of this work was also supported by the Research Foundation - Flanders (FWO) for ELIXIR Belgium \[I002819N\]. 
+
+#### Addendum
+##### Setting up a communication channel between Unipept Desktop and Docker
+In order to handle large amounts of data efficiently, most of the data from the Unipept Desktop application is stored in a relational database.
+By using Docker, we relieve the end user of having to manually install all required dependencies and keep them up-to-date.
+Since the Docker images that are used by the desktop application have their own versioning system, we can update these independently of the Unipept Desktop app.
+
+Downloading, starting and stopping the respective Docker images or containers required for the application to perform an analysis is managed by Unipept Desktop itself.
+In order to setup an easy to use communication channel between the desktop application and the Docker daemon, we decided to work with Dockerode.
+
+Dockerode is an opensource JavaScript library that acts as a client that communicates with the Docker daemon using the Docker Remote API.
+It abstracts the complexities of the underlying HTTP requests and responses, providing a convenient JavaScript API for developers to interact with Docker.
+
+When you create an instance of the Dockerode client, it establishes a connection with the Docker daemon using the specified configuration parameters, such as the socket path or TCP connection details.
+The Docker daemon provides a RESTful HTTP API that the Dockerode library utilizes to send requests and receive responses.
+
+By using environment variables, the Unipept Desktop application has a means to instruct the database construction scripts that are present in the Unipept database Docker images on which taxa should be filtered out and which database source should be used (i.e. TrEMBL or SwissProt).
+It is important to note that these environment variables can only be used to perform a one-way communication from the desktop app to the code in these Docker images.
+In order to update the user on the progress of the database construction process, however, communication in the other direction is also required (i.e. from the Docker daemon to Unipept Desktop).
+This is handled by writing specially formatted messages to the logfiles of the Docker containers that can be parsed and interpreted by Unipept Desktop.
+
+In Unipept Desktop, there is a special TypeScript class `DockerCommunicator` that provides even further abstractions on top of the Dockerode library that takes care of parsing these "special" messages from the logfiles and setting up the required environment variables.
+
+##### Lifecycle of a Unipept analysis with a local database
+In order to analyse a metaproteomics sample using a locally constructed targeted protein reference database, the Unipept Desktop app has to create, instruct and destroy a handful of Docker containers that each have their own isolated responsibility.
+More specifically, the end user first has to construct a targeted protein reference database using the "database creation wizard" (see \autoref{fig:desktop2_screenshot}).
+During this step, first the `unipept-database` image will be downloaded and a new container, which is responsible for constructing the database, will be started.
+
+Secondly, once such a targeted protein reference database is available, the actual analysis of metaproteomics data provided by the end user, can be started.
+The most important components that are required for this analysis are the Unipept database and the Unipept API, which are handled by two separate Docker images: `unipept-database` and `unipept-web`.
+See \autoref{fig:desktop_docker_communication} for a schematic summary of how communication between the Unipept Desktop app and Docker is handled and what messages are exchanged between the two.
+
+![This figure is a schematic representation of the communication that takes place between the Unipept Desktop app and Docker when a user decides to analyse a metaproteomics dataset using a targeted protein reference database. \label{fig:desktop_docker_communication}](resources/figures/chapter3_unipept_desktop_docker_communication.eps)
 

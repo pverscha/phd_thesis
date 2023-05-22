@@ -1,4 +1,4 @@
-# The Unipept ecosystem
+# The Unipept ecosystem {#part:unipept_ecosystem}
 
 \pagestyle{empty}
 

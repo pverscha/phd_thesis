@@ -110,6 +110,12 @@ Finally, the transcriptome can also be used to study the regulation of gene expr
 The study of the proteome is important for understanding many aspects of biology and medicine. By analyzing the proteins that are present in a particular cell or tissue, researchers can learn more about how it functions and how it responds to different conditions or treatments.
 This knowledge can be used to develop new therapies for diseases, as well as to improve our understanding of basic biological processes.
 
+#### Metaproteogenomics
+In recent years, there has been a growing interest in a cutting-edge research discipline called *metaproteogenomics*, which is revolutionizing our understanding of microbial communities and their functional dynamics.
+metaproteogenomics represents a powerful and interdisciplinary approach that combines metagenomics and metaproteomics to provide a comprehensive understanding of microbial communities. 
+By leveraging the strengths of both fields, researchers can achieve more accurate taxonomic assignments, unravel the functional potential of microorganisms, and gain insights into the intricate interplay between the genetic information encoded in the metagenome and the expressed proteins in a community.
+Metaproteogenomics is driving advancements in our knowledge of microbial ecology, paving the way for new discoveries and applications in diverse scientific domains.
+
 #### Shotgun metaproteomics (analysing the metaproteome)
 In this work, we focus on analysing the **metaproteome** of an ecosystem.
 The term metaproteomics was first coined by Paul Wilmes in 2004 [@wilmesApplicationTwodimensionalPolyacrylamide2004] and was previously referred to as **community proteomics** [@wilmesMetaproteomicsStudyingFunctional2006].
@@ -328,3 +334,63 @@ To make this more concrete, if a peptide occurs in proteins A, B and C, and func
 In order now to process a list of peptides, Unipept will match each of the input peptides with its peptide reference database and report all lowest common ancestors and functional annotations found per peptide.
 For a single sample, it will then provide something in the line of "species x was found to occur in 12 out of 153 total peptides" (and it will do so for every identified taxon).
 This information is not only presented in a textual fashion, but will also be rendered by a collection of interactive data visualizations (which have been designed and implemented in-house [@verschaffeltUnipeptVisualizationsInteractive2022]).
+
+### Expanding the Unipept ecosystem
+#### Part I: The need for the Unipept Desktop application
+Throughout my PhD thesis, I have encountered various challenges in pursuit of my research goals that needed to be overcome.
+One notable challenge is the large increase in volume of data that needs to be processed, surpassing any previous benchmarks [@zhangPerspectiveGuidelinesMetaproteomics2019;@kleinerMetaproteomicsMuchMore2019].
+Consequently, the current approach employed by Unipept necessitates significant improvement.
+The limitations imposed by web browsers render the Unipept web application inadequate for handling this scale of data analysis.
+While matching peptides with taxonomic and functional annotations is performed server-side, the task of summarizing this information and constructing interactive data visualizations is carried out client-side, relying on the end-user's machine.
+As analyses become more time-consuming, particularly when combined with specific configuration options of Unipept, it is increasingly desirable to have the capability to pause and resume the process, as well as to save analysis results offline for future reuse.
+
+In order to facilitate metaproteogenomics analyses, Unipept needs to possess the capability to query a specific subset of the protein reference database.
+Specifically, only proteins associated with organisms identified in a prior metagenomics experiment should be considered during the metaproteomics analysis.
+This, however, renders all precomputations that are performed during the construction of the server-side protein reference database useless and causes the analysis time to increase dramatically (from a few minutes to multiple hours or even days).
+Not only does this cause a significant delay when working with these metaproteomics samples, it also requires a massive amount of computational power for Unipept to handle these expensive queries for multiple users concurrently.
+
+By building a new Unipept Desktop application, we can overcome both of these major challenges and provide a novel approach to analyse both metaproteogenomics datasets, as well as the increasingly larger modern metaproteomics datasets.
+Unipept Desktop, which is what this novel desktop application is called, is able to maximally utilize the computational power of an end user's machine and provides support for saving analysis results offline.
+The desktop application also allowed me to move the protein reference database from the server to the client, allowing researchers to construct a custom, filtered database that only contains those proteins associated with organisms identified by a prior metagenomics experiment.
+All required precomputations and in-silico tryptic digestion of the proteins in this database is performed locally, by each end-user individually, alleviating the Unipept servers from this intensive task.
+
+In \autoref{part:unipept_desktop} of my PhD thesis, I explain in more detail how the Unipept Desktop application is constructed and how the migration of the protein reference database is handled.
+
+By leveraging the Electron framework that allows us to use web technologies to build desktop applications, we can reuse a large portion of the code behind Unipept's web application.
+The graphical user interface of the Unipept Web application has been rewritten and restructured into a collection of standalone web components that are subsequently isolated into the Unipept Web Components software library.
+By doing so, a new feature or a fix for a bug only needs to be implemented once (as part of the web components library) and avoids me having to implement the same change twice.
+
+#### Part II: Building new tools in the Unipept ecosystem
+The second part of this PhD thesis, \autoref{part:unipept_ecosystem}, contains a summary of other tools that have been developed and further aid the analysis of metaproteomics data.
+Each of these tools tackle an existing problem in metaproteomics and provide a suitable approach to overcome the associated challenges linked to these problems.
+
+##### Unipept CLI / API 2.0
+Since the latest release of the Unipept Web application (version 4.0), we have introduced support for functional analysis of metaproteomics datasets.
+However, this advanced functional analysis pipeline was not yet accessible through the Unipept CLI and API, making it challenging to conduct such analyses on large samples and incorporate them into third-party applications.
+
+To address this limitation, I have enhanced the Unipept CLI in version 2.0 by adding seven new commands to the command-line interface.
+Five of these commands empower researchers to extract functional information from the database.
+Additionally, two new commands, namely `taxa2tree` and `taxonomy`, have been included to facilitate the export functionality of basic interactive data visualizations.
+
+In line with these improvements, the Unipept API version 2.0 now offers six new endpoints.
+These endpoints allow seamless integration of Unipept's functional analysis pipeline into third-party applications, enabling developers to leverage its capabilities effectively.
+
+##### MegaGO
+A key feature of metaproteomics research is finding out what a collection of microorganisms is doing in an ecosystem by creating a functional profile.
+Numerous different ontologies exist that each provide an ontology and definition for the different functions that occupy organisms. 
+The Gene Ontology [@thegeneontologyconsortiumGeneOntologyResource2019] is an example of one such ontology and is widely used in the field of metaproteomics (and beyond) [@maddaProteomicProfilingIdentification2020;@vuProteinFunctionPrediction2021;@conesaBlast2GOUniversalTool2005].
+
+In order to highlight the differences and shifts in exposed functionality between different ecosystems and organisms, it is important that we can efficiently compare how "similar" two sets of GO-terms are.
+A lot of different similarity metrics that fulfill this purpose have been developed over the years, but accessible and performant tools that allow these to be used are currently lacking.
+
+MegaGO is a web application (and command line tool) that is developed specifically for this purpose.
+It highly exploits the parallelism of modern CPUs with multiple processing cores by efficiently spreading the numerous computations required to determine set-based similarity over all of those cores.
+Since computing the similarity of two sets containing respectively $m$ and $n$ GO-terms requires approximately $m*n$ comparisons, an efficient approach was required.
+
+Additionally, the similarity metric that was eventually chosen for the comparison of two GO-terms, the Lin-semantic similarity metric [@linInformationTheoreticDefinitionSimilarity1998], requires a baseline of how "frequent" each GO-term occurs on average in the real world.
+In order to compute these average occurrences, we focus on the proteins found in the UniProtKB database (SwissProt).
+Because of the size of this database, these frequency counts are precomputed beforehand by the servers provided by GitHub and are automatically updated after every new release of the SwissProt database.
+A new release of the MegaGO software package is automatically published on PyPi after each update of the term frequency counts and an new version of the associated web application (accessible at [https://megago.ugent.be](https://megago.ugent.be)) is automatically deployed as well.
+
+##### Other tools in the Unipept ecosystem
+

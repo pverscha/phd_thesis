@@ -1,7 +1,7 @@
 \renewcommand{\chaptermark}[1]{\markboth{\textsf{Part \thepart.~ \parttitle}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textsf{Part \thepart.~ Introduction}}}
 
-# Unipept Desktop
+# Unipept Desktop {#part:unipept_desktop}
 
 \pagestyle{empty}
 
