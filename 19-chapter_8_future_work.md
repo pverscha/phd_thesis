@@ -3,13 +3,37 @@
 
 *No scientific work is ever complete and there remain a lot of challenges in the field of metaproteomics and proteogenomics that still need to be solved. In this section, I discuss some issues and challenges that currently arise and what needs to be overcome in order to solve these.*
 
+\vfill
+
+\begin{flushright}
+    \parbox{7cm}{``Closing time, every new beginning comes from some other beginning's end, yeah"} \\
+    \vspace{0.15cm}
+    \faMusic\ \ Closing Time - Semisonic
+\end{flushright}
+
 \newpage
 
-### Conclusion
+### Discussion
+Most of the work presented in this thesis is being used on a daily basis by researchers all over the globe.
+The process of developing and releasing a new desktop application from scratch was very valuable and it is very rewarding to see it being referenced in literature and being used by researchers to tackle their own set of problems.
 
+Since the desktop application was released, it has been downloaded over 200 times on all major operating systems.
+Currently, Unipept Desktop is at version 2.0.0 and more releases with new features are on the way.
 
-### Modelling the inherent ambiguities in the Unipept matching system
-#### Current situation
+Unipept's API, which allows our analysis pipeline to be integrated into third party applications, and which powers the queries of the desktop and web application has processed over half a million requests in one month's time.
+This is an all-time high and underlines the importance of accessible and easy-to-use tools in the metaproteomics research field.
+
+Thanks to all the international collaborations with colleagues who work on metaproteomics analysis tools abroad, I was able to setup a very valuable network and make Unipept interact with a variety of different tools.
+
+A first step has been made into supporting metaproteogenomics analysis, but more work can still be done such that proteins that are not present in the UniProtKB resource can also be matched.
+This, in turn, allows the Unipept Desktop application to also be applicable to analyze ecosystems that have not been studied in-depth before or that are very diverse (e.g. ocean water).
+
+Below, I discuss a number of improvements and extensions that can be done in the future to progress this research area even further.
+
+### Future work
+
+#### Modelling the inherent ambiguities in the Unipept matching system
+##### Current situation
 In a process prior to database construction, peptide sequences are reconstructed by spectral search engines.
 During the construction of the protein reference database, Unipept aggregates the functional and taxonomic annotations of proteins by grouping them by exact matching of peptide sequences.
 Since a single mass spectrum can, however, be explained by different peptide sequences, a search engine sometimes needs to pick and output the most probable peptide sequence that explains this spectrum.
@@ -22,7 +46,7 @@ In this case, we rely on the search engines that are matching experimental mass 
 In practice, it is common for multiple peptide sequences to correspond with the same mass spectrum, causing ambiguity in the spectral matching process.
 But, since Unipept only looks at sequence identity, part of this spectral ambiguity is (potentially unjustified) ignored.
 
-#### Proposed work plan
+##### Proposed work plan
 Instead of grouping together different peptides by only looking at the sequence similarity, we can predict the mass spectrum of each peptide in the Unipept protein reference database using a tool such as MS2PIP [@degroeveMS2PIPToolMS2013].
 MS2PIP employs the XGBoost machine learning algorithm in order to predict MS2 signal peak intensities from peptide sequences and has proven to produce very reliable results.
 Tryptic peptides that were identical when using the sequence-based similarity metric, will also be identical with this new metric.
@@ -30,30 +54,34 @@ But important to note is that the spectrum-based similarity metric will be “le
 Consequently, this also means that resolution of the taxonomic and functional profile for a metaproteomics sample will go down.
 By now taking into account the spectral ambiguity that was previously masked by Unipept’s analysis, we can design an experiment to investigate to what extent this ambiguity proves to be an issue.
 
-##### Update the Unipept database construction process
+\textsf{Update the Unipept database construction process}
+
 The construction process of the Unipept database is currently not designed to work with different similarity metrics when it comes to grouping peptides.
 A first, big change, will have to be made to this construction process in order to allow it to accept arbitrary similarity metrics.
 This will, in turn, allow us to implement the spectrum based similarity metric (as well as variants) and easily plug them into the database construction process.
 No other major changes will have to be made to the finalised Unipept database, the underlying database structure will be more or less the same.
 
-##### Perform a first experiment
+\textsf{Perform a first experiment}
+
 In order to test the hypothesis that we proposed at the start of this section, we will have to perform an experiment in which we compare the end result of a metaproteomics analysis using the updated spectrum-based similarity approach for Unipept against using the traditional sequence-based similarity approach.
 For this experiment, we can analyse the SIHUMI sample using each of the approaches and compare the end results.
 SIHUMI is a sample that was artificially constructed for the renowned CAMPI study [@vandenbosscheCriticalAssessmentMetaProteome2021] and for which the exact taxonomic composition is known.
 We expect to find that the spectrum-similarity based Unipept leads to a lower, but more realistic, taxonomic and functional resolution for the provided sample.
 
-##### Predict retention times
+\textsf{Predict retention times}
+
 Instead of only looking at the predicted MS2 peak intensities of a peptide sequence using MS2PIP, we can go one step further and also predict retention times and take these into account and expand the similarity metric that was developed during the previous steps.
 Retention times can be predicted using the DeepLC tool [@bouwmeesterDeepLCCanPredict2021] and will cause some peptides, that are similar when we compare them solely by spectra, to be different if we also take into account this predicted retention time.
 Since the Unipept database construction process has already been updated to be compatible with hot-pluggable similarity metrics at this point, we only need to implement a new similarity metric and rebuild the Unipept database.
 
-##### Perform a second experiment
+\textsf{Perform a second experiment}
+
 Finally, we can augment the experiment designed earlier to compare the results between the updated spectrum-based similarity approach for Unipept against using the traditional sequence-based similarity approach with the analysis using the spectrum-similarity based Unipept that also takes into account retention times for the tryptic peptides.
 For this comparison, we expect the taxonomic and functional resolution of the end result to have increased when comparing it to the spectrum-based similarity of before.
 
-### Identification and analysis of arbitrary peptides, including variants
+#### Identification and analysis of arbitrary peptides, including variants
 
-#### Current situation
+##### Current situation
 Unipept requires that all input peptides are tryptic in order to be able to match them with peptides in its reference database.
 However, researchers are transitioning to experiment with datasets that contain other peptide formats that Unipept currently can not use for downstream analysis.
 In order to accomodate this change, we could design a new index structure for Unipept based on bidirectional FM-indices and search schemes which will no longer require the input peptides to adhere to a fixed format.
@@ -72,32 +100,36 @@ This is where search schemes come into play.
 A search scheme is a strategy that describes how a bi-directional FM-index can be queried such that patterns with up to $k$ mismatches can efficiently be matched with a long string (such as a protein).
 Search schemes were first proposed by (Lam et al.) and were further generalised by [@kucherovApproximateStringMatching2014].
 
-#### Proposed work plan
+##### Proposed work plan
 
-##### Design and implement a new index structure for Unipept
+\textsf{Design and implement a new index structure for Unipept}
+
 The first step that should be performed in order to allow Unipept to match peptides of arbitrary format, is to design a new index structure for our database, using FM-indices, and to implement this new index structure.
 Each protein in the protein reference database, will be added to a generalised FM-index that will eventually contain all proteins from the reference database and which allows us to match any kind of peptide.
 We can use the Rust programming language since it is designed with performance and parallelization in mind, and it already provides a very good, open-source implementation of the FM-index data structure ^[https://docs.rs/fm-index/latest/fm_index/].
 These changes will allow us to match arbitrary peptides and peptides with missed cleavages using Unipept.
 
-##### Implement a bi-directional FM-index
+\textsf{Implement a bi-directional FM-index}
+
 A second step consists of updating the FM-index data structure that was used during the previous step such that it supports matching patterns in two directions (backwards *and* forwards).
 This so-called bi-directional FM-index is extensively described in [@lamHighThroughputShort] and is required for efficiently performing approximate pattern matching using search schemes.
 We can improve and expand the existing, open-source Rust FM-index implementation from the previous step such that it allows searching in two directions.
 By contributing to this open-source project we do not need to start from scratch, and we can share our improvements with other researchers around the globe.
 
-##### Implement and validate search scheme prototypes
+\textsf{Implement and validate search scheme prototypes}
+
 A lot of different proposals for search schemes already exist at this point. During this step, we can take a look at a selection of search schemes such as the Pigeon H.S. [@fletcherFoundationsHigherMathematics1996], 01*0 seeds [@vrolandApproximateSearchShort2016], schemes proposed by Kucherov [@kucherovApproximateStringMatching2014], and $Man_{best}$ [@pockrandtApproximateStringMatching2019].
 All of these search schemes will have to be benchmarked for performance and applicability for our needs.
 The search scheme that comes out as best from this comparison can then be tweaked and refined further.
 
-##### Integrate the best search scheme into Unipept
+\textsf{Integrate the best search scheme into Unipept}
+
 Finally, the search scheme that was selected during the previous step needs to be integrated into the Unipept database index structure.
 By doing so, Unipept will effectively support matching peptides with up to $k$ mismatches with the proteins from a reference database.
 
-### Towards a meta-, multi-omics Unipept
+#### Towards a meta-, multi-omics Unipept
 
-#### Current situation
+##### Current situation
 Over the last few years, we have been working very hard to build the Unipept Desktop application which provides a first step in the integration of metagenomics information in metaproteomics experiments.
 By first performing a metagenomics experiment on a sample, researchers are able to derive the taxonomic profile of the ecosystem under study.
 This taxonomic profile can then be used in a subsequent step as a guide for constructing a targeted protein reference database (that only contains proteins that are associated with the taxa that were detected during the metagenomics experiment).
@@ -107,23 +139,25 @@ Building on the individual strength of these techniques, an aggregated view enab
 By augmenting Unipept with support for both metagenomics and metatranscriptomics analyses, it has the potential to become the “go-to” tool for all analyses related to the “meta-omics” research disciplines.
 The ultimate goal of this addition would be to transform Unipept into the first tool that provides a complete global overview of multi-disciplinary “meta-omics” experiments.
 
-#### Proposed work plan
+##### Proposed work plan
 
-##### Allow Unipept to directly load metagenomics reads
+\textsf{Allow Unipept to directly load metagenomics reads}
+
 By improving Unipept with the capability of loading metagenomics reads directly into the software, we can allow users to construct a fully custom protein reference database from these reads.
 At this time, a targeted reference database is always constructed by extracting and filtering proteins from the UniProtKB resource.
 This works very well when the organisms under study have been analysed before and their proteomic profile is available in the UniProtKB resource.
 By providing support for the construction of protein reference databases from metagenomic reads instead, we can also allow organisms that are not present in the UniProtKB resource to be analysed.
 
-##### Design and implement new visualizations for metagenomics experiments
+\textsf{Design and implement new visualizations for metagenomics experiments}
+
 Unipept provides a lot of valuable and interactive data visualisations that increase the insight of researchers into the taxonomic and functional profile of a metaproteomics ecosystem.
 These visualisations are implemented in a very generic way that allows them to be applicable to other situations as well.
 I propose to expand Unipept with the ability to visualise the taxonomic profile determined by a metagenomics experiment, and the potential functional profile that is determined by performing a metatranscriptomics experiment.
 This will increase the insight of users into the ecosystem that they are currently investigating.
 
-### Differential analysis of metaproteomics data
+#### Differential analysis of metaproteomics data
 
-#### Current situation
+##### Current situation
 Dedicated data analysis methods for differential metaproteomics are currently lacking.
 Different tools for the analysis of metaproteomics data exist at this point, but none of them provide a statistically sound framework for the **comparative** analysis of metaproteomics data.
 
@@ -133,14 +167,16 @@ Moreover, we could also devise methods to detect shifts in the population or the
 
 Ideally, this comparative analysis pipeline can be integrated and embedded into user-friendly workflows for Unipept. 
 
-#### Proposed work plan
+##### Proposed work plan
 
-##### Develop and validate normalisation and filtering strategies for metaproteomics applications
+\textsf{Develop and validate normalisation and filtering strategies for metaproteomics applications}
+
 A Unipept analysis will map peptides to taxa and functions resulting in a count table, but these counts can be largely driven by library size, i.e., the total number of peptides in a sample.
 Hence, the data need to be normalised, which will be done by calculating normalisation offsets for the GLMs that will be developed in the next step.
 Besides library size, we also have to evaluate the use of other features, e.g., average peptide length, for more advanced normalisation using a CQN approach [@hansenRemovingTechnicalVariability2012].
 
-##### Establish a generalized linear model (GLM)
+\textsf{Establish a generalized linear model (GLM)}
+
 The second step in my proposed work plan consists of establishing a generalised linear model (GLM) framework for count regression in metaproteomics.
 Development will start from well-established tools for modelling bulk RNA sequencing (RNA-seq) data.
 A preliminary edgeR [@robinsonEdgeRBioconductorPackage2010] analysis that we’ve performed shows that metaproteomics counts exhibit a similar mean-dispersion relation as RNA-seq data.
@@ -150,13 +186,15 @@ Indeed, experiments with more complex designs can be accommodated for by includi
 Finally, the challenge to detect shifts in communities, e.g., at a certain taxonomic level, shows many similarities with assessing differential transcript usage in bulk RNA-seq experiments, where researchers try to discover shifts in the relative abundance of isoforms within a gene.
 Again, we will have to port and tailor these tools towards metaproteomics.
 
-##### Perform statistical inference
+\textsf{Perform statistical inference}
+
 Within the GLM framework, likelihood ratio tests, score tests and Wald tests can be conducted.
 We can evaluate their performance within an empirical Bayes context and in terms of computational efficiency.
 Next, false discovery rate (FDR) methods should be adopted and more advanced FDR methods will be developed for metaproteomics applications.
 Specifically, we can build upon stage-wise testing procedures that have proven their merits for transcript level analysis and gene-set enrichment analysis [@vandenbergeStageRGeneralStagewise2017].
 
-##### Develop a user-friendly workflow and integrate into Unipept
+\textsf{Develop a user-friendly workflow and integrate into Unipept}
+
 The last step that I can propose for this workplan is to integrate all of the methods and strategies that where developed during the previous tasks into a user-friendly workflow for the Unipept web application.
 For each of the steps we will have to consider whether to implement the step in JavaScript and run it directly in the browser, or to offload it to an R instance running server-side.
 The latter will probably require less implementation work because of the available R packages but comes at the cost of less flexibility and interactivity.

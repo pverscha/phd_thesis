@@ -33,7 +33,7 @@ Some of the figures used in this document originate from sources that I would li
 * Scissors icon is designed by Bmijnlieff of The Noun Project.
 
 
-**\autoref{fig:spectra_to_unipept}**
+**\autoref{fig:shotgun_metaproteomics}**
 
 * File icon is designed by Khoiriyah of The Noun Project.
 * Application Code icon is designed by Damian Hetman of The Noun Project.

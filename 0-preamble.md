@@ -67,6 +67,7 @@ header-includes:
 \newcommand{\parttitle}{}
 \renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
 
+
 \pagestyle{plain}
 
 \raggedbottom
